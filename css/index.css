@@ -163,3 +163,27 @@ element.style {
 #main-banner .swiper-slide img {
   width: 100%;
 }
+
+/* ----------------------------------- */
+
+#main-banner {
+  position: relative;
+}
+
+#main-banner .swiper-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  width: 100px;
+  margin-top: -50px;
+}
+
+#main-banner .swiper-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  width: 100px;
+  margin-top: -50px;
+}
