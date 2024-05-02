@@ -80,10 +80,7 @@ h1.logo-box {
     cursor: pointer;
 }
 
-
-
-button, input, textarea {
-    margin: 0;
-    background: transparent;
+.player-nav ul {
+    display: flex;
+    flex-wrap: wrap;
 }
-
