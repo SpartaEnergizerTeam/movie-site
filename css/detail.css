@@ -1,3 +1,6 @@
+
+
+
 .image-box img {
     width: 100%;
 }
@@ -52,3 +55,35 @@ h1.logo-box {
     height: 100%;
     z-index: 10;
 }
+
+
+.more {
+    color:#fff
+    
+}
+
+
+
+.player-nav ul li button.on {
+    border-bottom-color: #1351f9;
+    color: #fff;
+}
+
+.player-nav ul li button {
+    display: inline-block;
+    padding: 0 10px;
+    border-bottom: 4px solid transparent;
+    font-size: 18px;
+    color: #a5a5a5;
+    line-height: 63px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+button, input, textarea {
+    margin: 0;
+    background: transparent;
+}
+
