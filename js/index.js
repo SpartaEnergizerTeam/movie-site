@@ -27,8 +27,8 @@ function SliderBox1__init() {
 
     // Navigation arrows
     navigation: {
-      nextEl: "#main-banner .swiper-button-next",
-      prevEl: "#main-banner .swiper-button-prev",
+      nextEl: "#main-banner .swiper-next",
+      prevEl: "#main-banner .swiper-prev",
     },
   });
 }
