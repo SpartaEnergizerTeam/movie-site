@@ -15,6 +15,8 @@ fetch(
   .then((response) => console.log(response))
   .catch((err) => console.error(err));
 
+// 슬라이드 배너 함수 //
+
 function SliderBox1__init() {
   const swiper = new Swiper("#main-banner", {
     // Optional parameters
