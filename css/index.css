@@ -152,21 +152,14 @@ element.style {
   float: left;
 }
 
-element.style {
-  transform: translate3d(-6310px, 0px, 0px);
-  transition-duration: 0ms;
-}
-
-.picture-area .banner-title,
-.picture-area .big-banner {
-  width: 1240px;
-  height: 508px;
-}
-
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
   z-index: -1000;
+}
+
+#main-banner .swiper-slide img {
+  width: 100%;
 }

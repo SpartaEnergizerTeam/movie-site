@@ -14,3 +14,23 @@ fetch(
   .then((response) => response.json())
   .then((response) => console.log(response))
   .catch((err) => console.error(err));
+
+function SliderBox1__init() {
+  const swiper = new Swiper("#main-banner", {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: "#main-banner .swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: "#main-banner .swiper-button-next",
+      prevEl: "#main-banner .swiper-button-prev",
+    },
+  });
+}
+
+SliderBox1__init();
