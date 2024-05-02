@@ -1,0 +1,295 @@
+body,
+html {
+  scrollbar-color: #a5a5a5 #1b1b1b;
+  color: #a5a5a5;
+}
+
+/* div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+.header-gnb {
+  position: relative;
+  width: 1240px;
+  height: 74px;
+  margin: 0 auto;
+  font-size: 0;
+  z-index: 10;
+}
+
+.header-gnb h1 {
+  display: inline-block;
+  height: 100%;
+  margin-right: 78px;
+  line-height: 74px;
+  vertical-align: middle;
+}
+
+.header-gnb h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header-gnb h1 img {
+  display: inline-block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  font-weight: 400;
+}
+
+.header-gnb .gnb-left {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.header-gnb .gnb-left > ul > li {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.category-list-item {
+  position: relative;
+}
+
+.header-gnb .gnb-left > ul > li > a,
+.header-gnb .gnb-left > ul > li > button {
+  display: block;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 74px;
+  color: #a5a5a5;
+}
+
+.header-gnb .gnb-left > ul > li > span.on,
+.header-gnb .gnb-left > ul > li > span:hover,
+.header-gnb .gnb-left > ul li a.on,
+.header-gnb .gnb-left > ul li a:hover {
+  color: #fff;
+}
+
+.header-gnb .search-box {
+  position: absolute;
+  top: 18px;
+  right: -9px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  transition: width 0.2s ease-out;
+}
+
+.header-gnb .search-box .btn-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 9px;
+  z-index: 10;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header-gnb .search-box .btn-search:before {
+  background-image: url(../img/icon-search-22.704db5c8.svg);
+  background-size: 22px auto;
+  display: block;
+  width: 22px;
+  height: 22px;
+  content: "";
+}
+
+여기까지 헤더 */
+
+.main {
+  width: 100%;
+  z-index: 10;
+  margin: 109px auto 0;
+  padding-bottom: 50px;
+  height: 100%;
+  min-height: 1080px;
+  overflow: hidden;
+  min-width: 1240px;
+  background-color: #1b1b1b;
+}
+
+.multi-banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 80px;
+  position: relative;
+  min-width: 1240px;
+  max-width: 3840px;
+  min-height: 555px;
+}
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ir {
+  font-size: 0;
+  text-indent: -999999px;
+}
+
+.multi-banner .main01-nav {
+  display: table;
+  position: absolute;
+  top: 528px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.multi-banner .main01-nav button[class^="btn"] {
+  display: table-cell;
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.multi-banner .btn-pause {
+  background: url(../img/pause.svg) no-repeat 50% / cover;
+}
+
+.multi-banner .btn-play {
+  background: url(../img/play.svg) no-repeat 50% / cover;
+}
+
+.multi-banner .swiper-button-next,
+.multi-banner .swiper-button-prev {
+  position: absolute;
+  top: 186px;
+  z-index: 20;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-size: 100px auto;
+  font-size: 0;
+}
+
+.multi-banner .swiper-button-prev {
+  left: 100px;
+  background-image: url(../img/<.png);
+}
+
+.multi-banner .swiper-button-next {
+  right: 100px;
+  background-image: url(../img/>.png);
+}
+
+.multi-banner .swiper-pagination {
+  display: table-cell;
+  position: static;
+  width: auto;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: opacity 0.3s;
+  transform: translateZ(0);
+  z-index: 10;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: #e8e8e8;
+}
+
+.multi-banner .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.multi-banner .swiper-pagination span {
+  margin: 0 4px;
+  width: 10px;
+  height: 10px;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  opacity: 1;
+  cursor: default;
+}
+
+element.style {
+  transform: translate3d(-6310px, 0px, 0px);
+  transition-duration: 0ms;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.multi-banner .swiper-slide {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 1240px;
+  height: 508px;
+  margin: 0 10px;
+  border-radius: 12px;
+  background-color: #252525;
+}
+
+.component-list {
+  width: 240px;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+}
+
+element.style {
+  transform: translate3d(-6310px, 0px, 0px);
+  transition-duration: 0ms;
+}
+
+.picture-area .banner-title,
+.picture-area .big-banner {
+  width: 1240px;
+  height: 508px;
+}
+
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1000;
+}
