@@ -1,0 +1,54 @@
+.image-box img {
+    width: 100%;
+}
+
+.text-box {
+    position: absolute;
+    z-index: 2;
+    top: 350px;
+    left: 0;
+}
+
+.video-detail {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.image-box {
+    position: relative;
+    z-index: 1;
+}
+
+h1.logo-box {
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.video-button {
+    width: 360px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #1351f9;
+    font-size: 16px;
+    color: #fff;
+}
+
+.content-clamp {
+    font-size: 16px;
+    color: #a5a5a5;
+    line-height: 1.5;
+}
+
+.image-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/detail/detail_gra_bg.png);
+    background-size: 1240px auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
