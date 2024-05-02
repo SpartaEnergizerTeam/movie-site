@@ -9,7 +9,7 @@ const options = {
 const defaultUrl = "https://api.themoviedb.org/3/";
 
 // playing, popular, top, upcoming 중 하나를 movieTypeString의 인자로 넣으면 됩니다.
-export const getData = async (movieTypeString, pageNum) => {
+export const getData = async (movieTypeString, pageNum = 1) => {
   let url = "";
   switch (movieTypeString) {
     case "playing":
