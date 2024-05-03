@@ -23,14 +23,17 @@
            <p class="dot-item">
                드라마
            </p>
-           <button class="video-button" type="button">트레일러 재생</button>
+           <div class="btnbox">
+            <button class="video-button" type="button">트레일러 재생</button>
            <ul>
                <li class="icon-item">
                    <button type="button">
                        <img src="./img/detail/element-icon-share.svg" width="30" height="30" alt="공유">
+                       <span class="icon-txt">공유</span>
                    </button>
                </li>
            </ul>
+           </div>
            <div class="detail-info-box">
                <p class="content-priview-box">
                    <div class="content-clamp">
@@ -64,35 +67,15 @@
     </div>
     <div class="detail-view-content-arena">
         <div class="preview-detail-box">
-            <strong class="priview-title"> 수사반장 1958 </strong>
-            <em class="priview-subtitle"> 현재 에피소드 : 1. '황천에서 온 사나이' </em>
+            <strong class="preview-title"> 수사반장 1958 </strong>
+            
             <p class="preview-dsc">황천에서 상경한 영한(이제훈)은 부임 첫날부터 동대문파의 이인자 살모사(강인권)를 검거하고 종남서 최고 골칫덩이로 등극한다.</p>
             <div class="content-actor-box"><!--출연진-->
                 <strong>출연 :</strong>
-                <span class="content-actor-list">
-                    <a href="javascript:void(0)">
-                        이제훈
-                      </a>
-                      ", "
-                </span>
-                <span class="content-actor-list">
-                    <a href="javascript:void(0)">
-                        이동휘
-                      </a>
-                      ", "
-                </span>
-                <span class="content-actor-list">
-                    <a href="javascript:void(0)">
-                        이제훈
-                      </a>
-                      ", "
-                </span>
-                <span class="content-actor-list">
-                    <a href="javascript:void(0)">
-                        윤현수
-                      </a>
-                      ", "
-                </span>
+                <span class="content-actor-list"><a> 이제훈 </a></span>
+                <span class="content-actor-list"><a> 이동휘 </a></span>
+                <span class="content-actor-list"><a> 최우성 </a></span>
+                <span class="content-actor-list"><a> 윤현수 </a></span>
 
             </div>
         </div>
@@ -100,7 +83,9 @@
             <div class="thumb-box">
                 <div class="picture-arena">
                     <picture>
-                        <source srcset="https://image.wavve.com/v1/thumbnails/240_360_20_80/meta/image/202404/1713512289000104275.webp 1x,https://image.wavve.com/v1/thumbnails/480_720_20_80/meta/image/202404/1713512289000104275.webp 1.7x,https://image.wavve.com/v1/thumbnails/720_1080_20_80/meta/image/202404/1713512289000104275.webp 2.5x" type="image/webp">
+                   <!---<source srcset=".img/detail/1713512289000104275.webp 1x,.img/detail/1713512289000104275.webp 1.7x,.img/detail/1713512289000104275.webp 2.5x" type="image/webp">--->
+                     <img src="./img/detail/1713512289000104275.webp" alt="수사반장 1958" class="thumb-img">
+
                     </picture>
                 </div>
             </div>
@@ -132,19 +117,19 @@
                             <a href="javascript:void(0)" class="genre">
                                 이제훈
                               </a>
-                              ", "
+                              
                               <a href="javascript:void(0)" class="genre">
                                 이동휘
                               </a>
-                              ", "
+                              
                               <a href="javascript:void(0)" class="genre">
                                 최우성
                               </a>
-                              ", "
+                              
                               <a href="javascript:void(0)" class="genre">
                                 윤현수
                               </a>
-                              ", "  
+                                
                         </td>
                     </tr>
                     <tr>
@@ -155,14 +140,7 @@
                               </a>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">등급</th>
-                        <td>
-                            <span>
-                                <img src="/img/element-icons-72-x-72-ic-vod-15-years.3f150ba7.svg" width="50" height="50" :alt="15세 이상 관람가 아이콘">
-                            </span>
-                        </td>
-                    </tr>
+
                 </table>  <!---하단 썸네일 인포 끝자락-->
             </div>
 
