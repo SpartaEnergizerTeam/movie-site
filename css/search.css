@@ -1,0 +1,23 @@
+.popularSeries {
+  display: block;
+  width: 1240px;
+  height: 221px;
+}
+
+.titleSeries {
+  color: #ffffff;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+img {
+  width: 230;
+  height: 135;
+}
+
+.moviePosterContainer {
+  display: block;
+}
