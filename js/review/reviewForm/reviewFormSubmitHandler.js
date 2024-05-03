@@ -1,4 +1,4 @@
-import submitReview from "./submitReview.js";
+import addReviewToLocalStorage from "./addReviewToLocalStorage.js";
 import isValidReviewValues from "./isValidReviewValues.js";
 
 const reviewFormSubmitHandler = () => {
@@ -21,7 +21,7 @@ const reviewFormSubmitHandler = () => {
     const isValid = isValidReviewValues(values);
     if (!isValid) return;
 
-    submitReview(values);
+    addReviewToLocalStorage(values);
 
     $rate.dataset.rate = '';
     $rateFillBox.style.width = '0%';

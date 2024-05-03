@@ -5,7 +5,7 @@ import {
   setDetailComments
 } from "../utils.js";
 
-const submitReview = (values) => {
+const addReviewToLocalStorage = (values) => {
   const movieId = getMovieIdFromURL();
   let comments = getDetailComments();
   const {index, isExistingComments} = getExistingDetailComments({comments, movieId});
@@ -28,4 +28,4 @@ const addCommentToExisting = ({comments, index, values}) => {
   return updatedComments;
 };
 
-export default submitReview;
+export default addReviewToLocalStorage;
