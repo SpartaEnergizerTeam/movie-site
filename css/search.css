@@ -13,11 +13,20 @@
   line-height: 35px;
 }
 
-img {
-  width: 230;
-  height: 135;
+.swiperContainer img {
+  width: 230px;
+  height: 135px;
 }
 
 .moviePosterContainer {
   display: block;
+}
+
+.swiperContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.moviePosterContainer p {
+  color: #ffffff;
 }
