@@ -20,27 +20,36 @@
     <script defer src="./js/header.js" type="module"></script>
   </head>
   <body>
-    <header class="headerSection" alt="wavve">
-      <a href="./index.html" class="logo">
-        <img src="./img/common/ci-wavve.svg" alt="WAVVE" />
-      </a>
-      <nav class="navContainer">
-        <ul>
-          <li><a href="#" class="navHome">홈</a></li>
-          <li><a href="#" class="navCat">카테고리</a></li>
-          <li><a href="#" class="navLive">LIVE</a></li>
-          <li><a href="#" class="navMy">MY</a></li>
-        </ul>
-      </nav>
-      <div class="searchContainer">
-        <a href="./search.html">
-          <img src="./img/common/icon-search.svg" alt="검색" />
+    <header>
+        <div class="headerNav">
+            <nav class="headerNav">
+                <nav class="headerNavMenu">
+                    <ul>
+                      <li><a href="#" class="logIn">로그인</a></li>
+                      <li><a href="#" class="tiket">이용권</a></li>
+                      <li><a href="#" class="cupon">쿠폰·코인</a></li>
+                      <li><a href="#" class="waveon">웨이브온</a></li>
+                      <li><a href="#" class="event">이벤트</a></li>
+                    </ul>
+            </nav>
+        </div>
+      <div class="headerSection">
+        <a href="./index.html" class="logo">
+          <img src="./img/common/ci-wavve.svg" alt="WAVVE" />
         </a>
-        <!--<input
-          type="text"
-          class="searchInput"
-          placeholder="제목, 장르, 배우로 찾아보세요"
-        />-->
+        <nav class="headerMenu">
+          <ul>
+            <li><a href="#" class="navHome">홈</a></li>
+            <li><a href="#" class="navCat">카테고리</a></li>
+            <li><a href="#" class="navLive">LIVE</a></li>
+            <li><a href="#" class="navMy">MY</a></li>
+          </ul>
+        </nav>
+        <div class="searchContainer">
+          <a href="./search.html">
+            <img src="./img/common/icon-search.svg" alt="검색" />
+          </a>
+        </div>
       </div>
     </header>
   </body>

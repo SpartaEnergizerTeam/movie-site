@@ -1,4 +1,23 @@
-header {
+.headerNav {
+  border-bottom: 1px solid #2e2e2e;
+  height: 34px;
+  margin-top: 15px;
+}
+
+.headerNavMenu {
+  display: flex;
+  margin: 0px auto;
+  justify-content: flex-end;
+  font-size: 12px;
+  padding: 0 11px;
+  color: #a5a5a5;
+}
+
+.headerNavMenu ul li {
+  margin: 1px solid white;
+}
+
+.headerSection {
   color: #fff;
   display: flex;
   height: 74px;
@@ -9,8 +28,9 @@ header {
   margin: 0 auto;
 }
 
-.navContainer {
-]:absolute;flex-grow: 2;}
+.headerMenu {
+  flex-grow: 2;
+}
 
 .searchContainer {
   display: flex;
@@ -18,28 +38,8 @@ header {
   flex-shrink: 0;
 }
 
-.searchInput {
-  width: 200px;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-}
-
-.searchButton {
-  background-color: #1b1b1b;
-  border: 1px solid black;
-  color: #fff;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
 .logo img {
   width: 100px;
-}
-
-nav {
 }
 
 nav ul {
@@ -50,14 +50,21 @@ nav ul {
   gap: 20px;
 }
 
-nav ul li {
+.headerNav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-size: 20px;
+  padding: 0 10px;
+  border-right: 1px solid white;
 }
 
 nav ul li:first-child {
   margin-left: 0;
 }
 
-nav ul li a {
+.headerMenu ul li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -68,16 +75,9 @@ nav ul li a {
 nav ul li a:hover {
   color: gray;
 }
-.searchInput {
-  display: flex;
-  font-size: 19px;
-  height: 50px;
-  margin-right: auto;
-  width: 450px;
-  background-color: black;
+
+.navHome:hover {
   color: white;
-  text-decoration: none;
-  border-radius: 10px;
 }
 
 header .logo {
