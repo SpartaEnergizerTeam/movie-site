@@ -1,9 +1,7 @@
 // 이미지를 랜덤하게 조건을 걸어서 생성한다.
 // 생성한 이미지 값을 유저가 선택하면 로컬스토리지에 저장한다.
 
-// animate__zoomInDown
-
-var disabled = false;
+let disabled = false;
 const returnUrl = "index.html";
 let imageUrl =
   "https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg";
@@ -29,7 +27,7 @@ const background_color_list = [
   "fdd835",
   "ffb300",
 ];
-// const background_type_list = ["gradientLinear", "solid"];
+
 const eyes_list = [
   "bulging",
   "dizzy",
@@ -60,9 +58,6 @@ const mouth_list = [
 
 const getRandomAvatar = () => {
   // backgroundColor 19
-  // backgroundType 2
-  // translateX
-  // translateY
   // eyes 14
   // mouth 9
   const randomNum_1 = Math.random();
@@ -99,12 +94,6 @@ document
       "animate__animated animate__zoomInDown";
   });
 
-document.getElementById("logo").addEventListener("click", function () {
-  window.location.href = returnUrl;
-});
-document.getElementById("cancel").addEventListener("click", function () {
-  window.location.href = returnUrl;
-});
 document.getElementById("content").addEventListener("submit", function (e) {
   e.preventDefault();
   const userObj = {

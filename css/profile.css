@@ -7,14 +7,6 @@ input:-webkit-autofill:focus,
   -webkit-text-fill-color: #a5a5a5;
 }
 
-@charset "UTF-8"; /*!
- * animate.css - https://animate.style/
- * Version - 4.1.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2020 Animate.css
- */
-
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
@@ -59,8 +51,6 @@ input:-webkit-autofill:focus,
   width: 1240px;
   margin: 0 auto;
 }
-.logo_section img {
-}
 
 .content {
   position: absolute;
@@ -91,7 +81,6 @@ input:-webkit-autofill:focus,
   background-color: #1351f9;
   border-radius: 999px;
   cursor: pointer;
-
   box-sizing: border-box;
   border: none;
 }
