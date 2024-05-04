@@ -98,14 +98,23 @@ html {
 }
 
 #cards {
+  width: 1240px;
   padding: 0;
   margin-bottom: 20px;
 }
 
-.card {
+.card-poster {
   background-color: white;
-  width: 240px;
+  width: 240px !important;
   height: 360px;
   border-radius: 10px;
   margin: 0 5px;
+  overflow: hidden;
+}
+
+.card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
 }

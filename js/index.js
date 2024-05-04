@@ -1,21 +1,4 @@
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNGU1NjY2Yjk0Yjc1NDg1ZTJmM2QxZDQxZWE2NGMyMCIsInN1YiI6IjY2Mjg2OTdmMjIxYmE2MDE3YzE3ZTIwNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.di8q-a-oZSQzN9BfpzUocwn5_lxuO_GwsBB2Ga-pxAg",
-  },
-};
-
-fetch(
-  "https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1",
-  options
-)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
-
-// 슬라이드 배너 함수 //
+// 슬라이드 배너 함수
 
 function SliderBox1__init() {
   const swiper = new Swiper("#main-banner", {
@@ -36,3 +19,32 @@ function SliderBox1__init() {
 }
 
 SliderBox1__init();
+
+// 영화 api data 출력
+
+import { getMovieData } from "./api.js";
+
+const loadMoviesAndDisplay = async () => {
+  try {
+    const movieData = await getMovieData("top");
+    const movies = movieData.results;
+
+    const cardList = document.querySelector("#cards");
+    cardList.innerHTML = "";
+
+    const cardsHtml = movies
+      .map(
+        (movie) =>
+          `<li class="card-poster" id=${movie.id}>
+          <img class="card-img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
+         </li>`
+      )
+      .join("");
+
+    cardList.innerHTML = cardsHtml;
+  } catch (error) {
+    console.error("영화 데이터를 불러오는 중 오류가 발생했습니다:", error);
+  }
+};
+
+loadMoviesAndDisplay();

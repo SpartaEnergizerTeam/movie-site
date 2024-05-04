@@ -6,7 +6,7 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MTQ5MzRmNzg4ZjRlYzI1NmViY2RlYzcyNzVhMDdlZCIsInN1YiI6IjY2MjdhNGMyNjJmMzM1MDE2NGQ5ZDU0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UrmYmAFfVZN-YSlLPyTfP10QreSXWz1VYKRQeak1yxU",
   },
 };
-const defaultUrl = "https://api.themoviedb.org/3/";
+const defaultUrl = "https://api.themoviedb.org/3/movie/";
 
 // playing, popular, top, upcoming 중 하나를 movieTypeString의 인자로 넣으면 됩니다.
 export const getMovieData = async (movieTypeString, pageNum = 1) => {
