@@ -2,6 +2,7 @@ import getUrlParamValue from "../utils/getUrlParamValue.js";
 import {getLocalStorage, setLocalStorage} from "../utils/localStorage.js";
 
 const LOCALSTORAGE_COMMENTS = 'comments';
+const LOCALSTORAGE_USER_INFO = 'user-information';
 const TEST_VALUE = '123';
 console.log('@@ TODO: 테스트 값 꼭 삭제하기');
 
@@ -19,3 +20,10 @@ export const getExistingDetailComments = ({comments = [], movieId}) => {
     isExistingComments: index !== -1
   };
 };
+
+export const getUser = () => JSON.parse(getLocalStorage(LOCALSTORAGE_USER_INFO) || '[]');
+
+export const getUserInformation = () => {
+  const { username, password, imageUrl } = getUser();
+  return { username, password, imageUrl }
+}

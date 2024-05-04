@@ -30,6 +30,8 @@
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    background: #ffffff;
+    object-fit: cover;
 }
 
 #reviews .user-group p {
@@ -73,7 +75,6 @@
     padding: 16px 36px 20px;
     border-radius: 4px;
     position: relative;
-    margin-top: 4px;
 }
 
 #comment {
@@ -106,20 +107,20 @@
     margin-top: 4px;
 }
 
-.rating-container {
+#writeReviewForm {
+    margin: 15px 0 0;
+}
+
+.form-row {
     position: relative;
     background: #323337;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    margin: 15px 0 0;
-    padding: 8px 26px;
+    padding: 0 36px;
     gap: 16px;
-}
-
-.rating-container p {
-    color: var(--title-color1);
-    font-size: 15px;
+    margin-bottom: 4px;
+    height: 62px;
 }
 
 .write-rate-container {
@@ -129,15 +130,16 @@
     border-radius: 4px;
     width: 100px;
     margin-right: 10px;
+    flex-shrink: 0;
 }
-.rating-container .rate-box:not(.gray) {
+.form-row .rate-box:not(.gray) {
     z-index: 2;
     width: 0;
     white-space: nowrap;
     overflow: hidden;
     pointer-events: none;
 }
-.rating-container .rate-box.gray {
+.form-row .rate-box.gray {
     position: absolute;
     top: 15px;
     left: 0;
@@ -146,18 +148,18 @@
     cursor: pointer;
 }
 
-.rating-container .rate-box.gray [class*='star-'] {
+.form-row .rate-box.gray [class*='star-'] {
     background-color: #535455;
 }
 
-.rating-container [class*='star-'] {
+.form-row [class*='star-'] {
     width: 20px;
     height: 20px;
     mask-size: 20px;
     flex-shrink: 0;
 }
 
-#name {
+#writeReviewForm .text-input {
     height: 38px;
     background: none;
     border: none;

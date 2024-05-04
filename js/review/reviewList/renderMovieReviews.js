@@ -19,7 +19,7 @@ const getReviewHtml = (result) => {
   return `
     <li>
       <article class="user-group">
-        <img src="./img/detail/user.png" alt=""/>
+        <img src="${result.thumbnail}" alt=""/>
         <div>
           <div class="top-info">
             <strong class="name">${result.name}</strong>

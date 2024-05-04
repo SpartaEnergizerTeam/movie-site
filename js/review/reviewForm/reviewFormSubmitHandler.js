@@ -1,5 +1,6 @@
 import addReviewToLocalStorage from "./addReviewToLocalStorage.js";
 import isValidReviewValues from "./isValidReviewValues.js";
+import {getUserInformation} from "../utils.js";
 
 const reviewFormSubmitHandler = () => {
   const form = document.querySelector('#writeReviewForm');
@@ -8,14 +9,15 @@ const reviewFormSubmitHandler = () => {
     e.preventDefault();
 
     const $rate = this.querySelector('#commentRateBox');
-    const $rateFillBox = this.querySelector('#fillRateBox');
     const $comment = this.querySelector('#comment');
-    const $name = this.querySelector('#name');
+
+    const {username, imageUrl} = getUserInformation();
 
     const values = {
       rate: $rate.dataset.rate,
       comment: $comment.value,
-      name: $name.value
+      name: username,
+      thumbnail: imageUrl
     };
 
     const isValid = isValidReviewValues(values);
@@ -23,10 +25,6 @@ const reviewFormSubmitHandler = () => {
 
     addReviewToLocalStorage(values);
 
-    $rate.dataset.rate = '';
-    $rateFillBox.style.width = '0%';
-    $comment.value = '';
-    $name.value = '';
     window.location.reload();
   });
 };
