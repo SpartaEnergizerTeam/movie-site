@@ -106,10 +106,11 @@ html {
 .card-poster {
   background-color: white;
   width: 240px !important;
-  height: 360px;
+  height: 360px !important;
   border-radius: 10px;
-  margin: 0 5px;
+  margin: 0 4px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .card-img {
@@ -117,4 +118,10 @@ html {
   width: 100%;
   height: 100%;
   display: block;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
 }
