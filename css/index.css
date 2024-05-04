@@ -55,11 +55,11 @@ html {
   position: absolute;
 }
 
-.swiper-slide {
+#main-banner .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 1240px;
   height: 508px;
   margin: 0 auto;
 }

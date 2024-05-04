@@ -2,11 +2,15 @@ import { getMovieData } from "./api.js";
 
 // 슬라이드 배너 함수
 function SliderBox1__init() {
-  const swiper = new Swiper("#main-banner", {
-    // Optional parameters
-    loop: true,
-
-    // If we need pagination
+  new Swiper("#main-banner", {
+    loop: true, //반복재생
+    slidesPerView: 'auto', // 슬라이드 갯수 조정 (지금은 css로 맞춰두었기 때문에  auto로 함)
+    spaceBetween: 20, // 다른 슬라이드와의 간격
+    centeredSlides: true, // 가운데 중심의 슬라이드
+    autoplay: {
+      delay: 5000, // 5초마다 자동 재생
+    },
+    disableOnInteraction: false, // 사람이 넘겨도 멈추지 않고 다시 자동재생 유지
     pagination: {
       el: "#main-banner .swiper-pagination",
     },
