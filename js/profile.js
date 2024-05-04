@@ -4,6 +4,7 @@
 // animate__zoomInDown
 
 var disabled = false;
+const returnUrl = "/index.html";
 let imageUrl =
   "https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg";
 
@@ -98,7 +99,12 @@ document
       "animate__animated animate__zoomInDown";
   });
 
-document.getElementById("cancel").addEventListener("click", function () {});
+document.getElementById("logo").addEventListener("click", function () {
+  window.location.href = returnUrl;
+});
+document.getElementById("cancel").addEventListener("click", function () {
+  window.location.href = returnUrl;
+});
 document.getElementById("content").addEventListener("submit", function (e) {
   e.preventDefault();
   const userObj = {
@@ -107,6 +113,8 @@ document.getElementById("content").addEventListener("submit", function (e) {
     imageUrl: imageUrl,
   };
   window.localStorage.setItem("userObj", JSON.stringify(userObj));
+  // 여기서 다른 url로 이동하면 된다.
+  window.location.href = returnUrl;
 });
 
 // 맨 처음 로컬스토리지 가져와서 값 넣기
