@@ -139,6 +139,9 @@ input:-webkit-autofill:focus,
 }
 .cancel {
   background: #5e5e5e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cancel:hover {
   background: #717171;
