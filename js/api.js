@@ -71,19 +71,3 @@ export const getMovieVideos = async (movie_id) => {
   return [];
 };
 
-//출연진//
-
-export const getMovieCast = async (movie_id) => {
-  const defaultUrl = 'https://api.themoviedb.org/3/movie/';
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNDQ1MzFmMGRkOGY3NmY2NDE2NWEwNzU4MDQ1M2QzOSIsInN1YiI6IjY2MmIyMzQ5NzY0ODQxMDExZDJjMzFkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bNR43UvxNhyv-aUuh3xtx44tXz-IjayN-QrgO-ATUMA'
-    }
-  };
-
-  const url = `${defaultUrl}${movie_id}/credits`;
-  const response = await fetch(url, options);
-  return await response.json();
-};
