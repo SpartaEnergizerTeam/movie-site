@@ -2,8 +2,9 @@
 // 생성한 이미지 값을 유저가 선택하면 로컬스토리지에 저장한다.
 
 let disabled = false;
+// 배포시에 맞는 url로 변경 필!
 const returnUrl = "index.html";
-let imageUrl =
+let IMAGE_URL =
   "https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg";
 
 const background_color_list = [
