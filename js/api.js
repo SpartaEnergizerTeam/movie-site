@@ -6,23 +6,23 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MTQ5MzRmNzg4ZjRlYzI1NmViY2RlYzcyNzVhMDdlZCIsInN1YiI6IjY2MjdhNGMyNjJmMzM1MDE2NGQ5ZDU0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UrmYmAFfVZN-YSlLPyTfP10QreSXWz1VYKRQeak1yxU",
   },
 };
-const defaultUrl = "https://api.themoviedb.org/3/movie/";
+const defaultUrl = "https://api.themoviedb.org/3/";
 
 // playing, popular, top, upcoming 중 하나를 movieTypeString의 인자로 넣으면 됩니다.
 export const getMovieData = async (movieTypeString, pageNum = 1) => {
   let url = "";
   switch (movieTypeString) {
     case "playing":
-      url = `${defaultUrl}now_playing?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/now_playing?language=ko&page=${pageNum}`;
       break;
     case "popular":
-      url = `${defaultUrl}popular?language=ko&page=${pageNum}"`;
+      url = `${defaultUrl}movie/popular?language=ko&page=${pageNum}"`;
       break;
     case "top":
-      url = `${defaultUrl}top_rated?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/top_rated?language=ko&page=${pageNum}`;
       break;
     case "upcoming":
-      url = `${defaultUrl}upcoming?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/upcoming?language=ko&page=${pageNum}`;
       break;
   }
   const response = await fetch(url, options);

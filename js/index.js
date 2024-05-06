@@ -1,12 +1,11 @@
 import { getMovieData } from "./api.js";
 
-async function mainImgSwiper(movieTypeString) {
+const mainImgSwiper = async (movieTypeString) => {
   try {
     const movieData = await getMovieData(movieTypeString);
     const movies = movieData.results.slice(0, 5); // 5개의 이미지만 롤링되도록 합니다
 
     const swiperWrapper = document.querySelector("#main-slider");
-    swiperWrapper.innerHTML = "";
 
     movies.forEach((movie) => {
       const slide = document.createElement("div");
@@ -44,7 +43,7 @@ async function mainImgSwiper(movieTypeString) {
       error
     );
   }
-}
+};
 
 mainImgSwiper("popular");
 
@@ -79,9 +78,6 @@ loadMoviesAndDisplay("upcoming");
 loadMoviesAndDisplay("popular");
 
 // 영화리스트 스크롤
-document.addEventListener("DOMContentLoaded", function () {
-  movieScroll();
-});
 
 function movieScroll() {
   new Swiper(`#card-carousel`, {
