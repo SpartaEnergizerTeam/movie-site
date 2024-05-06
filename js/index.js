@@ -1,31 +1,52 @@
 import { getMovieData } from "./api.js";
 
-// 슬라이드 배너 함수
-// 3번 이미지부터 뜨는 것, 옆 이미지가 안뜨는 것 해결해야함 //
+async function mainImgSwiper(movieTypeString) {
+  try {
+    const movieData = await getMovieData(movieTypeString);
+    const movies = movieData.results.slice(0, 5); // 5개의 이미지만 롤링되도록 합니다
 
-function SliderBox1__init() {
-  new Swiper("#main-banner", {
-    loop: true, //반복재생
-    slidesPerView: "auto", // 슬라이드 갯수 조정 (지금은 css로 맞춰두었기 때문에  auto로 함)
-    spaceBetween: 20, // 다른 슬라이드와의 간격
-    centeredSlides: true, // 가운데 중심의 슬라이드
-    autoplay: {
-      delay: 3000, // 3초마다 자동 재생
-    },
-    disableOnInteraction: false, // 사람이 넘겨도 멈추지 않고 다시 자동재생 유지
-    pagination: {
-      el: "#main-banner .swiper-pagination",
-    },
+    const swiperWrapper = document.querySelector("#main-slider");
+    swiperWrapper.innerHTML = "";
 
-    // Navigation arrows
-    navigation: {
-      nextEl: "#main-banner .swiper-next",
-      prevEl: "#main-banner .swiper-prev",
-    },
-  });
+    movies.forEach((movie) => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" class="big-banner"/>`;
+      swiperWrapper.appendChild(slide);
+    });
+
+    new Swiper("#main-banner", {
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      disableOnInteraction: false,
+      on: {
+        init: function () {
+          this.slideToLoop(0, 5); // 첫 번째 슬라이드로 이동
+        },
+      },
+      autoplay: {
+        delay: 3500, // 3.5초마다 자동 재생
+      },
+    });
+  } catch (error) {
+    console.error(
+      `영화 데이터(${movieTypeString})를 불러오는 중 오류가 발생했습니다:`,
+      error
+    );
+  }
 }
 
-SliderBox1__init();
+mainImgSwiper("popular");
 
 // 영화 api data 출력
 const loadMoviesAndDisplay = async (movieTypeString) => {
@@ -66,9 +87,13 @@ function movieScroll() {
   new Swiper(`#card-carousel`, {
     slidesPerView: 5,
     paginationClickable: true,
-    spaceBetween: 5,
+    spaceBetween: 10,
     freeMode: false,
     slidesPerGroup: 5,
+    navigation: {
+      nextEl: ".custom-swiper-button-next",
+      prevEl: ".custom-swiper-button-prev",
+    },
   });
 }
 

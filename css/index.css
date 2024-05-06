@@ -11,18 +11,19 @@ html {
   margin: 109px auto 0;
   padding-bottom: 50px;
   min-height: 1080px;
-  overflow: hidden;
   min-width: 1240px;
   background-color: #1b1b1b;
 }
 
 #main-banner {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  margin-bottom: 80px;
+  min-width: 1240px;
+  max-width: 3840px;
+  min-height: 555px;
 }
 
 #main-banner .swiper-prev {
@@ -45,8 +46,20 @@ html {
   cursor: pointer;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
-  background: #e8e8e8;
+.main-nav .swiper-pagination {
+  bottom: -20px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #e8e8e8 !important;
+}
+
+.main-nav .swiper-pagination-bullet-active {
+  background-color: #ffffff;
 }
 
 .swiper-wrapper {
@@ -61,13 +74,12 @@ html {
   align-items: center;
   width: 1240px;
   height: 508px;
-  margin: 0 auto;
 }
 
 .big-banner {
-  display: flex;
+  object-fit: cover;
   width: 1240px;
-  margin: 0px auto;
+  height: 508px;
   border-radius: 10px;
 }
 
@@ -108,7 +120,6 @@ html {
   width: 240px !important;
   height: 360px !important;
   border-radius: 10px;
-  margin: 0 4px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -124,4 +135,39 @@ html {
 
 .card-img:hover {
   transform: scale(1.05);
+}
+
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-swiper-button-prev {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: left 0.3s ease;
+}
+
+.custom-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: right 0.3s ease;
+}
+
+/* 호버 시 버튼을 화면 안으로 이동시킵니다. */
+.swiper-container:hover .custom-swiper-button-prev {
+  left: 0px; /* 화면 안으로 이동 */
+}
+
+.swiper-container:hover .custom-swiper-button-next {
+  right: 0px; /* 화면 안으로 이동 */
 }

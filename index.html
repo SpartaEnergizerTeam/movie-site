@@ -21,13 +21,11 @@
   <body>
     <main id="contents" class="main">
       <div>
-        <section class>
+        <section>
           <div id="main-banner" class="swiper-container">
-            <div class="main01-nav">
-              <div class="swiper-pagination swiper-pagination-bullets">
-                <span
-                  class="swiper-pagination-bullet swiper-pagination-bullet-active"
-                ></span>
+            <div class="main-nav">
+              <div class="swiper-pagination">
+                <span class="swiper-pagination-bullet"></span>
                 <span class="swiper-pagination-bullet"></span>
                 <span class="swiper-pagination-bullet"></span>
               </div>
@@ -38,29 +36,7 @@
             <button type="button" class="swiper-next">
               <img src="./img/main/arrow-right.png" alt="앞으로" />
             </button>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="https://image.wavve.com/v1/thumbnails/2480_1016_20_80/banner/pooq/2024/20240403_banner_161418.jpg"
-                  alt="영드_메리 앤 조지"
-                  class="big-banner"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://image.wavve.com/v1/thumbnails/2480_1016_20_80/banner/pooq/2024/20240429_banner_140516.jpg"
-                  alt="wavvie영화_300"
-                  class="big-banner"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="https://image.wavve.com/v1/thumbnails/2480_1016_20_80/banner/pooq/2024/20240429_banner_155131.jpg"
-                  alt="OG_연애남매"
-                  class="big-banner"
-                />
-              </div>
-            </div>
+            <div class="swiper-wrapper" id="main-slider"></div>
           </div>
         </section>
 
@@ -77,8 +53,17 @@
                 </button>
               </div>
             </div>
-            <div class="swiper-container" id="card-carousel">
+            <div
+              class="swiper-container second-swiper-container"
+              id="card-carousel"
+            >
               <ul id="cards-top" class="swiper-wrapper"></ul>
+              <div class="custom-swiper-button-prev">
+                <img src="./img/main/swiper_previous.png" alt="이전으로" />
+              </div>
+              <div class="custom-swiper-button-next">
+                <img src="./img/main/swiper_next.png" alt="다음으로" />
+              </div>
             </div>
           </section>
         </section>
@@ -98,6 +83,12 @@
             </div>
             <div class="swiper-container" id="card-carousel">
               <ul id="cards-playing" class="swiper-wrapper"></ul>
+              <div class="custom-swiper-button-prev">
+                <img src="./img/main/swiper_previous.png" alt="이전으로" />
+              </div>
+              <div class="custom-swiper-button-next">
+                <img src="./img/main/swiper_next.png" alt="다음으로" />
+              </div>
             </div>
           </section>
         </section>
@@ -117,6 +108,12 @@
             </div>
             <div class="swiper-container" id="card-carousel">
               <ul id="cards-upcoming" class="swiper-wrapper"></ul>
+              <div class="custom-swiper-button-prev">
+                <img src="./img/main/swiper_previous.png" alt="이전으로" />
+              </div>
+              <div class="custom-swiper-button-next">
+                <img src="./img/main/swiper_next.png" alt="다음으로" />
+              </div>
             </div>
           </section>
         </section>
@@ -136,6 +133,12 @@
             </div>
             <div class="swiper-container" id="card-carousel">
               <ul id="cards-popular" class="swiper-wrapper"></ul>
+              <div class="custom-swiper-button-prev">
+                <img src="./img/main/swiper_previous.png" alt="이전으로" />
+              </div>
+              <div class="custom-swiper-button-next">
+                <img src="./img/main/swiper_next.png" alt="다음으로" />
+              </div>
             </div>
           </section>
         </section>
