@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-	<meta charset='UTF-8'>
-	<title>Energivve(에너자이브)</title>
-	<link rel="stylesheet" href="./css/reset.css"/>
-	<link rel="stylesheet" href="./css/common.css"/>
-	<link rel="stylesheet" href="./css/index.css"/>
-	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script defer src="./js/index.js" type="module"></script>
-</head>
-<body>
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Energivve(에너자이브)</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./js/index.js" type="module"></script>
+    <script defer src="./js/popup.js"></script>
+  </head>
+  <body style="height: 100vh; width: 100vw">
+    <div class="popup-back" id="popup_back">
+      <screen class="main-screen">
+        <div class="main-outer">
+          <button class="popup-close" id="popup_close">
+            <img
+              src="https://www.wavve.com/img/btn-popup-close.1b1a67e7.svg"
+              alt="팝업 닫기"
+            />
+          </button>
+          <a class="main-content" href="#">
+            <img
+              src="https://image.wavve.com/v1/thumbnails/0_0_20_80/service30/crm/auth_firstbenefit_layerpopup_pc.jpg"
+              alt="팝업배너"
+            />
+          </a>
+          <div class="popup-checkbox">
+            <input type="checkbox" id="popup_checkbox" class="checkbox" />
+            <label for="popup_checkbox">일주일 동안 보지 않기</label>
+          </div>
+        </div>
+      </screen>
+    </div>
+  </body>
 </html>
