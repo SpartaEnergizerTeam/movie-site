@@ -29,7 +29,7 @@ getMovieDetail('1094844').then((response) => {
   }
 
   // 개요 설정
-  const overviewElement = document.querySelector('.detail-info-box .content-clamp .text');
+  const TaglineElement = document.querySelector('.detail-info-box .content-clamp .text');
   overviewElement.textContent = response.overview;
 
   // preview-title 설정
@@ -105,3 +105,15 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
     });
   })
   .catch(err => console.error(err));
+
+
+
+  const moreLink = document.querySelector('.more');
+
+  moreLink.addEventListener('click', function() {
+    // 스크롤을 제일 아래로 내립니다.
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth' // 스무스한 스크롤 효과 적용
+    });
+  });
