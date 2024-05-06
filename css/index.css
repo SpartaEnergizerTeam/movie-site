@@ -75,8 +75,9 @@
 .cards-section {
   position: relative;
   width: 1240px;
-  margin: 80px auto 100px;
+  margin: 80px auto;
   overflow: hidden;
+  padding-bottom: 40px;
 }
 
 .title {
