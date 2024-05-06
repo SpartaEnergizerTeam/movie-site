@@ -1,8 +1,8 @@
-import addReviewToLocalStorage from "./addReviewToLocalStorage.js";
-import isValidReviewValues from "./isValidReviewValues.js";
-import {getUserInformation} from "../utils.js";
+import {addReviewToLocalStorage} from "./utils.js";
+import {isValidReviewValues} from "./isValidReviewValues.js";
+import {getUserInformation, notifyAndReload} from "../utils.js";
 
-const reviewFormSubmitHandler = () => {
+const writeReviewHandler = () => {
   const form = document.querySelector('#writeReviewForm');
 
   form.addEventListener('submit', function (e) {
@@ -24,9 +24,8 @@ const reviewFormSubmitHandler = () => {
     if (!isValid) return;
 
     addReviewToLocalStorage(values);
-
-    window.location.reload();
+    notifyAndReload('작성이 완료되었어요');
   });
 };
 
-export default reviewFormSubmitHandler;
+export default writeReviewHandler;

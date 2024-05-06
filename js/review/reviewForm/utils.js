@@ -5,7 +5,7 @@ import {
   setDetailComments
 } from "../utils.js";
 
-const addReviewToLocalStorage = (values) => {
+export const addReviewToLocalStorage = (values) => {
   const movieId = getMovieIdFromURL();
   let comments = getDetailComments();
   const {index, isExistingComments} = getExistingDetailComments({comments, movieId});
@@ -17,7 +17,6 @@ const addReviewToLocalStorage = (values) => {
   }
 
   setDetailComments(comments);
-  window.alert('작성이 완료되었어요');
 };
 
 const addNewComment = ({comments, movieId, values}) => [...comments, { movieId, results: [values] }];
@@ -27,5 +26,3 @@ const addCommentToExisting = ({comments, index, values}) => {
   updatedComments[index].results.push(values);
   return updatedComments;
 };
-
-export default addReviewToLocalStorage;
