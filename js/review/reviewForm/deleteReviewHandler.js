@@ -3,23 +3,27 @@ import {isValidPassword} from "./isValidReviewValues.js";
 import {notifyAndReload} from "../utils.js";
 import useDeleteModal from "./useDeleteModal.js";
 
+const POPUP_NAME = 'popup';
+
 const deleteReviewHandler = () => {
-  const handleButtonClick = (event) => {
+  const onClick = (event) => {
+    const popup = document.getElementById(POPUP_NAME);
+    if (popup) return;
+
     const index = parseInt(event.target.closest('.comment-util').dataset.index);
 
     const modal = useDeleteModal({
-      name: 'popup',
+      name: POPUP_NAME,
       onSubmit: () => onSubmit({passwordInput, index})
     });
 
     const passwordInput = modal.querySelector('.text-input[type=password]');
-    passwordInput.focus();
 
     document.getElementById('reviewContainer').appendChild(modal);
   };
 
   document.querySelectorAll('.comment-util .delete-btn')
-    .forEach(btn => btn.addEventListener('click', handleButtonClick));
+    .forEach(btn => btn.addEventListener('click', onClick));
 };
 
 const onSubmit = ({passwordInput, index}) => {
