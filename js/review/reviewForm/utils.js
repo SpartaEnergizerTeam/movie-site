@@ -26,3 +26,15 @@ const addCommentToExisting = ({comments, index, values}) => {
   updatedComments[index].results.push(values);
   return updatedComments;
 };
+
+const deleteReview = ({reviews, deleteIndex}) => reviews.filter((_, i) => i !== deleteIndex);
+
+export const deleteReviewToLocalStorage = (deleteIndex) => {
+  const movieId = getMovieIdFromURL();
+  let comments = getDetailComments();
+  const {index: currentMovieIndex} = getExistingDetailComments({comments, movieId});
+
+  comments[currentMovieIndex].results = deleteReview({reviews: comments[currentMovieIndex].results, deleteIndex});
+
+  setDetailComments(comments);
+}
