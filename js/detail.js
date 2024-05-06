@@ -107,6 +107,7 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
   .catch(err => console.error(err));
 
 
+//더보기 스크롤 밑으로 내리기 함수
 
   const moreLink = document.querySelector('.more');
 
