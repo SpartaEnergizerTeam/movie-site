@@ -1,30 +1,19 @@
-body, html {
-    height: 100%;
-    background-color: #1b1b1b;
-    scrollbar-color: #a5a5a5 #1b1b1b;
-    
-}
+/*메인 이미지 관련 css*/
 
-.image-box img {
-    width: 100%;
-}
-
-.image-box:before {
+.video-detail .image-box:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     background-image: url(../img/detail/detail_gra_bg.png);
-    background-size: 1240px auto;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     z-index: 10;
 }
 
-/*메인 이미지 관련 css*/
-
-.image-box {
+.video-detail .image-box {
     
     position: relative;
     overflow: hidden;
@@ -34,13 +23,13 @@ body, html {
     
 }
 
-.image-box img {
+.video-detail .image-box img {
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
 
-.text-box {
+.video-detail .text-box {
     position: absolute;
     z-index: 2;
     top: 385px;
@@ -54,9 +43,14 @@ body, html {
     margin: 0 auto;
 }
 
+.video-detail .text-box .btnbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    /* align-items: center; /*수평정렬, 원본에는 수평정렬 썼는데 저는 공유버튼이랑 높낮이 맞추려고 껐습니다*/
+}
 
-
-h1.logo-box {
+.video-detail .text-box .logo-box {
     font-size: 70px;
     color: #ffffff;
     margin-left: -430px;
@@ -65,36 +59,33 @@ h1.logo-box {
      /*텍스트 중앙정렬*/
 }
 
-.dot-item {
+.video-detail .text-box .dot-item {
     font-weight: bold;
     color: #ffffff;
 }
 
-.video-button {
+.video-detail .btnbox .video-button {
     width: 360px;
     height: 48px;
     border-radius: 12px;
     background-color: #1351f9;
     font-size: 16px;
-    color: #fff;
+    color: #ffffff;
     margin-right: 50px; /* 오른쪽 여백 추가 */
 }
 
-.content-clamp {
+.video-detail .detail-info-box .content-clamp {
     font-size: 16px;
     color: #a5a5a5;
     line-height: 1.5;
 }
 
-
-
-/*메인 이미지 관련 css*/
-.more {
-    color:#fff
+.video-detail .detail-info-box .content-clamp .more {
+    color:#ffffff
     
 }
 
-.btnbox .icon-item .icon-txt {
+.video-detail .text-box .btnbox .icon-item .icon-txt {
     display: block;
     margin-top: 4px;
     font-size: 12px;
@@ -102,12 +93,14 @@ h1.logo-box {
     color: #a5a5a5;
 }
 
-.player-nav ul li button.on {
+/*여기부터 하단 */
+
+.player-bottom-contents .player-nav ul li button.on {
     border-bottom-color: #1351f9;
-    color: #fff;
+    color: #ffffff;
 }
 
-.player-nav ul li button {
+.player-bottom-contents .player-nav ul li button {
     display: inline-block;
     padding: 0 20px;
     border-bottom: 4px solid transparent;
@@ -120,11 +113,7 @@ h1.logo-box {
     margin-left: -10px;
 }
 
-
-
-
-
-.player-nav ul {         /* 선긋기효과 */
+.player-bottom-contents .player-nav ul {         /* 선긋기효과 */
     width: 100%;
     border-bottom: 1px solid #2f2f2f;
     font-size: 0;
@@ -142,33 +131,21 @@ h1.logo-box {
     margin: 0 auto;
 }
 
-.btnbox {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    /* align-items: center; /*수평정렬, 원본에는 수평정렬 썼는데 저는 공유버튼이랑 높낮이 맞추려고 껐습니다*/
-}
-
-
 .detail-info-box {
     width: 780px;
 
     margin-top: 25px;
 }
 
-
-
-.preview-title {
+.detail-view-content-arena .preview-detail-box .preview-title {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: #ffffff;
     line-height: 30px;
 }
 
-.preview-dsc {
-
-    
+.detail-view-content-arena .preview-detail-box .preview-dsc {
     margin-top: 18px;
     font-size: 16px;
     color: #a5a5a5;
@@ -179,15 +156,8 @@ h1.logo-box {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: #ffffff;
     line-height: 30px;
-}
-
-
-.detail-view-content-arena  {
-
-    padding-bottom: 60px;
-
 }
 
 .detail-view-content-arena .preview-detail-box {
@@ -197,19 +167,15 @@ h1.logo-box {
 .detail-view-content-arena .content-actor-box {
     margin-top: 15px;
 }
-.content-actor-box  {
+.detail-view-content-arena .content-actor-box  {
     margin-right: 12px;
     font-weight: 400;
     color: #a5a5a5;
 }
 
-.detail-view-content-arena .detail-view-box {    /* 선긋기효과 */
-    /*padding-top: 20px;*/
-    border-top: 1px solid #2f2f2f;
-}
-
-
-.detail-view-content-arena .detail-view-box {
+.detail-view-content-arena .detail-view-box {    
+   
+    border-top: 1px solid #2f2f2f;/* 선긋기효과 */
     display: flex;
     flex-wrap: wrap;
     margin-top: 15px;
@@ -226,7 +192,7 @@ h1.logo-box {
     vertical-align: top;
 }
 
-.thumb-img {
+.player-bottom-contents .detail-view-content-arena .detail-view-box .thumb-img {
     margin-top: 25px;
     border-radius: 20px;
     margin-right: 30px;
@@ -235,19 +201,13 @@ h1.logo-box {
     
 }
 
-.detail-view-content-area .detail-view-box .detail-info-table .genre {
-    display: inline-block;
-    color: #fff;
-    vertical-align: top;
-}
-
 .detail-view-content-area,
 .detail-view-box,
 .detail-info-table,
 .genre {
-    color: #fff; 
+    color: #ffffff; 
 }
 
-.detail-dsc {
+.detail-view-content-arena .detail-view-box .detail-info-box .detail-dsc {
     line-height: 25px;
 }

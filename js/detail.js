@@ -1,11 +1,5 @@
 import {getMovieDetail} from './api.js';
 
-//getMovieDetail('1096197').then((response) => {
-//  const dsd = document.querySelector('.logo-box');
-//  dsd.textContent = response.title;
-//  const genre = document.querySelector('.dot-item');
-//  genre.textContent =response.genres(name);
-//});
 
 getMovieDetail('1094844').then((response) => {
   // 영화 제목 설정
