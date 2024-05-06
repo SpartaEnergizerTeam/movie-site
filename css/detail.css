@@ -47,7 +47,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
-    /* align-items: center; /*수평정렬, 원본에는 수평정렬 썼는데 저는 공유버튼이랑 높낮이 맞추려고 껐습니다*/
 }
 
 .video-detail .text-box .logo-box {
@@ -116,7 +115,6 @@
 .player-bottom-contents .player-nav ul {         /* 선긋기효과 */
     width: 100%;
     border-bottom: 1px solid #2f2f2f;
-    font-size: 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -187,7 +185,7 @@
     padding-top: 30px;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #ffffff;
     text-align: left;
     vertical-align: top;
 }
