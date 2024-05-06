@@ -90,12 +90,29 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
 
 //더보기 스크롤 밑으로 내리기 함수
 
-  const moreLink = document.querySelector('.more');
+const moreLink = document.querySelector('.more');
 
-  moreLink.addEventListener('click', function() {
-    // 스크롤을 제일 아래로 내립니다.
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth' // 스무스한 스크롤 효과 적용
-    });
+moreLink.addEventListener('click', function() {
+  // 스크롤을 제일 아래로 내립니다.
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth' // 스무스한 스크롤 효과 적용
   });
+});
+
+// 클립보드
+const shareButton = document.querySelector('.icon-item button');
+shareButton.addEventListener('click', function() {
+  // 현재 페이지의 URL을 가져옵니다.
+  const url = window.location.href;
+  // 클립보드에 URL을 복사합니다.
+  navigator.clipboard.writeText(url)
+    .then(() => {
+      // 복사가 성공했을 때 알림을 표시합니다.
+      alert('주소가 복사되었습니다.');
+    })
+    .catch(err => {
+      // 복사가 실패했을 때 에러를 콘솔에 출력합니다.
+      console.error('주소 복사 실패:', err);
+    });
+});
