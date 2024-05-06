@@ -2,7 +2,6 @@ const thresholdsPercent = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 const reviewRatingClickHandler = () => {
   document.querySelector('.write-rate-container .rate-box').addEventListener('click', function (e) {
-    e.stopPropagation();
     const rect = this.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const width = rect.width;
