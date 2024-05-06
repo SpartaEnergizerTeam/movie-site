@@ -81,24 +81,30 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
     actorListElement.innerHTML = ''; // 기존의 내용 초기화
 
     // 출연진 정보를 추가합니다.
-    actors.forEach(actor => {
+    actors.forEach((actor, index) => {
       const actorElement = document.createElement('span');
       actorElement.classList.add('content-actor-list');
       actorElement.innerHTML = `<a>${actor.name}</a>`;
       actorListElement.appendChild(actorElement);
+
+      // 마지막 요소가 아닐 경우에만 쉼표를 추가합니다.
+      if (index < actors.length - 1) {
+        const comma = document.createTextNode(', ');
+        actorListElement.appendChild(comma);
+      }
     });
 
     // 출연진 정보를 detail-info-table에 추가합니다.
     const genreRow = document.querySelector('.detail-info-table tbody tr:nth-child(3) td');
     genreRow.innerHTML = '';
-    actors.forEach(actor => {
+    actors.forEach((actor, index) => {
       const actorElement = document.createElement('a');
       actorElement.classList.add('genre');
       actorElement.textContent = actor.name;
       genreRow.appendChild(actorElement);
 
       // 마지막 요소가 아닐 경우에만 쉼표를 추가합니다.
-      if (actor !== actors[actors.length - 1]) {
+      if (index < actors.length - 1) {
         const comma = document.createTextNode(', ');
         genreRow.appendChild(comma);
       }
