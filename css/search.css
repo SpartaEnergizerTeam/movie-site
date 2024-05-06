@@ -1,10 +1,12 @@
-.popularSeries {
+.popular-series {
   display: block;
   width: 1240px;
   height: 221px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-.titleSeries {
+.title-series {
   color: #ffffff;
   font-size: 24px;
   display: block;
@@ -13,20 +15,65 @@
   line-height: 35px;
 }
 
-.swiperContainer img {
+.swiper-container img {
   width: 230px;
   height: 135px;
+  border-radius: 15px;
 }
 
-.moviePosterContainer {
+.movie-poster-container {
   display: block;
 }
 
-.swiperContainer {
+.swiper-container {
   display: flex;
   gap: 10px;
 }
 
-.moviePosterContainer p {
+.movie-poster-container p {
   color: #ffffff;
+}
+
+.popular-movies {
+  display: block;
+  width: 1240px;
+  height: 221px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.contentsName {
+  margin-top: 10px;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.search-input-box {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.5px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 40px;
+  padding: 0 40px;
+}
+
+.search-input-box:focus {
+  outline: none;
+}
+
+.search-input-icon {
+  position: absolute;
+  margin-left: 11px;
+}
+
+.serch-cancel-icon {
+  position: absolute;
+  width: 15px;
+  height: 15px;
 }

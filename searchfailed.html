@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/searchfailed.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -46,12 +47,24 @@
           </ul>
         </nav>
         <div class="search-container">
-          <a href="./search.html">
-            <img src="./img/common/icon-search.svg" alt="검색" />
-          </a>
+          <img src="img/common/icon-search.svg" class="search-input-icon" />
+          <input
+            placeholder="제목, 장르, 배우로 찾아보세요"
+            type="text"
+            class="search-input-box"
+          />
+          <img src="...." class="search-cancel-icon" />
         </div>
       </div>
     </header>
+    <main class="search-empty-main">
+      <img src="img/common/icon-alert.png" class="search-empty-icon" />
+      <div class="search-empty-text">
+        '
+        <span class="error_word">응애</span>
+        '검색결과가 없어요.
+        <div class="search-empty-text2">이런 검색어는 어떠세요?</div>
+      </div>
     </main>
   </body>
 </html>

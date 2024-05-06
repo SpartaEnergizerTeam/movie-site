@@ -22,8 +22,8 @@
   </head>
   <body>
     <header>
-      <div class="headerNav">
-        <nav class="headerNavMenu">
+      <div class="header-nav">
+        <nav class="header-nav-menu">
           <ul>
             <li><a href="#">로그인</a></li>
             <li><a href="#">이용권</a></li>
@@ -33,11 +33,11 @@
           </ul>
         </nav>
       </div>
-      <div class="headerSection">
+      <div class="header-section">
         <a href="./index.html" class="logo">
           <img src="./img/common/ci-wavve.svg" alt="WAVVE" />
         </a>
-        <nav class="headerMenu">
+        <nav class="header-menu">
           <ul>
             <li><a href="#" class="on">홈</a></li>
             <li><a href="#">카테고리</a></li>
@@ -45,55 +45,103 @@
             <li><a href="#">MY</a></li>
           </ul>
         </nav>
-        <div class="searchContainer">
-          <a href="./search.html">
-            <img src="./img/common/icon-search.svg" alt="검색" />
-          </a>
+        <div class="search-container">
+          <img src="img/common/icon-search.svg" class="search-input-icon" />
+          <input
+            placeholder="제목, 장르, 배우로 찾아보세요"
+            type="text"
+            class="search-input-box"
+          />
+          <img src="...." class="search-cancel-icon" />
         </div>
-      </div>
     </header>
     <main>
-      <div class="popularSeries">
-        <div class="titleSeries">인기 시리즈</div>
-        <ul class="swiperContainer">
+      <div class="popular-series">
+        <div class="title-series">인기 시리즈</div>
+        <ul class="swiper-container">
           <li>
-            <div class="moviePosterContainer">
+            <div class="movie-poster-container">
               <img
                 src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/BMS/TVProgram/2022/PRG_S01_P451575582-Horizontal_LogoY-RE.webp"
               />
-              <p>꼬리에 꼬리를 무는 그날 이야기</p>
+              <span class="contentsName">꼬리에 꼬리를 무는 그날 이야기</span>
             </div>
           </li>
           <li>
-            <div class="moviePosterContainer">
+            <div class="movie-poster-container">
               <img
                 src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202309/1694678594363712565.webp"
               />
-              <p>나는 SOLO, 그 후 사랑은 계속된다</p>
+              <span class="contentsName">나는 SOLO, 그 후 사랑은 계속된다</span>
             </div>
           </li>
           <li>
-            <div class="moviePosterContainer">
+            <div class="movie-poster-container">
               <img
                 src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/BMS/TVProgram/2022/PRG_S03_22000012183-Horizontal_LogoY.webp"
               />
-              <p>나는 SOLO</p>
+              <span class="contentsName">나는 SOLO</span>
             </div>
           </li>
           <li>
-            <div class="moviePosterContainer">
+            <div class="movie-poster-container">
               <img
                 src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202404/1713164400649524213.webp"
               />
-              <p>덩치 서바이벌-먹찌빠</p>
+              <span class="contentsName">덩치 서바이벌-먹찌빠</span>
             </div>
           </li>
           <li>
-            <div class="moviePosterContainer">
+            <div class="movie-poster-container">
               <img
                 src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/BMS/TVProgram/2022/PRG_M_1003736100000100000-Horizontal_LogoY.webp"
               />
-              <p>실화탐사대</p>
+              <span class="contentsName">실화탐사대</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="popular-movies">
+        <div class="title-series">인기 영화</div>
+        <ul class="swiper-container">
+          <li>
+            <div class="movie-poster-container">
+              <img
+                src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202404/1713508933635952631.webp"
+              />
+              <span class="contentsName">파묘</span>
+            </div>
+          </li>
+          <li>
+            <div class="movie-poster-container">
+              <img
+                src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202404/1712297718515465882.webp"
+              />
+              <span class="contentsName">데드맨 (2024)</span>
+            </div>
+          </li>
+          <li>
+            <div class="movie-poster-container">
+              <img
+                src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202401/1706514057956365212.webp"
+              />
+              <span class="contentsName">노량: 죽음의 바다</span>
+            </div>
+          </li>
+          <li>
+            <div class="movie-poster-container">
+              <img
+                src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/meta/image/202310/1697607772102026758.webp"
+              />
+              <span class="contentsName">스즈메의 문단속</span>
+            </div>
+          </li>
+          <li>
+            <div class="movie-poster-container">
+              <img
+                src="https://image.wavve.com/v1/thumbnails/1080_609_20_80/movieImg/MovieGroup/2022/GMV_CD01_WR0000011251-Horizontal_LogoY.webp"
+              />
+              <span class="contentsName">해리포터와 마법사의 돌</span>
             </div>
           </li>
         </ul>
