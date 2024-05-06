@@ -31,13 +31,15 @@
           <div id="animate__zoomInDown" class="animate__animated">
             <img
               id="imgUrl"
-              style="width: 120px; height: 120px"
               src="https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg"
               alt="avatar"
+              class="img_style"
             />
           </div>
         </div>
-        <button class="createBtn" id="createRandomBtn">랜덤 생성</button>
+        <button type="button" class="createBtn" id="createRandomBtn">
+          랜덤 생성
+        </button>
         <div class="info_box">
           <span class="label">아이디</span>
           <input
@@ -61,9 +63,7 @@
           />
         </div>
         <div class="confirm_box">
-          <a href="index.html" id="cancel" type="button" class="btn cancel"
-            >취소</a
-          >
+          <a href="index.html" id="cancel" class="btn cancel">취소</a>
           <button id="confirm" type="submit" class="btn confirm">확인</button>
         </div>
       </form>
