@@ -23,14 +23,13 @@ getMovieDetail('1094844').then((response) => {
   const imageBox = document.querySelector('.video-detail .image-box img');
   const thumbImg = document.querySelector('.thumb-img');
   if (response.poster_path) {
-    const posterUrl = `https://image.tmdb.org/t/p/original${response.poster_path}`;
-    imageBox.src = posterUrl;
-    thumbImg.src = posterUrl;
+    imageBox.src = `https://image.tmdb.org/t/p/original${response.backdrop_path}`;
+    thumbImg.src = `https://image.tmdb.org/t/p/original${response.poster_path}`;
   }
 
   // 개요 설정
   const TaglineElement = document.querySelector('.detail-info-box .content-clamp .text');
-  overviewElement.textContent = response.overview;
+  TaglineElement.textContent = response.overview;
 
   // preview-title 설정
   const previewTitleElement = document.querySelector('.preview-title');
@@ -73,36 +72,18 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
     // preview-dsc에 있는 요소를 찾아서 출연진 정보를 추가합니다.
     const actorListElement = document.querySelector('.content-actor-list');
     actorListElement.innerHTML = ''; // 기존의 내용 초기화
-
-    // 출연진 정보를 추가합니다.
-    actors.forEach((actor, index) => {
-      const actorElement = document.createElement('span');
-      actorElement.classList.add('content-actor-list');
-      actorElement.innerHTML = `<a>${actor.name}</a>`;
-      actorListElement.appendChild(actorElement);
-
-      // 마지막 요소가 아닐 경우에만 쉼표를 추가합니다.
-      if (index < actors.length - 1) {
-        const comma = document.createTextNode(', ');
-        actorListElement.appendChild(comma);
-      }
-    });
+    const actorElement = document.createElement('span');
+    actorElement.classList.add('content-actor-list');
+    actorElement.textContent = actors.map((actor) => actor.name).join(', ');
+    actorListElement.appendChild(actorElement);
 
     // 출연진 정보를 detail-info-table에 추가합니다.
     const genreRow = document.querySelector('.detail-info-table tbody tr:nth-child(3) td');
     genreRow.innerHTML = '';
-    actors.forEach((actor, index) => {
-      const actorElement = document.createElement('a');
-      actorElement.classList.add('genre');
-      actorElement.textContent = actor.name;
-      genreRow.appendChild(actorElement);
-
-      // 마지막 요소가 아닐 경우에만 쉼표를 추가합니다.
-      if (index < actors.length - 1) {
-        const comma = document.createTextNode(', ');
-        genreRow.appendChild(comma);
-      }
-    });
+    const genreRowElement = document.createElement('span');
+    genreRowElement.classList.add('genre');
+    genreRowElement.textContent = actors.map((actor) => actor.name).join(', ');
+    genreRow.appendChild(genreRowElement);
   })
   .catch(err => console.error(err));
 
