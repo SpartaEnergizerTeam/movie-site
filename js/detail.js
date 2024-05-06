@@ -7,7 +7,7 @@ import {getMovieDetail} from './api.js';
 //  genre.textContent =response.genres(name);
 //});
 
-getMovieDetail('1096197').then((response) => {
+getMovieDetail('1094844').then((response) => {
   // 영화 제목 설정
   const titleElement = document.querySelector('.logo-box');
   titleElement.textContent = response.title;
@@ -60,4 +60,48 @@ getMovieDetail('1096197').then((response) => {
   genreRow.innerHTML = `<a class="genre">${genres}</a>`;
 });
 //////////영화 인물 감독 ////////////
+//1.인물 api. 상단4명만 출력할것
 
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNDQ1MzFmMGRkOGY3NmY2NDE2NWEwNzU4MDQ1M2QzOSIsInN1YiI6IjY2MmIyMzQ5NzY0ODQxMDExZDJjMzFkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bNR43UvxNhyv-aUuh3xtx44tXz-IjayN-QrgO-ATUMA'
+  }
+};
+
+fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', options)
+  .then(response => response.json())
+  .then(response => {
+    // API에서 가져온 출연진 정보
+    const actors = response.cast.slice(0, 4); // 배열의 처음 4개 요소만 선택
+
+    // preview-dsc에 있는 요소를 찾아서 출연진 정보를 추가합니다.
+    const actorListElement = document.querySelector('.content-actor-list');
+    actorListElement.innerHTML = ''; // 기존의 내용 초기화
+
+    // 출연진 정보를 추가합니다.
+    actors.forEach(actor => {
+      const actorElement = document.createElement('span');
+      actorElement.classList.add('content-actor-list');
+      actorElement.innerHTML = `<a>${actor.name}</a>`;
+      actorListElement.appendChild(actorElement);
+    });
+
+    // 출연진 정보를 detail-info-table에 추가합니다.
+    const genreRow = document.querySelector('.detail-info-table tbody tr:nth-child(3) td');
+    genreRow.innerHTML = '';
+    actors.forEach(actor => {
+      const actorElement = document.createElement('a');
+      actorElement.classList.add('genre');
+      actorElement.textContent = actor.name;
+      genreRow.appendChild(actorElement);
+
+      // 마지막 요소가 아닐 경우에만 쉼표를 추가합니다.
+      if (actor !== actors[actors.length - 1]) {
+        const comma = document.createTextNode(', ');
+        genreRow.appendChild(comma);
+      }
+    });
+  })
+  .catch(err => console.error(err));
