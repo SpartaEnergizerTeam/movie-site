@@ -1,4 +1,7 @@
-const renderMovieReviews = (reviews = []) => {
+import getMovieReviews from "./getMovieReviews.js";
+
+const renderMovieReviews = () => {
+  const reviews = getMovieReviews();
   const $wrap = document.querySelector('#reviewList');
 
   if (reviews.length === 0) {
