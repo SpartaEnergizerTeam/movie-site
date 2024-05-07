@@ -40,7 +40,7 @@ export const getMovieWithKeywords = async (keywords) => {
 
 // 무비 id를 입력하면 영화 디테일 정보를 가져옵니다.
 export const getMovieDetail = async (movie_id) => {
-  const url = `${defaultUrl}${movie_id}?language=ko`;
+  const url = `${defaultUrl}movie/${movie_id}?language=ko`;
   const response = await fetch(url, options);
   return await response.json();
 };
@@ -68,3 +68,4 @@ export const getMovieVideos = async (movie_id) => {
   }
   return [];
 };
+
