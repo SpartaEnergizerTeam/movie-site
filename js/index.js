@@ -20,7 +20,7 @@ const mainImgSwiper = async (movieTypeString) => {
       spaceBetween: 20,
       centeredSlides: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".main-nav .swiper-pagination",
         clickable: true,
       },
       navigation: {

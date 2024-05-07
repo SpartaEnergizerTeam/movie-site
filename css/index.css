@@ -11,9 +11,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  margin-bottom: 80px;
   min-width: 1240px;
-  min-height: 555px;
 }
 
 #main-banner .swiper-prev {
@@ -152,9 +150,24 @@
 
 /* 호버 시 버튼을 화면 안으로 이동시킵니다. */
 .swiper-container:hover .custom-swiper-button-prev {
-  left: 0px; /* 화면 안으로 이동 */
+  left: 0; /* 화면 안으로 이동 */
 }
 
 .swiper-container:hover .custom-swiper-button-next {
-  right: 0px; /* 화면 안으로 이동 */
+  right: 0; /* 화면 안으로 이동 */
+}
+
+.main-nav .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+  bottom: unset;
+}
+
+.main-nav {
+  margin-top: 30px;
+}
+
+.main-nav .swiper-pagination-bullet {
+  background: #e8e8e8;
+  width: 10px;
+  height: 10px;
 }
