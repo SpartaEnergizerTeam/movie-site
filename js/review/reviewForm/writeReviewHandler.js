@@ -14,6 +14,14 @@ const writeReviewHandler = () => {
   const $rate = document.querySelector('.write-button-container .rate-container');
 
   openReviewButton.addEventListener('click', () => {
+    const {username, imageUrl} = getUserInformation();
+
+    if (!username) {
+      window.alert('먼저 프로필을 설정하신 뒤에 작성해주세요');
+      window.location.href = './profile.html';
+      return;
+    }
+
     const isValid = isValidRate($rate.dataset.rate);
     if (!isValid) return;
 
@@ -22,13 +30,12 @@ const writeReviewHandler = () => {
       title: '감상평을 남겨주세요',
       innerHtmlText: MODAL_CONTENT,
       buttonText: '평가하기',
-      onSubmit: () => onSubmit({modal})
+      onSubmit: () => onSubmit({modal, username, imageUrl})
     });
   });
 
-  const onSubmit = ({ modal }) => {
+  const onSubmit = ({ modal, username, imageUrl }) => {
     const $comment = modal.querySelector('.comment');
-    const {username, imageUrl} = getUserInformation();
 
     const values = {
       rate: $rate.dataset.rate,
