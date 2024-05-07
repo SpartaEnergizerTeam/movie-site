@@ -59,8 +59,15 @@ const loadMoviesAndDisplay = async (movieTypeString) => {
     const cardList = document.querySelector(`#cards-${movieTypeString}`);
 
     const cardsHtml = movies
-      .map((movie) => {
+      .map((movie, index) => {
+        const ratedNumberHtml =
+          movieTypeString === "top"
+            ? `<img class="rated-number" src="./img/main/rate-num/${
+                index + 1
+              }.png" alt="rated-num ${index + 1}"/>`
+            : "";
         return `<li class="card-poster swiper-slide" id=${movie.id}>
+          ${ratedNumberHtml} <!-- 여기에 순위 이미지 코드를 추가합니다. -->
           <img class="card-img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
           </li>`;
       })

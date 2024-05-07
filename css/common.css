@@ -7,3 +7,12 @@ html {
   scrollbar-color: #a5a5a5 #1b1b1b;
   color: #a5a5a5;
 }
+
+.blind {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
