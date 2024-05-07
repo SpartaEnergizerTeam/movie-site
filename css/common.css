@@ -1,5 +1,11 @@
 body {
-    background-color: #1b1b1b;
+  background-color: #1b1b1b;
+}
+
+body,
+html {
+  scrollbar-color: #a5a5a5 #1b1b1b;
+  color: #a5a5a5;
 }
 
 .blind {
