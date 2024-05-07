@@ -121,7 +121,6 @@
   width: 240px;
   height: 360px;
   border-radius: 10px;
-  overflow: hidden;
   flex-shrink: 0;
   position: relative;
   z-index: 2;
@@ -130,8 +129,6 @@
 #card-carousel #cards-top .card-poster {
   width: 240px;
   height: 360px;
-  border-radius: 10px;
-  overflow: visible;
   position: relative;
   z-index: 3;
 }
@@ -190,7 +187,7 @@
 }
 
 .main-nav
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   position: relative;
   bottom: unset;
 }
@@ -203,4 +200,10 @@
   background: #e8e8e8;
   width: 10px;
   height: 10px;
+}
+
+.card-image-wrap {
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 2 / 3;
 }
