@@ -15,35 +15,28 @@
 <body>
     <img src="https://dx35vtwkllhj9.cloudfront.net/universalstudios/nope/images/gallery/image1.jpg" alt="" style="width: 100%; max-width: 600px; margin: 0 auto 30px; display: block;"/>
     <section id="reviewContainer">
-        <h1 class="section-title">감상평</h1>
-        <div id="reviewList"></div>
-        <h1 class="section-title">평가하기</h1>
-        <form id="writeReviewForm">
-            <div class="form-row">
-                <div id="commentRateBox" class="write-rate-container">
-                    <div class="rate-box gray">
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                    </div>
-                    <div id="fillRateBox" class="rate-box">
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                        <span class="star-fill"></span>
-                    </div>
+        <div class="write-button-container">
+            <p>이 작품 어떠셨나요?</p>
+            <div class="rate-container big">
+                <div class="rate-box gray">
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                </div>
+                <div class="fill-rate-box rate-box">
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
+                    <span class="star-fill"></span>
                 </div>
             </div>
-            <div class="comment-wrap">
-                <textarea id="comment" placeholder="내용을 입력해주세요" maxlength="300"></textarea>
-            </div>
-            <button id="writeReviewBtn" type="submit">
-                평가하기
-            </button>
-        </form>
+            <button id="openWriteReviewBtn" type="button">감상평 남기기</button>
+        </div>
+        <h1 class="section-title">감상평</h1>
+        <div id="reviewList"></div>
     </section>
 </body>
 </html>

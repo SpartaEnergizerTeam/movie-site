@@ -4,6 +4,12 @@
     --title-color2: #84868d;
 }
 
+#reviewContainer {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 3%;
+}
+
 #reviews {
     color: var(--title-color2);
     display: flex;
@@ -18,6 +24,7 @@
 #reviews .name {
     color: var(--title-color0);
     font-weight: 300;
+    font-size: 16px;
 }
 
 #reviews .user-group {
@@ -40,31 +47,32 @@
     margin: 4px 0;
     line-height: 1.5;
     white-space: pre-wrap;
+    font-size: 16px;
 }
 
 #reviews .top-info {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
 }
 
-.rate-box {
+#reviewContainer .rate-box {
     display: flex;
 }
 
-[class*='star-'] {
+#reviewContainer [class*='star-'] {
     display: block;
-    width: 10px;
-    height: 10px;
-    mask: url(../img/detail/star-fill.svg) no-repeat center /10px;
+    width: 12px;
+    height: 12px;
+    mask: url(../img/detail/star-fill.svg) no-repeat center /12px;
     background-color: #fbc02d;
 }
 
-[class*='star-half'] {
+#reviewContainer [class*='star-half'] {
     mask-image: url(../img/detail/star-half.svg);
 }
 
-.section-title {
+#reviewContainer .section-title {
     color: var(--title-color0);
     font-size: 20px;
     font-weight: 600;
@@ -72,92 +80,59 @@
     margin-bottom: 13px;
 }
 
-.comment-wrap {
-    background: #323337;
-    padding: 16px 36px 20px;
+#reviewContainer .comment-wrap {
+    padding: 16px 16px 20px;
     border-radius: 4px;
     position: relative;
+    border: 1px solid var(--title-color1);
+    display: flex;
 }
 
-#comment {
+#reviewContainer .comment {
     width: 100%;
     resize: none;
     border: none;
     background: none;
     height: 72px;
     font-size: 15px;
-    color: var(--title-color1);
-    font-weight: 300;
+    color: #000000;
+    font-weight: 400;
     line-height: 1.6;
     outline: none;
 }
 
-#reviewContainer {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 3%;
-}
-
-#writeReviewBtn {
-    color: #babac1;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 22px 46px;
-    border-radius: 4px;
-    background: #272727;
-    width: 100%;
-    margin-top: 4px;
-}
-
-#writeReviewForm {
-    margin: 15px 0 0;
-}
-
-.form-row {
-    position: relative;
-    background: #323337;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    padding: 0 36px;
-    gap: 16px;
-    margin-bottom: 4px;
-    height: 62px;
-}
-
-.write-rate-container {
+#reviewContainer .rate-container.big {
     position: relative;
     display: flex;
     padding: 15px 0;
     border-radius: 4px;
-    width: 100px;
-    margin-right: 10px;
+    width: 140px;
     flex-shrink: 0;
 }
-.form-row .rate-box:not(.gray) {
+#reviewContainer .rate-container.big .rate-box:not(.gray) {
     z-index: 2;
     width: 0;
     white-space: nowrap;
     overflow: hidden;
     pointer-events: none;
 }
-.form-row .rate-box.gray {
+#reviewContainer .rate-container.big .rate-box.gray {
     position: absolute;
     top: 15px;
     left: 0;
     z-index: 1;
-    width: 100px;
+    width: 140px;
     cursor: pointer;
 }
 
-.form-row .rate-box.gray [class*='star-'] {
+#reviewContainer .rate-container.big .rate-box.gray [class*='star-'] {
     background-color: #535455;
 }
 
-.form-row [class*='star-'] {
-    width: 20px;
-    height: 20px;
-    mask-size: 20px;
+#reviewContainer .rate-container.big [class*='star-'] {
+    width: 28px;
+    height: 28px;
+    mask-size: 28px;
     flex-shrink: 0;
 }
 
@@ -169,13 +144,13 @@
     text-align: center;
 }
 
-.comment-util {
+#reviewContainer .comment-util {
     position: absolute;
     top: 6px;
     right: 0;
     display: flex;
     gap: 5px;
-    font-size: 12px;
+    font-size: 13px;
     z-index: 1;
 }
 
@@ -183,9 +158,9 @@
     position: relative;
 }
 
-.comment-util li + li:before {
+#reviewContainer .comment-util li + li:before {
     position: absolute;
-    top: 4px;
+    top: 5px;
     left: -3px;
     content: "";
     width: 1px;
@@ -193,13 +168,13 @@
     background-color: #2f2f2f;
 }
 
-.comment-util button {
+#reviewContainer .comment-util button {
     color: inherit;
     font-size: inherit;
     padding: 2px 4px;
 }
 
-#reviewContainer #popup {
+#reviewContainer .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -212,7 +187,7 @@
     justify-content: center;
 }
 
-#reviewContainer #modalForm {
+#reviewContainer .popup .modal-form {
     background: var(--title-color0);
     border-radius: 12px;
     padding: 36px 22px 30px;
@@ -220,14 +195,14 @@
     position: relative;
 }
 
-#reviewContainer #popup strong {
+#reviewContainer .popup strong {
     display: block;
     margin-bottom: 20px;
     font-size: 17px;
     font-weight: 700;
 }
 
-#reviewContainer #popup .modal-button {
+#reviewContainer .popup .modal-button {
     background: #000000;
     width: 100%;
     color: var(--title-color0);
@@ -239,7 +214,7 @@
     font-weight: 500;
 }
 
-button.close-button {
+#reviewContainer .popup .close-button {
     width: 35px;
     height: 35px;
     background: #eeeeee;
@@ -250,7 +225,7 @@ button.close-button {
     cursor: pointer;
 }
 
-button.close-button:before {
+#reviewContainer .close-button:before {
     width: 14px;
     height: 2px;
     background: #555555;
@@ -263,7 +238,7 @@ button.close-button:before {
     transform: rotate(45deg);
 }
 
-button.close-button:after {
+#reviewContainer .close-button:after {
     width: 14px;
     height: 2px;
     background: #555555;
@@ -277,7 +252,7 @@ button.close-button:after {
 }
 
 
-.text-input {
+#reviewContainer .text-input {
     height: 45px;
     background: none;
     color: #000000;
@@ -290,7 +265,55 @@ button.close-button:after {
     font-size: 15px;
 }
 
-.text-input:not(:placeholder-shown) {
+#reviewContainer .text-input:not(:placeholder-shown) {
     font: small-caption;
     font-size: 34px;
+}
+
+#reviewContainer .write-button-container {
+    border-top: 1px solid #323337;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 70px;
+    margin: 0 3%;
+}
+
+#reviewContainer .write-button-container p {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#reviewContainer .write-button-container button {
+    background-color: #1351f9;
+    width: 236px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+#reviewContainer #writePopup.popup .modal-form {
+    width: 450px;
+}
+
+#reviewContainer #editPopup.popup .modal-form {
+    width: 450px;
+}
+
+#reviewContainer #editPopup.popup strong {
+    margin-bottom: 0;
+}
+
+#reviewContainer #editPopup .text-input {
+    margin-bottom: 7px;
+}
+
+#editPopup .rate-container.big .rate-box.gray [class*='star-'] {
+    background: var(--title-color1);
 }
