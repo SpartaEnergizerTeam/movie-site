@@ -51,29 +51,29 @@ const editReviewHandler = () => {
 
   document.querySelectorAll('.comment-util .edit-btn')
     .forEach(btn => btn.addEventListener('click', onClick));
-
-  const onSubmit = ({ modal, index }) => {
-    const $rate = modal.querySelector('.rate-container');
-    const $password = modal.querySelector('input[type=password]');
-    const $comment = modal.querySelector('.comment');
-    const {username, imageUrl} = getUserInformation();
-
-    const values = {
-      rate: $rate.dataset.rate,
-      comment: $comment.value,
-      name: username,
-      thumbnail: imageUrl
-    };
-
-    const isValidPw = isValidPassword($password.value);
-    if (!isValidPw) return;
-
-    const isValidDefaultForm = isValidReviewValues(values);
-    if (!isValidDefaultForm) return;
-
-    updateReviewToLocalStorage({index, values});
-    notifyAndReload('수정이 완료되었어요');
-  }
 };
+
+const onSubmit = ({ modal, index }) => {
+  const $rate = modal.querySelector('.rate-container');
+  const $password = modal.querySelector('input[type=password]');
+  const $comment = modal.querySelector('.comment');
+  const {username, imageUrl} = getUserInformation();
+
+  const values = {
+    rate: $rate.dataset.rate,
+    comment: $comment.value,
+    name: username,
+    thumbnail: imageUrl
+  };
+
+  const isValidPw = isValidPassword($password.value);
+  if (!isValidPw) return;
+
+  const isValidDefaultForm = isValidReviewValues(values);
+  if (!isValidDefaultForm) return;
+
+  updateReviewToLocalStorage({index, values});
+  notifyAndReload('수정이 완료되었어요');
+}
 
 export default editReviewHandler;
