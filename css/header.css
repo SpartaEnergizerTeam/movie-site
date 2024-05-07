@@ -1,18 +1,17 @@
 .header-nav {
-  border-bottom: 1px solid #2e2e2e;
-  height: 34px;
-  margin-top: 15px;
+  border-bottom: 1px solid var(--main-color5);
 }
 
 .header-nav-menu {
   display: flex;
-  margin: 0px auto;
+  margin: 0 auto;
   justify-content: flex-end;
   font-size: 12px;
-  padding: 0 11px;
-  color: #a5a5a5;
+  color: var(--main-color2);
   position: relative;
-  width: 1240px;
+  max-width: 1240px;
+  align-items: center;
+  height: 34px;
 }
 
 .header-nav-menu ul li {
@@ -22,10 +21,10 @@
 .header-nav-menu ul li::after {
   position: absolute;
   top: 2px;
-  right: 0px;
+  right: 0;
   content: "";
   height: 8px;
-  background-color: #2f2f2f;
+  background-color: var(--main-color2);
   width: 1px;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .header-section {
-  color: #ffffff;
+  color: var(--main-color0);
   display: flex;
   height: 74px;
   justify-content: space-between;
@@ -69,7 +68,7 @@
 }
 
 .header-nav ul li a {
-  color: #fff;
+  color: var(--main-color0);
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s ease;
@@ -89,16 +88,21 @@ nav ul li:first-child {
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: var(--main-color0);
 }
 
 .header-menu ul li a.on {
-  color: #ffffff;
+  color: var(--main-color0);
 }
 
 header .logo {
   flex-shrink: 0;
   margin-right: 78px;
+  width: 108px;
+  height: 24px;
+  mask: url(../img/common/ci-wavve.svg) no-repeat center /cover;
+  display: block;
+  background: var(--main-color0);
 }
 
 #searchResultSection {

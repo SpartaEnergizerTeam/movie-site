@@ -1,11 +1,12 @@
 body {
-    background-color: #1b1b1b;
+    background-color: var(--background-color);
+    transition: .4s;
 }
 
 body,
 html {
-    scrollbar-color: #a5a5a5 #1b1b1b;
-    color: #a5a5a5;
+    scrollbar-color: var(--main-color2) var(--background-color);
+    color: var(--main-color2);
 }
 
 .blind {
@@ -24,7 +25,7 @@ html {
 }
 
 .cards-section-title {
-    color: white;
+    color: var(--main-color0);
     font-size: 24px;
     margin: 0 0 20px 10px;
     display: flex;
@@ -58,8 +59,8 @@ html {
 }
 
 .search-input-box {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--main-color5);
+    color: var(--main-color0);
     border-radius: 4px;
     font-size: 16px;
     top: 0;
@@ -89,4 +90,18 @@ html {
 #searchDeleteBtn:focus,
 #searchDeleteBtn:active {
     transform: scale(1);
+}
+
+
+/* ------------------------------ */
+
+#themeBtn {
+    width: 30px;
+    height: 25px;
+    mask: url(../img/common/light-theme.svg) no-repeat center /16px auto;
+    background: var(--main-color0);
+}
+
+.light-mode #themeBtn {
+    mask-image: url(../img/common/dark-theme.svg);
 }

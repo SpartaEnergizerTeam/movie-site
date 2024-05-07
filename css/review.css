@@ -1,17 +1,11 @@
 #reviewContainer {
-    --title-color0: #ffffff;
-    --title-color1: #dee1e9;
-    --title-color2: #84868d;
-}
-
-#reviewContainer {
     max-width: 1240px;
     margin: 0 auto;
     padding: 3%;
 }
 
 #reviews {
-    color: var(--title-color2);
+    color: var(--main-color4);
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -22,7 +16,7 @@
 }
 
 #reviews .name {
-    color: var(--title-color0);
+    color: var(--main-color0);
     font-weight: 300;
     font-size: 16px;
 }
@@ -39,7 +33,7 @@
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    background: #ffffff;
+    background: var(--main-color0);
     object-fit: cover;
 }
 
@@ -65,7 +59,7 @@
     width: 12px;
     height: 12px;
     mask: url(../img/detail/star-fill.svg) no-repeat center /12px;
-    background-color: #fbc02d;
+    background-color: var(--yellow-color1);
 }
 
 #reviewContainer [class*='star-half'] {
@@ -73,7 +67,7 @@
 }
 
 #reviewContainer .section-title {
-    color: var(--title-color0);
+    color: var(--main-color0);
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
@@ -84,7 +78,7 @@
     padding: 16px 16px 20px;
     border-radius: 4px;
     position: relative;
-    border: 1px solid var(--title-color1);
+    border: 1px solid var(--main-color1);
     display: flex;
 }
 
@@ -95,7 +89,7 @@
     background: none;
     height: 72px;
     font-size: 15px;
-    color: #000000;
+    color: var(--main-color5);
     font-weight: 400;
     line-height: 1.6;
     outline: none;
@@ -126,7 +120,7 @@
 }
 
 #reviewContainer .rate-container.big .rate-box.gray [class*='star-'] {
-    background-color: #535455;
+    background-color: var(--main-color3);
 }
 
 #reviewContainer .rate-container.big [class*='star-'] {
@@ -137,7 +131,7 @@
 }
 
 #reviewList .empty-review {
-    color: var(--title-color2);
+    color: var(--main-color4);
     padding: 0 0 80px;
     font-size: 15px;
     line-height: 1.6;
@@ -165,7 +159,7 @@
     content: "";
     width: 1px;
     height: 10px;
-    background-color: #2f2f2f;
+    background-color: var(--main-color5);
 }
 
 #reviewContainer .comment-util button {
@@ -181,14 +175,14 @@
     z-index: 100;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 50%);
+    background: var(--main-rgba-color2);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #reviewContainer .popup .modal-form {
-    background: var(--title-color0);
+    background: var(--main-color0);
     border-radius: 12px;
     padding: 36px 22px 30px;
     width: 350px;
@@ -203,9 +197,9 @@
 }
 
 #reviewContainer .popup .modal-button {
-    background: #000000;
+    background: var(--main-color5);
     width: 100%;
-    color: var(--title-color0);
+    color: var(--main-color0);
     height: 46px;
     font-size: 15px;
     border-radius: 4px;
@@ -217,7 +211,7 @@
 #reviewContainer .popup .close-button {
     width: 35px;
     height: 35px;
-    background: #eeeeee;
+    background: var(--main-color1);
     border-radius: 50%;
     position: absolute;
     top: 12px;
@@ -228,7 +222,7 @@
 #reviewContainer .close-button:before {
     width: 14px;
     height: 2px;
-    background: #555555;
+    background: var(--main-color3);
     border-radius: 2px;
     position: absolute;
     content: '';
@@ -241,7 +235,7 @@
 #reviewContainer .close-button:after {
     width: 14px;
     height: 2px;
-    background: #555555;
+    background: var(--main-color3);
     border-radius: 2px;
     position: absolute;
     content: '';
@@ -255,13 +249,13 @@
 #reviewContainer .text-input {
     height: 45px;
     background: none;
-    color: #000000;
+    color: var(--main-color5);
     border-radius: 4px;
     padding: 10px;
     flex-grow: 2;
     outline: none;
     width: 100%;
-    border: 1px solid var(--title-color1);
+    border: 1px solid var(--main-color1);
     font-size: 15px;
 }
 
@@ -272,7 +266,7 @@
 
 #reviewContainer .write-button-container {
     border-top: 1px solid #323337;
-    color: #ffffff;
+    color: var(--main-color0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,12 +282,12 @@
 }
 
 #reviewContainer .write-button-container button {
-    background-color: #1351f9;
+    background-color: var(--blue-color1);
     width: 236px;
     height: 52px;
     font-size: 16px;
     line-height: 50px;
-    color: #fff;
+    color: var(--main-color0);
     border-radius: 30px;
     margin-top: 10px;
 }
@@ -315,5 +309,5 @@
 }
 
 #editPopup .rate-container.big .rate-box.gray [class*='star-'] {
-    background: var(--title-color1);
+    background: var(--main-color1);
 }

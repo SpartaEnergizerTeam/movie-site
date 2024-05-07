@@ -1,5 +1,4 @@
 /*메인 이미지 관련 css*/
-
 .video-detail .image-box:before {
     content: '';
     position: absolute;
@@ -51,34 +50,34 @@
 
 .video-detail .text-box .logo-box {
     font-size: 70px;
-    color: #ffffff;
+    color: var(--main-color0);
     margin-bottom: 35px; /* 아래쪽 간격 추가 */
     text-align: left; /*텍스트 중앙정렬*/
 }
 
 .video-detail .text-box .dot-item {
     font-weight: bold;
-    color: #ffffff;
+    color: var(--main-color0);
 }
 
 .video-detail .btnbox .video-button {
     width: 360px;
     height: 48px;
     border-radius: 12px;
-    background-color: #1351f9;
+    background-color: var(--blue-color1);
     font-size: 16px;
-    color: #ffffff;
+    color: var(--main-color0);
     margin-right: 50px; /* 오른쪽 여백 추가 */
 }
 
 .video-detail .detail-info-box .content-clamp {
     font-size: 16px;
-    color: #a5a5a5;
+    color: var(--main-color2);
     line-height: 1.5;
 }
 
 .video-detail .detail-info-box .content-clamp .more {
-    color:#ffffff
+    color:var(--main-color0);
     
 }
 
@@ -87,14 +86,14 @@
     margin-top: 4px;
     font-size: 12px;
     line-height: 18px;
-    color: #a5a5a5;
+    color: var(--main-color2);
 }
 
 /*여기부터 하단 */
 
 .player-bottom-contents .player-nav ul li button.on {
-    border-bottom-color: #1351f9;
-    color: #ffffff;
+    border-bottom-color: var(--blue-color1);
+    color: var(--main-color0);
 }
 
 .player-bottom-contents .player-nav ul li button {
@@ -102,7 +101,7 @@
     padding: 0 20px;
     border-bottom: 4px solid transparent;
     font-size: 19px;
-    color: #a5a5a5;
+    color: var(--main-color2);
     line-height: 70px;
     text-align: center;
     cursor: pointer;
@@ -112,7 +111,7 @@
 
 .player-bottom-contents .player-nav ul {         /* 선긋기효과 */
     width: 100%;
-    border-bottom: 1px solid #2f2f2f;
+    border-bottom: 1px solid var(--main-color5);
     display: flex;
     flex-wrap: wrap;
 }
@@ -136,14 +135,14 @@
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--main-color0);
     line-height: 30px;
 }
 
 .detail-view-content-arena .preview-detail-box .preview-dsc {
     margin-top: 18px;
     font-size: 16px;
-    color: #a5a5a5;
+    color: var(--main-color2);
     line-height: 24px;
 }
 
@@ -151,7 +150,7 @@
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--main-color0);
     line-height: 30px;
 }
 
@@ -165,16 +164,16 @@
 .detail-view-content-arena .content-actor-box  {
     margin-right: 12px;
     font-weight: 400;
-    color: #a5a5a5;
+    color: var(--main-color2);
 }
 
 .detail-view-content-arena .detail-view-box {    
    
-    border-top: 1px solid #2f2f2f;/* 선긋기효과 */
+    border-top: 1px solid var(--main-color5);/* 선긋기효과 */
     display: flex;
     flex-wrap: wrap;
     margin-top: 15px;
-    color: #a5a5a5;
+    color: var(--main-color2);
 }
 
 .detail-view-content-arena .detail-view-box .detail-info-table td,
@@ -182,7 +181,7 @@
     padding-top: 30px;
     font-size: 16px;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--main-color0);
     text-align: left;
     vertical-align: top;
 }
@@ -200,7 +199,7 @@
 .detail-view-box,
 .detail-info-table,
 .genre {
-    color: #ffffff; 
+    color: var(--main-color0);
 }
 
 .detail-view-content-arena .detail-view-box .detail-info-box .detail-dsc {

@@ -38,6 +38,36 @@ table {
 
 /* ----------------------------------------------------- */
 
+:root {
+    --background-color: #1b1b1b;
+    --main-color0: #ffffff;
+    --main-color1: #e8e8e8;
+    --main-color2: #a5a5a5;
+    --main-color3: #5e5e5e;
+    --main-color4: #717171;
+    --main-color5: #2f2f2f;
+    --yellow-color1: #fbc02d;
+    --blue-color1: #1351f9;
+    --blue-color2: #3887ff;
+    --main-rgba-color1: rgba(0, 0, 0, 0.7);
+    --main-rgba-color2: rgba(0, 0, 0, 0.5);
+}
+
+.light-mode {
+    --background-color: #1b1b1b;
+    --main-color0: #ffffff;
+    --main-color1: #e8e8e8;
+    --main-color2: #a5a5a5;
+    --main-color3: #5e5e5e;
+    --main-color4: #717171;
+    --main-color5: #2f2f2f;
+    --yellow-color1: #fbc02d;
+    --blue-color1: #1351f9;
+    --blue-color2: #3887ff;
+    --main-rgba-color1: rgba(0, 0, 0, 0.7);
+    --main-rgba-color2: rgba(0, 0, 0, 0.5);
+}
+
 * {
     box-sizing: border-box;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -51,7 +81,7 @@ button {
 }
 
 a {
-    color: #a5a5a5;
+    color: var(--main-color2);
     text-decoration: none;
     cursor: pointer;
 }

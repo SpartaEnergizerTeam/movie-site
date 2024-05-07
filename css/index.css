@@ -3,7 +3,6 @@
   height: 100%;
   margin: 109px auto 0;
   padding-bottom: 50px;
-  background-color: #1b1b1b;
 }
 
 #main-banner {
@@ -41,7 +40,7 @@
   left: 0;
   right: 0;
   height: 35%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, var(--main-rgba-color1), transparent);
   border-radius: 10px;
 }
 
@@ -50,7 +49,7 @@
   display: flex;
   bottom: 50px;
   left: 60px;
-  color: rgb(255, 255, 255);
+  color: var(--main-color0);
   font-size: 60px;
   font-weight: 600;
   z-index: 1;
@@ -65,11 +64,11 @@
 #main-banner .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: #e8e8e8;
+  background-color: var(--main-color5);
 }
 
 .main-nav .swiper-pagination-bullet-active {
-  background-color: #ffffff;
+  background-color: var(--main-color0);
 }
 
 #main-banner #main-slider {
@@ -98,7 +97,7 @@
   justify-content: flex-end;
   font-size: 16px;
   line-height: 24px;
-  color: #a5a5a5;
+  color: var(--main-color2);
   margin: 0 0 0 auto;
   padding: 5px 10px 5px 0;
 }
@@ -157,7 +156,7 @@
 }
 
 .main-nav .swiper-pagination-bullet {
-  background: #e8e8e8;
+  background: var(--main-color1);
   width: 10px;
   height: 10px;
 }
