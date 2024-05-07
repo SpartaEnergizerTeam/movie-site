@@ -221,7 +221,9 @@
 }
 
 #loader {
-    width: 100%;
+    width: 93%;
+    margin: 0 auto;
+    max-width: 1240px;
     height: 4.8px;
     display: inline-block;
     position: relative;
@@ -261,5 +263,4 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 3%;
 }
