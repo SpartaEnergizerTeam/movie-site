@@ -92,7 +92,7 @@
   border-radius: 10px;
 }
 
-.cards-section .title .more {
+.cards-section-title .more {
   display: flex;
   align-items: center;
   justify-content: flex-end;
