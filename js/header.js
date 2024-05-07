@@ -23,7 +23,7 @@ getMovieWithKeywords(value).then(({results}) => {
   const a = document.createElement('ul');
   a.className = 'cards-section';
   a.innerHTML = results.map((movie) => {
-    if (!movie.poster_path) return;
+    if (!movie.poster_path || !movie.backdrop_path) return;
 
     return `
       <li class="card-poster">

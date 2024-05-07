@@ -1,7 +1,9 @@
 import {getMovieDetail} from './api.js';
+import getUrlParamValue from "./utils/getUrlParamValue.js";
 
+const movieId = getUrlParamValue('movieId');
 
-getMovieDetail('1094844').then((response) => {
+getMovieDetail(movieId).then((response) => {
   // 영화 제목 설정
   const titleElement = document.querySelector('.logo-box');
   titleElement.textContent = response.title;
@@ -63,7 +65,7 @@ const options = {
   }
 };
 
-fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', options)
+fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=ko-KR`, options)
   .then(response => response.json())
   .then(response => {
     // API에서 가져온 출연진 정보
