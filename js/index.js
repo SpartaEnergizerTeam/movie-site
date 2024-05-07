@@ -10,7 +10,10 @@ const mainImgSwiper = async (movieTypeString) => {
     movies.forEach((movie) => {
       const slide = document.createElement("div");
       slide.className = "swiper-slide";
-      slide.innerHTML = `<img src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}" class="big-banner"/>`;
+      slide.innerHTML = ` <div class="slide-img-container">
+      <title class="main-title">${movie.title}</title>
+      <img src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}" class="big-banner"/>
+      </div>`;
       swiperWrapper.appendChild(slide);
     });
 

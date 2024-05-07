@@ -34,6 +34,27 @@
   cursor: pointer;
 }
 
+.slide-img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.slide-img-container .main-title {
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+  left: 60px;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: 600;
+  z-index: 1;
+}
+
 .main-nav .swiper-pagination {
   bottom: -20px;
   background-color: transparent;
@@ -64,6 +85,7 @@
 }
 
 .big-banner {
+  background-image: linear-gradient(to top, #ffcc00, #ff6600);
   object-fit: cover;
   width: 1240px;
   height: 508px;
@@ -157,7 +179,8 @@
   right: 0; /* 화면 안으로 이동 */
 }
 
-.main-nav .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+.main-nav
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   position: relative;
   bottom: unset;
 }
