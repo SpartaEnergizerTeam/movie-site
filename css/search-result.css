@@ -1,11 +1,23 @@
+#searchResultSection .cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#searchResultSection {
+  width: 1240px;
+  margin: 80px auto;
+}
+
+/* ----------------------- */
+
 .search-empty-main {
   width: 1240px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 200px;
+  margin: 200px auto 0;
 }
 
 .search-empty-icon {
