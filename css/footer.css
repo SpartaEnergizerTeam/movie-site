@@ -2,9 +2,71 @@
   border-top: 1px solid #2f2f2f;
   min-width: 1240px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .footer-notice {
 }
 .footer-menu {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 0 0 100px;
+  position: relative;
+  overflow: hidden;
+  color: #717171;
+}
+.footer-ul {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+.footer-ul a {
+  display: block;
+  padding: 10px 0;
+  color: #717171;
+}
+.footer-ul a:hover {
+  color: rgb(45, 83, 255);
+}
+.footer-ul .bold a {
+  font-weight: 700;
+  color: #a5a5a5;
+}
+.footer-info-area {
+  font-size: 14px;
+  line-height: 20px;
+}
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+.footer-info-copyright {
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer-info-copyright span {
+  display: inline-block;
+  border-right: 1px solid #717171;
+  padding-right: 6px;
+  margin-right: 6px;
+  line-height: 11px;
+}
+.footer-info-copyright address {
+  display: inline-block;
+  border-right: 1px solid #717171;
+  padding-right: 6px;
+  margin-right: 6px;
+  line-height: 11px;
+}
+.footer-info-copyright a {
+  color: #717171;
+}
+.footer-info-copyright a:hover {
+  color: rgb(45, 83, 255);
+}
+.footer-info-copyright .underline {
+  text-decoration: underline;
 }
