@@ -57,3 +57,36 @@ html {
     transform: scale(1.05);
 }
 
+.search-input-box {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 40px;
+    padding: 0 40px;
+    border: none;
+    outline: none;
+}
+
+.search-input-icon {
+    position: absolute;
+    margin-left: 11px;
+}
+
+#searchDeleteBtn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    transition: transform 0.2s ease-out;
+    transform: scale(0);
+}
+
+.search-input-box:focus + #searchDeleteBtn,
+.search-input-box:active + #searchDeleteBtn,
+#searchDeleteBtn:focus,
+#searchDeleteBtn:active {
+    transform: scale(1);
+}
