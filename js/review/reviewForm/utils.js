@@ -38,3 +38,21 @@ export const deleteReviewToLocalStorage = (deleteIndex) => {
 
   setDetailComments(comments);
 }
+
+export const getMovieReviewFromIndex = (index) => {
+  const movieId = getMovieIdFromURL();
+  let comments = getDetailComments();
+  const {index: currentMovieIndex} = getExistingDetailComments({comments, movieId});
+
+  return comments[currentMovieIndex].results[index];
+}
+
+export const updateReviewToLocalStorage = ({index, values}) => {
+  const movieId = getMovieIdFromURL();
+  let comments = getDetailComments();
+  const {index: currentMovieIndex} = getExistingDetailComments({comments, movieId});
+
+  comments[currentMovieIndex].results[index] = values;
+
+  setDetailComments(comments);
+}

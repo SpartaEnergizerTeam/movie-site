@@ -2,7 +2,7 @@ import getUrlParamValue from "../utils/getUrlParamValue.js";
 import {getLocalStorage, setLocalStorage} from "../utils/localStorage.js";
 
 const LOCALSTORAGE_COMMENTS = 'comments';
-const LOCALSTORAGE_USER_INFO = 'user-information';
+const LOCALSTORAGE_USER_INFO = 'userObj';
 const TEST_VALUE = '1234';
 console.log('@@ TODO: 테스트 값 꼭 삭제하기');
 

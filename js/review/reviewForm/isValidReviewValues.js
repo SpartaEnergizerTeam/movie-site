@@ -1,10 +1,8 @@
 import {getUserInformation} from "../utils.js";
 
 export const isValidReviewValues = ({rate, comment}) => {
-  if (isNaN(rate)) {
-    window.alert('별을 눌러 이 영화의 별점을 매겨주세요');
-    return;
-  }
+  const isValidStarRate = isValidRate(rate);
+  if (!isValidStarRate) return;
 
   if (!comment) {
     window.alert('내용을 입력해주세요');
@@ -13,6 +11,15 @@ export const isValidReviewValues = ({rate, comment}) => {
 
   return true;
 };
+
+export const isValidRate = (rate) => {
+  if (isNaN(rate)) {
+    window.alert('별을 눌러 이 영화의 별점을 매겨주세요');
+    return;
+  }
+
+  return true;
+}
 
 export const isValidPassword = (value) => {
   if (!value) {
