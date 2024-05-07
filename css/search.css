@@ -2,8 +2,7 @@
   display: block;
   width: 1240px;
   height: 221px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto 0;
 }
 
 .title-series {
@@ -38,8 +37,7 @@
   display: block;
   width: 1240px;
   height: 221px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto 0;
 }
 
 .contentsName {
@@ -53,7 +51,6 @@
 .search-input-box {
   background-color: #000000;
   color: #ffffff;
-  border: 0.5px solid #ffffff;
   border-radius: 4px;
   font-size: 16px;
   top: 0;
@@ -61,6 +58,7 @@
   width: 360px;
   height: 40px;
   padding: 0 40px;
+  border: none;
 }
 
 .search-input-box:focus {
@@ -76,4 +74,19 @@
   position: absolute;
   width: 15px;
   height: 15px;
+}
+
+#searchDeleteBtn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  transition: transform 0.2s ease-out;
+  transform: scale(0);
+}
+
+.search-input-box:focus + #searchDeleteBtn,
+.search-input-box:active + #searchDeleteBtn,
+#searchDeleteBtn:focus,
+#searchDeleteBtn:active {
+  transform: scale(1);
 }
