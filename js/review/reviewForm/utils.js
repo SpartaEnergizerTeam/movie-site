@@ -47,7 +47,7 @@ export const getMovieReviewFromIndex = (index) => {
   return comments[currentMovieIndex].results[index];
 }
 
-export const updateMovieReview = ({index, values}) => {
+export const updateReviewToLocalStorage = ({index, values}) => {
   const movieId = getMovieIdFromURL();
   let comments = getDetailComments();
   const {index: currentMovieIndex} = getExistingDetailComments({comments, movieId});

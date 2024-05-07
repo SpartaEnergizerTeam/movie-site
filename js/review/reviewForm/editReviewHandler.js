@@ -1,4 +1,4 @@
-import {getMovieReviewFromIndex, updateMovieReview} from "./utils.js";
+import {getMovieReviewFromIndex, updateReviewToLocalStorage} from "./utils.js";
 import {isValidPassword, isValidReviewValues} from "./isValidReviewValues.js";
 import {getUserInformation, notifyAndReload} from "../utils.js";
 import useModal from "./useModal.js";
@@ -71,7 +71,7 @@ const editReviewHandler = () => {
     const isValidDefaultForm = isValidReviewValues(values);
     if (!isValidDefaultForm) return;
 
-    updateMovieReview({index, values});
+    updateReviewToLocalStorage({index, values});
     notifyAndReload('수정이 완료되었어요');
   }
 };
