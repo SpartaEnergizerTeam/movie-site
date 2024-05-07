@@ -13,16 +13,16 @@ export const getMovieData = async (movieTypeString, pageNum = 1) => {
   let url = "";
   switch (movieTypeString) {
     case "playing":
-      url = `${defaultUrl}now_playing?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/now_playing?language=ko&page=${pageNum}`;
       break;
     case "popular":
-      url = `${defaultUrl}popular?language=ko&page=${pageNum}"`;
+      url = `${defaultUrl}movie/popular?language=ko&page=${pageNum}"`;
       break;
     case "top":
-      url = `${defaultUrl}top_rated?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/top_rated?language=ko&page=${pageNum}`;
       break;
     case "upcoming":
-      url = `${defaultUrl}upcoming?language=ko&page=${pageNum}`;
+      url = `${defaultUrl}movie/upcoming?language=ko&page=${pageNum}`;
       break;
   }
   const response = await fetch(url, options);
@@ -42,7 +42,7 @@ export const getMovieWithKeywords = async (keywords) => {
 
 // 무비 id를 입력하면 영화 디테일 정보를 가져옵니다.
 export const getMovieDetail = async (movie_id) => {
-  const url = `${defaultUrl}${movie_id}?language=ko`;
+  const url = `${defaultUrl}movie/${movie_id}?language=ko`;
   const response = await fetch(url, options);
   return await response.json();
 };
@@ -70,3 +70,4 @@ export const getMovieVideos = async (movie_id) => {
   }
   return [];
 };
+

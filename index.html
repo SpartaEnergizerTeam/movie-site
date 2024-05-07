@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Energivve(에너자이브)</title>
+<<<<<<< HEAD
+=======
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+>>>>>>> e6a5460313e3e8f0dbfcd0bb069b2ab0c3477b7c
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -12,6 +16,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
     />
+<<<<<<< HEAD
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -45,5 +50,114 @@
         </ul>
       </div>
     </footer>
+=======
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/index.js" type="module"></script>
+  </head>
+  <body>
+    <main id="contents" class="main">
+      <div id="main-banner" class="swiper-container">
+        <button type="button" class="swiper-prev">
+          <img src="./img/main/arrow-left.png" alt="뒤로" />
+        </button>
+        <button type="button" class="swiper-next">
+          <img src="./img/main/arrow-right.png" alt="앞으로" />
+        </button>
+        <div class="swiper-wrapper" id="main-slider"></div>
+      </div>
+      <div class="main-nav">
+        <div class="swiper-pagination">
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+        </div>
+      </div>
+
+      <section class="cards-section top-rated">
+        <div class="cards-title">
+          <div class="title">
+            TOP 20
+            <a href="" class="more">
+              더보기<img src="./img/main/arrow-more.svg" class="arrow-more" />
+            </a>
+          </div>
+        </div>
+        <div
+          class="swiper-container second-swiper-container"
+          id="card-carousel"
+        >
+          <ul id="cards-top" class="swiper-wrapper"></ul>
+          <div class="custom-swiper-button-prev">
+            <img src="./img/main/swiper_previous.png" alt="이전으로" />
+          </div>
+          <div class="custom-swiper-button-next">
+            <img src="./img/main/swiper_next.png" alt="다음으로" />
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-section playing">
+        <div class="cards-title">
+          <div class="title">
+            NOW PLAYING
+            <a href="" class="more">
+              더보기<img src="./img/main/arrow-more.svg" class="arrow-more" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-container" id="card-carousel">
+          <ul id="cards-playing" class="swiper-wrapper"></ul>
+          <div class="custom-swiper-button-prev">
+            <img src="./img/main/swiper_previous.png" alt="이전으로" />
+          </div>
+          <div class="custom-swiper-button-next">
+            <img src="./img/main/swiper_next.png" alt="다음으로" />
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-section upcoming">
+        <div class="cards-title">
+          <div class="title">
+            UPCOMING
+            <a href="" class="more">
+              더보기<img src="./img/main/arrow-more.svg" class="arrow-more" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-container" id="card-carousel">
+          <ul id="cards-upcoming" class="swiper-wrapper"></ul>
+          <div class="custom-swiper-button-prev">
+            <img src="./img/main/swiper_previous.png" alt="이전으로" />
+          </div>
+          <div class="custom-swiper-button-next">
+            <img src="./img/main/swiper_next.png" alt="다음으로" />
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-section popular">
+        <div class="cards-title">
+          <div class="title">
+            POPULAR
+            <a href="" class="more">
+              더보기<img src="./img/main/arrow-more.svg" class="arrow-more" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-container" id="card-carousel">
+          <ul id="cards-popular" class="swiper-wrapper"></ul>
+          <div class="custom-swiper-button-prev">
+            <img src="./img/main/swiper_previous.png" alt="이전으로" />
+          </div>
+          <div class="custom-swiper-button-next">
+            <img src="./img/main/swiper_next.png" alt="다음으로" />
+          </div>
+        </div>
+      </section>
+    </main>
+>>>>>>> e6a5460313e3e8f0dbfcd0bb069b2ab0c3477b7c
   </body>
 </html>

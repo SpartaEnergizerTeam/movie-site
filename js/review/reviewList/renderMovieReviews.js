@@ -1,21 +1,25 @@
-const renderMovieReviews = (reviews = []) => {
-  const $wrap = document.querySelector('#reviewContainer');
+import getMovieReviews from "./getMovieReviews.js";
+import {getUserInformation} from "../utils.js";
+
+const renderMovieReviews = () => {
+  const reviews = getMovieReviews();
+  const $wrap = document.querySelector('#reviewList');
+  const {username} = getUserInformation();
 
   if (reviews.length === 0) {
     $wrap.innerHTML = `<div class="empty-review">이 영화에 대한 감상평이 없어요<br/>지금 작성하시면, 첫번째로 남기실 수 있어요 😆</div>`;
     return;
   }
   
-  let html = '';
-
-  reviews.forEach((result) => {
-    html += getReviewHtml(result);
+  const renderHtml = reviews.map((result, index) => {
+    const isSameUser = result.name === username;
+    return getReviewHtml(result, index, isSameUser);
   });
 
-  $wrap.innerHTML = `<ul id="reviews">${html}</ul>`;
+  $wrap.innerHTML = `<ul id="reviews">${renderHtml.join('')}</ul>`;
 }
 
-const getReviewHtml = (result) => {
+const getReviewHtml = (result, index, isSameUser) => {
   return `
     <li>
       <article class="user-group">
@@ -27,6 +31,12 @@ const getReviewHtml = (result) => {
           </div>
           <p>${result.comment}</p>
         </div>
+        ${isSameUser ? `
+          <ul class="comment-util" data-index="${index}">
+            <li><button class="edit-btn" type="button">수정</button></li>
+            <li><button class="delete-btn" type="button">삭제</button></li>
+          </ul>
+        ` : ''}
       </article>
     </li>
   `;

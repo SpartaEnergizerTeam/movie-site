@@ -2,8 +2,8 @@ import getUrlParamValue from "../utils/getUrlParamValue.js";
 import {getLocalStorage, setLocalStorage} from "../utils/localStorage.js";
 
 const LOCALSTORAGE_COMMENTS = 'comments';
-const LOCALSTORAGE_USER_INFO = 'user-information';
-const TEST_VALUE = '123';
+const LOCALSTORAGE_USER_INFO = 'userObj';
+const TEST_VALUE = '1234';
 console.log('@@ TODO: 테스트 값 꼭 삭제하기');
 
 export const getMovieIdFromURL = () => getUrlParamValue('movie_id') || TEST_VALUE;
@@ -27,3 +27,8 @@ export const getUserInformation = () => {
   const { username, password, imageUrl } = getUser();
   return { username, password, imageUrl }
 }
+
+export const notifyAndReload = (message) => {
+  window.alert(message);
+  window.location.reload();
+};
