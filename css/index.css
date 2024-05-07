@@ -207,3 +207,16 @@
   border-radius: 10px;
   aspect-ratio: 2 / 3;
 }
+
+.slide-img-container .main-title {
+  opacity: 0;
+  transition: 0.5s 0.2s;
+  transform: translateY(35px);
+  filter: blur(10px);
+}
+
+.swiper-slide.swiper-slide-active .main-title {
+  transform: translateY(0px);
+  opacity: 1;
+  filter: blur(0px);
+}
