@@ -37,4 +37,5 @@
   padding-bottom: 40px;
   margin: 0 auto;
   gap: 40px 10px;
+  min-height: 400px;
 }
