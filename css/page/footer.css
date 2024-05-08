@@ -1,0 +1,207 @@
+.footer {
+  border-top: 1px solid var(--main-color5);
+  min-width: 1240px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.footer-notice {
+  border-bottom: 1px solid var(--main-color5);
+}
+.footer-notice-inner {
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  z-index: 100;
+}
+.footer-notice-inner h2 {
+  margin-right: 23px;
+  float: left;
+  vertical-align: middle;
+}
+.footer-notice-inner .prev-btn {
+  border-right: 0;
+  position: absolute;
+  top: 0;
+  right: 54px;
+  border-left: 1px solid  var(--main-color5);
+  height: 50px;
+  z-index: 200;
+}
+.footer-notice-inner .next-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 1px solid var(--main-color5);
+  border-left: 1px solid var(--main-color5);
+  height: 50px;
+  z-index: 200;
+}
+.footer-notice-inner img {
+  transition: filter 0.1s ease;
+}
+.footer-notice-inner img:hover {
+  filter: brightness(40%);
+}
+.footer-swiper-container {
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.footer-swiper-container ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  box-sizing: content-box;
+  transition-duration: 300ms;
+}
+.footer-swiper-container li {
+  font-weight: 400;
+  font-size: 17px;
+  color: #a5a5a5;
+}
+
+.footer-menu {
+  position: relative;
+  width: 1240px;
+  margin: 0 auto;
+  padding: 0 0 100px;
+  position: relative;
+  overflow: hidden;
+  color: #717171;
+}
+.footer-ul {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+.footer-ul a {
+  display: block;
+  padding: 10px 0;
+  color: #717171;
+}
+.footer-ul a:hover {
+  color: rgb(45, 83, 255);
+}
+.footer-ul .bold a {
+  font-weight: 700;
+  color: #a5a5a5;
+}
+.footer-info-area {
+  font-size: 14px;
+  line-height: 20px;
+}
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+.footer-info-copyright {
+  font-size: 12px;
+  line-height: 20px;
+}
+.footer-info-copyright span {
+  display: inline-block;
+  border-right: 1px solid #717171;
+  padding-right: 6px;
+  margin-right: 6px;
+  line-height: 11px;
+}
+.footer-info-copyright address {
+  display: inline-block;
+  border-right: 1px solid #717171;
+  padding-right: 6px;
+  margin-right: 6px;
+  line-height: 11px;
+}
+.footer-info-copyright a {
+  color: #717171;
+}
+.footer-info-copyright a:hover {
+  color: rgb(45, 83, 255);
+}
+.footer-info-copyright .underline {
+  text-decoration: underline;
+}
+.copyright {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.footer-wavveon {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 20px;
+  font-size: 0;
+}
+
+.footer-wavveon .logo {
+  margin-right: 1px;
+  text-align: center;
+  background: var(--main-color6);
+}
+
+.footer-wavveon .logo-img {
+  width: 94px;
+  height: 38px;
+  display: block;
+  mask: url(../../img/common/ico-footer-wavve.svg);
+  mask-size: 94px;
+  background: var(--main-color0);
+}
+.footer-wavveon select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 225px;
+  height: 38px;
+  padding-left: 13px;
+  margin-right: 10px;
+  line-height: 32px;
+  color: var(--main-color2);
+  border: 1px solid var(--main-color6);
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVDhPYxgFo4AKICMjowyIpaFcnCA3N1cGpBbKhQMmKA0H////vwTE59LT07WgQhgAJPfr16+zILVQIThghtJwcPbs2TsmJiZPgczFxsbGa4D8jxAZCEhLS5NjZGQ8AGQWz5w5cwNEFAEwDAQBoCFXgIb+BmqcCjR0OZD/DSQONEwESB1iYmLqBRo2DySGDhihNFYANKAJSHmzsLDYg/h///4FuWw70LBaEB8bwGsgCADDazowrDSBzH9AF98GGpYOkcEOMCIFHUhKSmYDqVdA/A7IzgQLjoIRDRgYAMM3S1P54/NdAAAAAElFTkSuQmCC)    var(--main-color6) 96% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.footer-sns {
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer-sns .facebook {
+  display: inline-block;
+  width: 34px;
+  padding: 1px 1px;
+}
+.footer-sns .naver {
+  display: inline-block;
+  width: 34px;
+  padding: 1px 1px;
+}
+
+.footer-sns img {
+  display: block;
+  max-width: 100%;
+}
+
+.ghost-li {
+  visibility: hidden;
+}
+
+.footer-notice-inner h2 a {
+  font-weight: 500;
+  color: var(--main-color0);
+}

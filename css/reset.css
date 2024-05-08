@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ----------------------------------------------------- */
+
+:root {
+    --background-color: #1b1b1b;
+    --main-color0: #ffffff;
+    --fixed-color0: #ffffff;
+    --main-color1: #e8e8e8;
+    --fixed-color1: #e8e8e8;
+    --main-color2: #a5a5a5;
+    --main-color3: #5e5e5e;
+    --main-color4: #717171;
+    --fixed-color4: #717171;
+    --main-color5: #2f2f2f;
+    --fixed-color5: #2f2f2f;
+    --main-color6: #252525;
+    --main-color7: #1b1b1b;
+    --yellow-color1: #fbc02d;
+    --blue-color1: #1351f9;
+    --blue-color2: #3887ff;
+    --main-rgba-color1: rgba(0, 0, 0, 0.7);
+    --main-rgba-color2: rgba(255, 255, 255, 0.15);
+}
+
+.light-mode {
+    --background-color: #ffffff; 
+    --main-color0: #1b1b1b;
+    --main-color1: #333333;
+    --main-color2: #777777;
+    --main-color3: #999999; 
+    --main-color4: #cccccc;
+    --main-color5: #f2f2f2;
+    --main-color6: #f2f2f2;
+    --main-color7: #e8e8e8;
+    --yellow-color1: #fbc02d;
+    --blue-color1: #1351f9; 
+    --blue-color2: #3887ff; 
+    --main-rgba-color2: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+a {
+    color: var(--main-color2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,312 @@
+#reviewContainer {
+    max-width: 1240px;
+    margin: 60px auto 0;
+}
+
+#reviews {
+    color: var(--fixed-color4);
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 16px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 0;
+}
+
+#reviews .name {
+    color: var(--main-color0);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#reviews .user-group {
+    display: flex;
+    padding: 8px 0;
+    gap: 8px;
+}
+
+#reviews .user-group img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--main-color0);
+    object-fit: cover;
+}
+
+#reviews .user-group p {
+    margin: 4px 0;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    font-size: 16px;
+}
+
+#reviews .top-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#reviewContainer .rate-box {
+    display: flex;
+}
+
+#reviewContainer [class*='star-'] {
+    display: block;
+    width: 12px;
+    height: 12px;
+    mask: url(../../img/detail/star-fill.svg) no-repeat center /12px;
+    background-color: var(--yellow-color1);
+}
+
+#reviewContainer [class*='star-half'] {
+    mask-image: url(../../img/detail/star-half.svg);
+}
+
+#reviewContainer .section-title {
+    color: var(--main-color0);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 13px;
+}
+
+#reviewContainer .comment-wrap {
+    padding: 16px 16px 20px;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid var(--fixed-color1);
+    display: flex;
+}
+
+#reviewContainer .comment {
+    width: 100%;
+    resize: none;
+    border: none;
+    background: none;
+    height: 72px;
+    font-size: 15px;
+    color: var(--fixed-color5);
+    font-weight: 400;
+    line-height: 1.6;
+    outline: none;
+}
+
+#reviewContainer .rate-container.big {
+    position: relative;
+    display: flex;
+    padding: 15px 0;
+    border-radius: 4px;
+    width: 140px;
+    flex-shrink: 0;
+}
+#reviewContainer .rate-container.big .rate-box:not(.gray) {
+    z-index: 2;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+#reviewContainer .rate-container.big .rate-box.gray {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 1;
+    width: 140px;
+    cursor: pointer;
+}
+
+#reviewContainer .rate-container.big .rate-box.gray [class*='star-'] {
+    background-color: var(--main-color3);
+}
+
+#reviewContainer .rate-container.big [class*='star-'] {
+    width: 28px;
+    height: 28px;
+    mask-size: 28px;
+    flex-shrink: 0;
+}
+
+#reviewList .empty-review {
+    color: var(--fixed-color4);
+    padding: 0 0 80px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#reviewContainer .comment-util {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    display: flex;
+    gap: 5px;
+    font-size: 13px;
+    z-index: 1;
+}
+
+#reviews li {
+    position: relative;
+}
+
+#reviewContainer .comment-util li + li:before {
+    position: absolute;
+    top: 5px;
+    left: -3px;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: var(--main-color5);
+}
+
+#reviewContainer .comment-util button {
+    color: inherit;
+    font-size: inherit;
+    padding: 2px 4px;
+}
+
+#reviewContainer .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reviewContainer .popup .modal-form {
+    background: var(--fixed-color0);
+    border-radius: 12px;
+    padding: 36px 22px 30px;
+    width: 350px;
+    position: relative;
+}
+
+#reviewContainer .popup strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--fixed-color5);
+}
+
+#reviewContainer .popup .modal-button {
+    background: var(--fixed-color5);
+    width: 100%;
+    color: var(--fixed-color0);
+    height: 46px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+#reviewContainer .popup .close-button {
+    width: 35px;
+    height: 35px;
+    background: var(--fixed-color1);
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+#reviewContainer .close-button:before {
+    width: 14px;
+    height: 2px;
+    background: var(--main-color3);
+    border-radius: 2px;
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -1px;
+    margin-left: -7px;
+    transform: rotate(45deg);
+}
+
+#reviewContainer .close-button:after {
+    width: 14px;
+    height: 2px;
+    background: var(--main-color3);
+    border-radius: 2px;
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -1px;
+    margin-left: -7px;
+    transform: rotate(-45deg);
+}
+
+
+#reviewContainer .text-input {
+    height: 45px;
+    background: none;
+    color: var(--fixed-color5);
+    border-radius: 4px;
+    padding: 10px;
+    flex-grow: 2;
+    outline: none;
+    width: 100%;
+    border: 1px solid var(--fixed-color1);
+    font-size: 15px;
+}
+
+#reviewContainer .text-input:not(:placeholder-shown) {
+    font: small-caption;
+    font-size: 34px;
+}
+
+#reviewContainer .write-button-container {
+    border-top: 1px solid var(--main-color5);
+    color: var(--main-color0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 70px;
+}
+
+#reviewContainer .write-button-container p {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#reviewContainer .write-button-container button {
+    background-color: var(--blue-color1);
+    width: 236px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 50px;
+    color: var(--fixed-color0);
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+#reviewContainer #writePopup.popup .modal-form {
+    width: 450px;
+}
+
+#reviewContainer #editPopup.popup .modal-form {
+    width: 450px;
+}
+
+#reviewContainer #editPopup.popup strong {
+    margin-bottom: 0;
+}
+
+#reviewContainer #editPopup .text-input {
+    margin-bottom: 7px;
+}
+
+#editPopup .rate-container.big .rate-box.gray [class*='star-'] {
+    background: var(--main-color1);
+}

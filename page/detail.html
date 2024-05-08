@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='UTF-8'>
+    <title>Energivve(에너자이브)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/page/detail.css"/>
+    <link rel="stylesheet" href="../css/page/review.css"/>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <script defer src="../js/common.js" type="module"></script>
+    <script defer src="../js/page/detail.js" type="module"></script>
+    <script defer src="../js/page/review/index.js" type="module"></script>
+</head>
+<div id="loaderWrap"><div id="loader"></div></div>
+<body id="detailPage">
+<header>
+    <div class="header-wrap">
+        <div class="header-nav">
+            <nav class="header-nav-menu">
+                <ul>
+                    <li><a href="./profile.html">내 프로필</a></li>
+                    <li><a class="not-open-link" href="#">이용권</a></li>
+                    <li><a class="not-open-link" href="#">쿠폰·코인</a></li>
+                    <li><a class="not-open-link" href="#">웨이브온</a></li>
+                    <li><a class="not-open-link" href="#">이벤트</a></li>
+                </ul>
+                <button id="themeBtn" type="button"><span class="blind">테마 변경</span></button>
+            </nav>
+        </div>
+        <div class="header-section">
+            <a href="../index.html" class="logo"><span class="blind">Wavve</span></a>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="../index.html" class="on">홈</a></li>
+                    <li>
+                        <a href="#">카테고리</a>
+                        <div class="category">
+                            <ul>
+                                <li><a href="./top20.html">TOP 20</a></li>
+                                <li><a href="./nowplaying.html">NOW PLAYING</a></li>
+                                <li><a href="./upcoming.html">UPCOMING</a></li>
+                                <li><a href="./popular.html">POPULAR</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="not-open-link" href="#">LIVE</a></li>
+                    <li><a href="profile.html">MY</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <a href="search.html">
+                    <img src="../img/common/icon-search.svg" alt="검색" />
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+   <div class=video-detail>
+       <div class="image-box">
+           <img src="" alt=""/>
+       </div>
+       <div class="text-box">
+           <div class="text-inner">
+               <h1 class="logo-box"></h1>
+               <p class="dot-item"></p>
+               <div class="btnbox">
+                   <button class="video-button not-open-link" type="button">트레일러 재생</button>
+                   <ul>
+                       <li class="icon-item">
+                           <button class="share-button" type="button">
+                               <span class="icon"></span>
+                               <span class="icon-txt">공유</span>
+                           </button>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+    <div class="detail-info-box">
+        <p class="content-priview-box">
+        <div class="content-clamp"><span><span class="text"></span><a class="more"> 더보기</a></span></div>
+        </p>
+    </div>
+    <div class="player-bottom-contents">
+    <div class="player-nav">
+        <ul>
+            <li>
+                <button type="button" class="not-open-link">에피소드</button>
+            </li>
+            <li>
+                <button type="button" class="not-open-link"> 관련영상</button>
+            </li>
+            <li>
+                <button type="button" class="not-open-link">추천</button>
+            </li>
+            <li>
+                <button type="button" class="on">상세정보</button>
+            </li>
+        </ul>
+    </div>
+    <div class="detail-view-content-arena">
+        <div class="preview-detail-box">
+            <strong class="preview-title"></strong>
+            
+            <p class="preview-dsc"></p>
+            <div class="content-actor-box"><!--출연진-->
+                <strong>출연 :</strong>
+                <span class="content-actor-list"><!--이제훈--></span>
+            </div>
+        </div>
+        <div class="detail-view-box"><!--하단 썸네일-->
+            <div class="thumb-box">
+                <div class="picture-arena"><picture><img src="" alt="" class="thumb-img"/></picture></div>
+            </div>
+            <div class="detail-info-box">
+                <p class="detail-dsc"></p>
+                <table class="detail-info-table"> <!---하단 출연진 및 기타 정보-->
+                    <colgroup>
+                        <col style="width: 76px">
+                        <col style="width: auto">
+                    </colgroup>
+                    <tr>
+                        <th scope="row">개요</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">장르</th>
+                        <td><span class="genre"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">출연</th>
+                        <td></td>
+                    </tr>
+
+                </table>  <!---하단 썸네일 인포 끝자락-->
+            </div>
+
+        </div>
+    </div>
+</div>
+   <section id="reviewContainer">
+       <div class="write-button-container">
+           <p>이 작품 어떠셨나요?</p>
+           <div class="rate-container big">
+               <div class="rate-box gray">
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+               </div>
+               <div class="fill-rate-box rate-box">
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+               </div>
+           </div>
+           <button id="openWriteReviewBtn" type="button">감상평 남기기</button>
+       </div>
+       <h1 class="section-title">감상평</h1>
+       <div id="reviewList"></div>
+   </section>
+</body>
+</html>

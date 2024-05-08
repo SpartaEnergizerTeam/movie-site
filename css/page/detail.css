@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+/*메인 이미지 관련 css*/
+#detailPage {
+}
+
+.video-detail .image-box:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 79%;
+    z-index: 10;
+    background: linear-gradient(to bottom, transparent 30%, var(--background-color) 72%);
+}
+
+.video-detail .image-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    height: 650px;
+}
+
+.video-detail .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 0.56;
+}
+
+.video-detail .text-box {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.video-detail {
+    position: relative;
+}
+
+.video-detail .text-box .btnbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.video-detail .text-box .logo-box {
+    font-size: 70px;
+    color: var(--main-color0);
+    margin-bottom: 35px; /* 아래쪽 간격 추가 */
+    text-align: left; /*텍스트 중앙정렬*/
+}
+
+.video-detail .text-box .dot-item {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-color0);
+}
+
+.video-detail .btnbox .video-button {
+    width: 360px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--blue-color1);
+    font-size: 16px;
+    color: var(--fixed-color0);
+    margin-right: 50px; /* 오른쪽 여백 추가 */
+}
+
+.detail-info-box .content-clamp {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.detail-info-box .content-clamp span {
+    display: block;
+    max-width: 1000px;
+    word-break: keep-all;
+    font-size: 16px;
+    color: var(--main-color2);
+    line-height: 1.5;
+    padding-right: 20px;
+}
+
+.video-detail .detail-info-box .content-clamp .more {
+    color:var(--main-color0);
+}
+
+.video-detail .text-box .btnbox .icon-item .icon-txt {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--main-color2);
+}
+
+/*여기부터 하단 */
+
+.player-bottom-contents .player-nav ul li button.on {
+    border-bottom-color: var(--blue-color1);
+    color: var(--main-color0);
+}
+
+.player-bottom-contents .player-nav ul li button {
+    display: inline-block;
+    padding: 0 20px;
+    border-bottom: 4px solid transparent;
+    font-size: 19px;
+    color: var(--main-color2);
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+.player-bottom-contents .player-nav ul {         /* 선긋기효과 */
+    width: 100%;
+    border-bottom: 1px solid var(--main-color5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.player-bottom-contents .player-nav {
+    margin: 0 0 40px;
+}
+
+.player-bottom-contents {
+    position: relative;
+    margin: 40px auto 0;
+    max-width: 1240px;
+}
+
+.detail-info-box {
+    margin-top: 25px;
+}
+
+.detail-view-content-arena .preview-detail-box .preview-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--main-color0);
+    line-height: 30px;
+}
+
+.detail-view-content-arena .preview-detail-box .preview-dsc {
+    margin-top: 18px;
+    font-size: 16px;
+    color: var(--main-color2);
+    line-height: 24px;
+}
+
+.detail-view-content-area .preview-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--main-color0);
+    line-height: 30px;
+}
+
+.detail-view-content-arena .preview-detail-box {
+    padding-bottom: 20px;
+}
+
+.detail-view-content-arena .content-actor-box {
+    margin-top: 15px;
+}
+.detail-view-content-arena .content-actor-box  {
+    margin-right: 12px;
+    font-weight: 400;
+    color: var(--main-color2);
+}
+
+.detail-view-content-arena .detail-view-box {
+    border-top: 1px solid var(--main-color5);/* 선긋기효과 */
+    display: flex;
+    margin-top: 15px;
+    color: var(--main-color2);
+}
+
+.detail-view-content-arena .thumb-box {
+    flex-shrink: 0;
+}
+
+.detail-view-content-arena .detail-view-box .detail-info-table td,
+.detail-view-content-arena .detail-view-box .detail-info-table th {
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-color0);
+    text-align: left;
+    vertical-align: top;
+}
+
+.player-bottom-contents .detail-view-content-arena .detail-view-box .thumb-img {
+    margin-top: 25px;
+    border-radius: 20px;
+    margin-right: 30px;
+    width: 185px;
+
+    height: 277px;
+}
+
+.detail-view-content-area,
+.detail-view-box,
+.detail-info-table,
+.genre {
+    color: var(--main-color0);
+}
+
+.detail-view-content-arena .detail-view-box .detail-info-box .detail-dsc {
+    line-height: 25px;
+}
+
+.video-detail .text-box .dot-item span + span:before {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 10px 4px 0;
+    border-radius: 50%;
+    background-color: var(--main-color2);
+    vertical-align: top;
+    content: "";
+    transform: translateX(-2px);
+}
+
+#loader {
+    width: 93%;
+    margin: 0 auto;
+    max-width: 1240px;
+    height: 4.8px;
+    display: inline-block;
+    position: relative;
+    background: var(--main-rgba-color2);
+    overflow: hidden;
+    border-radius: 4px;
+}
+#loader::after {
+    content: '';
+    box-sizing: border-box;
+    width: 0;
+    height: 4.8px;
+    background: var(--blue-color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animFw 2s linear infinite;
+}
+@keyframes animFw {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#loaderWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-detail .text-box .share-button .icon {
+    display: block;
+    mask: url(../../img/detail/element-icon-share.svg);
+    width: 30px;
+    height: 30px;
+    background: var(--main-color0);
+    mask-size: 30px;
+}
+
+.video-detail .text-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+}

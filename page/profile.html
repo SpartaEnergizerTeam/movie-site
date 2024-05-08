@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>프로필 설정 : 에너자이브</title>
+    <link rel="shortcut icon" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/page/profile.css"/>
+    <script defer src="../js/common.js" type="module"></script>
+    <script defer src="../js/page/profile.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo_section">
+        <a href="../index.html">
+          <span class="blind">Wavve</span>
+        </a>
+      </div>
+      <form id="content" class="content">
+        <div class="title">프로필 설정</div>
+        <div class="profile_container">
+          <div id="animate__zoomInDown" class="animate__animated">
+            <img
+              id="imgUrl"
+              src="https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg"
+              alt="avatar"
+              class="img_style"
+            />
+          </div>
+        </div>
+        <button type="button" class="createBtn" id="createRandomBtn">
+          랜덤 생성
+        </button>
+        <div class="info_box">
+          <span class="label">아이디</span>
+          <input
+            name="username"
+            id="username"
+            class="input"
+            type="text"
+            placeholder="아이디를 입력해주세요"
+            required
+          />
+        </div>
+        <div class="info_box">
+          <span class="label">비밀번호</span>
+          <input
+            name="password"
+            id="password"
+            class="input"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            required
+          />
+        </div>
+        <div class="confirm_box">
+          <a href="../index.html" id="cancel" class="btn cancel">취소</a>
+          <button id="confirm" type="submit" class="btn confirm">확인</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

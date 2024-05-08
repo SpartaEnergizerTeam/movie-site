@@ -1,0 +1,166 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+.info_box input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-out;
+  -webkit-text-fill-color: var(--main-color2);
+}
+
+:root {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+}
+
+.animate__animated {
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+}
+
+.animate__animated.animate__zoomInDown {
+  animation-name: zoomInDown;
+}
+
+@keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.container {
+  position: relative;
+  min-width: 1240px;
+  max-width: 100%;
+  min-height: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 59px 0 50px;
+  overflow: hidden;
+}
+
+.logo_section {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.logo_section a {
+  width: 108px;
+  height: 24px;
+  mask: url(../../img/common/ci-wavve.svg) no-repeat center /cover;
+  display: block;
+  background: var(--main-color0);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: var(--main-color0);
+}
+.profile_container {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.createBtn {
+  display: block;
+  margin: 20px auto 40px auto;
+  width: 236px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--fixed-color0);
+  background-color: var(--blue-color1);
+  border-radius: 999px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+}
+.createBtn:disabled {
+  background: var(--main-color3) !important;
+  color: var(--main-color4);
+  cursor: not-allowed;
+}
+.createBtn:active:not(:disabled) {
+  scale: 98%;
+}
+.createBtn:hover {
+  background-color: var(--blue-color2);
+}
+
+.info_box {
+  display: flex;
+  margin-top: 20px;
+}
+.label {
+  color: var(--main-color2);
+  font-size: 16px;
+  width: 65px;
+  height: 54px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.input {
+  width: 393px;
+  height: 54px;
+  font-size: 18px;
+  color: #a5a5a5;
+  margin-left: 20px;
+  padding: 0 20px;
+  background: var(--main-color5);
+  border: none;
+  vertical-align: middle;
+  border-radius: 8px;
+  outline: none;
+}
+
+.confirm_box {
+  margin-top: 80px;
+  display: flex;
+  gap: 10px;
+}
+.confirm_box .btn {
+  width: 236px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  border-radius: 999px;
+}
+.cancel {
+  background: var(--main-color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancel:hover {
+  background: var(--main-color4);
+}
+.confirm {
+  background-color: var(--blue-color1);
+}
+.confirm:hover {
+  background-color: var(--blue-color2);
+}
+
+.img_style {
+  width: 120px;
+  height: 120px;
+}

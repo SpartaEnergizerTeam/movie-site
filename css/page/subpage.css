@@ -1,0 +1,40 @@
+.page-top {
+  margin-bottom: 40px;
+  padding: 40px 0;
+  background-color: var(--main-color6);
+}
+
+.page-top-inner-wrap {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.page-title {
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--main-color0);
+  font-weight: 500;
+}
+
+.page-title + .page-text {
+  margin-top: 2px;
+}
+
+.page-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-color2);
+  font-weight: 400;
+}
+
+.cards-section {
+  width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  gap: 40px 10px;
+}
