@@ -135,7 +135,7 @@
 }
 
 .detail-info-box {
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .detail-view-content-arena .preview-detail-box .preview-title {
@@ -162,7 +162,6 @@
 }
 
 .detail-view-content-arena .preview-detail-box {
-    padding-bottom: 20px;
 }
 
 .detail-view-content-arena .content-actor-box {
@@ -177,7 +176,7 @@
 .detail-view-content-arena .detail-view-box {
     border-top: 1px solid var(--main-color5);/* 선긋기효과 */
     display: flex;
-    margin-top: 15px;
+    margin-top: 40px;
     color: var(--main-color2);
 }
 
@@ -196,11 +195,10 @@
 }
 
 .player-bottom-contents .detail-view-content-arena .detail-view-box .thumb-img {
-    margin-top: 25px;
+    margin-top: 40px;
     border-radius: 20px;
     margin-right: 30px;
     width: 185px;
-
     height: 277px;
 }
 
