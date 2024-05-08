@@ -11,8 +11,6 @@ if ($searchResetBtn) {
   });
 }
 
-  window.location.href = `./search-result.html?query=${encodeURIComponent($searchInput.value)}`;
-});
 if ($searchForm) {
   $searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
