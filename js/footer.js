@@ -72,7 +72,7 @@ const footer = () => {
   document
     .getElementById("swiper_button_next_footer")
     .addEventListener("click", () => {
-      if (currentIndex === 4) {
+      if (currentIndex === totalItems - 1) {
         return;
       }
       clearInterval(autoSlideInterval);
