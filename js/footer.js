@@ -13,7 +13,6 @@ let clickTimeout = null;
 
 // 현재 인덱스를 받아서 인덱스 * 지정한 단위높이만큼 ul을 움직이게 한다.
 function moveToIndex(index) {
-  console.log("index, currentIndex : ", index, currentIndex);
   let yOffset = -(index * containerHeight);
   // 움직여야하는 y높이
   if (index === 0) {
@@ -24,7 +23,6 @@ function moveToIndex(index) {
     currentIndex = 0;
     ++index;
     setTimeout(function () {
-      console.log("두번쨰 움직임", index, containerHeight);
       const ul = document.querySelector(".footer-swiper-container ul");
       // 두 번째 이동을 위해 transition 설정
       ul.style.transition = "transform 300ms"; // 2단계 이동에는 transition 적용
@@ -73,7 +71,6 @@ document
     if (currentIndex === 4) {
       return;
     }
-    console.log("내가 막았을텐데??");
     clearInterval(autoSlideInterval);
     // 타임아웃 클리어
     clearTimeout(clickTimeout);
