@@ -224,6 +224,7 @@
     background-color: var(--main-color2);
     vertical-align: top;
     content: "";
+    transform: translateX(-2px);
 }
 
 #loader {
