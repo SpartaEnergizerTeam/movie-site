@@ -20,7 +20,8 @@ getMovieVideos(movieId).then((response) => {
     if (response.length > 0) {
       // 영화 비디오 url이 있으면?
       btn.addEventListener("click", function () {
-        window.open(response[0]);
+        const dataLength = response.length;
+        window.open(response[dataLength - 1]);
       });
     } else {
       btn.addEventListener("click", function () {
