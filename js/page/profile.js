@@ -69,7 +69,6 @@ const getRandomAvatar = () => {
   const mouth = Math.floor(randomNum_3 * 9);
   const tempImageUrl = `https://api.dicebear.com/8.x/bottts-neutral/svg?backgroundColor=${background_color_list[backgroundColor]}&eyes=${eyes_list[eyes]}&mouth=${mouth_list[mouth]}`;
   document.getElementById("imgUrl").src = tempImageUrl;
-  imageUrl = tempImageUrl;
 };
 
 document
@@ -100,7 +99,7 @@ document.getElementById("content").addEventListener("submit", function (e) {
   const userObj = {
     username: this.username.value,
     password: this.password.value,
-    imageUrl: imageUrl,
+    imageUrl: this.imgUrl.src,
   };
   window.localStorage.setItem("userObj", JSON.stringify(userObj));
   // 여기서 다른 url로 이동하면 된다.
