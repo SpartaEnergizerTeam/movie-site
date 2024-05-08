@@ -1,4 +1,9 @@
 /*메인 이미지 관련 css*/
+#detailPage {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
 .video-detail .image-box:before {
     content: '';
     position: absolute;
