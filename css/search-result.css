@@ -1,0 +1,48 @@
+#searchResultSection .cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 10px;
+}
+
+#searchResultSection {
+  width: 1240px;
+  margin: 80px auto;
+}
+
+#searchResultSection .cards-section .card-poster p {
+  padding-top: 8px;
+  padding-right: 12px;
+  table-layout: fixed;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a5a5a5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+.no-result-box .search-empty-text {
+  margin-top: 12px;
+  font-size: 22px;
+  color: #a5a5a5;
+  justify-content: center;
+  line-height: 34px;
+}
+
+.no-result-box .error-word {
+  color: #3887ff;
+}
+
+.no-result-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 120px;
+  text-align: center;
+}
+
+.no-result-box img {
+  width: 74px;
+}

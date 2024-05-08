@@ -31,10 +31,8 @@ export const getMovieData = async (movieTypeString, pageNum = 1) => {
 
 // 영화를 한글 키워드로 검색을 할 수 있습니다.
 export const getMovieWithKeywords = async (keywords) => {
-  const urlString = changeKorToUrl(keywords);
-
   const response = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${urlString}&include_adult=false&language=ko&page=1`,
+    `https://api.themoviedb.org/3/search/movie?query=${keywords}&include_adult=false&language=ko&page=1`,
     options
   );
   return await response.json();

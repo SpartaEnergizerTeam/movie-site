@@ -94,7 +94,7 @@ loadMoviesAndDisplay("popular");
 // 영화리스트 스크롤
 
 function movieScroll() {
-  new Swiper(`#card-carousel`, {
+  new Swiper(`.cards-section .card-carousel`, {
     slidesPerView: 5,
     paginationClickable: true,
     spaceBetween: 10,
