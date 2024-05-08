@@ -1,5 +1,4 @@
 import { getMovieData } from "./api.js";
-export const loadMoviesAndDisplay = () => {};
 
 const mainImgSwiper = (movieTypeString) => {
   try {
@@ -67,8 +66,8 @@ const loadMoviesAndDisplay = (movieTypeString) => {
               ? `<img class="rated-number" src="./img/main/rate-num/${
                   index + 1
                 }.png" alt="rated-num ${index + 1}"/>`
-                : "";
-            return `
+              : "";
+          return `
               <li class="card-poster swiper-slide" id=${movie.id}>
                 <a href="./detail.html?movieId=${movie.id}">
                   ${ratedNumberHtml} <!-- 여기에 순위 이미지 코드를 추가합니다. -->
@@ -77,8 +76,8 @@ const loadMoviesAndDisplay = (movieTypeString) => {
                   </div>
                 </a>
               </li>`;
-          })
-          .join("");
+        })
+        .join("");
 
       cardList.innerHTML = cardsHtml;
     });

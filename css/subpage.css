@@ -29,39 +29,12 @@
   font-weight: 400;
 }
 
-/* 공통규칙안에 있어서 삭제예정 */
-.list-view-detail {
+.cards-section {
   width: 1240px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 40px;
   margin: 0 auto;
-}
-
-.list-view-detail .card-poster {
-  border-radius: 10px;
-  position: relative;
-  z-index: 2;
-  width: calc(20% - 8px);
-  flex-shrink: 0;
-  padding-bottom: 40px;
-}
-
-.card-poster .card-image-wrap {
-  overflow: hidden;
-  aspect-ratio: 2 / 3;
-}
-
-.card-image-wrap .card-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.card-poster .card-image-wrap:hover .card-img {
-  transform: scale(1.05);
+  gap: 40px 10px;
 }
