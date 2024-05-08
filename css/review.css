@@ -5,9 +5,6 @@
 }
 
 #reviewContainer {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 3%;
 }
 
 #reviews {
@@ -278,7 +275,6 @@
     align-items: center;
     justify-content: center;
     padding: 60px 0 70px;
-    margin: 0 3%;
 }
 
 #reviewContainer .write-button-container p {
