@@ -46,3 +46,7 @@
 .no-result-box img {
   width: 74px;
 }
+
+#searchResultSection {
+  margin-top: 80px;
+}
