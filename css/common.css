@@ -37,13 +37,13 @@ html {
     z-index: 2;
     width: calc(20% - 8px);
     flex-shrink: 0;
-    border: 1px solid var(--main-color7);
 }
 
 .cards-section .card-image-wrap {
     overflow: hidden;
     border-radius: 10px;
     aspect-ratio: 2 / 3;
+    border: 1px solid var(--main-color7);
 }
 
 .cards-section .card-img {
