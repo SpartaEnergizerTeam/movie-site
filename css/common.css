@@ -1,11 +1,11 @@
 body {
-    background-color: #1b1b1b;
+    background-color: var(--background-color);
 }
 
 body,
 html {
-    scrollbar-color: #a5a5a5 #1b1b1b;
-    color: #a5a5a5;
+    scrollbar-color: var(--main-color2) var(--background-color);
+    color: var(--main-color2);
 }
 
 .blind {
@@ -24,7 +24,7 @@ html {
 }
 
 .cards-section-title {
-    color: white;
+    color: var(--main-color0);
     font-size: 24px;
     margin: 0 0 20px 10px;
     display: flex;
@@ -58,8 +58,8 @@ html {
 }
 
 .search-input-box {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--main-color5);
+    color: var(--main-color0);
     border-radius: 4px;
     font-size: 16px;
     top: 0;
@@ -99,7 +99,7 @@ html {
     display: flex;
     justify-content: flex-end;
     font-size: 12px;
-    color: #a5a5a5;
+    color: var(--main-color2);
     position: relative;
     height: 34px;
     align-items: center;
@@ -115,7 +115,7 @@ html {
     right: 0px;
     content: "";
     height: 8px;
-    background-color: #2f2f2f;
+    background-color: var(--main-color5);
     width: 1px;
 }
 
@@ -124,7 +124,7 @@ html {
 }
 
 .header-section {
-    color: #ffffff;
+    color: var(--main-color0);
     display: flex;
     height: 74px;
     justify-content: space-between;
@@ -153,7 +153,7 @@ html {
 }
 
 .header-nav ul li a {
-    color: #a5a5a5;
+    color: var(--main-color2);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.3s ease;
@@ -173,11 +173,11 @@ header nav ul li:first-child {
 }
 
 header nav ul li a:hover {
-    color: #ffffff;
+    color: var(--main-color0);
 }
 
 .header-menu ul li a.on {
-    color: #ffffff;
+    color: var(--main-color0);
 }
 
 header {
@@ -188,16 +188,26 @@ header {
 header .logo {
     flex-shrink: 0;
     margin-right: 78px;
-}
-
-header .logo img {
     width: 108px;
+    height: 24px;
+    mask: url(../img/common/ci-wavve.svg) no-repeat center /cover;
+    display: block;
+    background: var(--main-color0);
 }
 
 #searchResultSection {
     margin-top: 80px;
 }
 
-.header-nav ul li:last-child a {
-    padding-right: 0;
+/* ------------------------------ */
+
+#themeBtn {
+    width: 30px;
+    height: 25px;
+    mask: url(../img/common/light-theme.svg) no-repeat center /16px auto;
+    background: var(--main-color0);
+}
+
+.light-mode #themeBtn {
+    mask-image: url(../img/common/dark-theme.svg);
 }

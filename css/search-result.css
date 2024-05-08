@@ -15,7 +15,7 @@
   table-layout: fixed;
   font-size: 16px;
   line-height: 24px;
-  color: #a5a5a5;
+  color: var(--main-color2);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -25,13 +25,13 @@
 .no-result-box .search-empty-text {
   margin-top: 12px;
   font-size: 22px;
-  color: #a5a5a5;
+  color: var(--main-color2);
   justify-content: center;
   line-height: 34px;
 }
 
 .no-result-box .error-word {
-  color: #3887ff;
+  color: var(--blue-color2);
 }
 
 .no-result-box {

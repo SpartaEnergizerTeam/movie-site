@@ -1,4 +1,5 @@
 import getUrlParamValue from "./utils/getUrlParamValue.js";
+import {getLocalStorage, setLocalStorage} from "./utils/localStorage.js";
 
 const $searchForm = document.querySelector('#searchContainer');
 const $searchInput = document.querySelector('#searchInput');
@@ -23,4 +24,20 @@ if ($searchForm) {
 const value = decodeURIComponent(getUrlParamValue('query'));
 if (value) {
   $searchInput.value = value;
+}
+
+const themeButton = document.querySelector('#themeBtn');
+const bodyElement = document.body;
+
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    bodyElement.classList.toggle('light-mode');
+    const lightMode = bodyElement.className;
+    setLocalStorage('theme-mode', lightMode === 'light-mode' ? 'light-mode' : '');
+  });
+}
+
+const themeMode = getLocalStorage('theme-mode');
+if (themeMode === 'light-mode') {
+  bodyElement.classList.add('light-mode');
 }
