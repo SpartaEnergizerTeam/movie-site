@@ -43,13 +43,15 @@ table {
     --main-color0: #ffffff;
     --fixed-color0: #ffffff;
     --main-color1: #e8e8e8;
+    --fixed-color1: #e8e8e8;
     --main-color2: #a5a5a5;
     --main-color3: #5e5e5e;
     --main-color4: #717171;
     --fixed-color4: #717171;
     --main-color5: #2f2f2f;
-    --main-color6: #252525;
     --fixed-color5: #2f2f2f;
+    --main-color6: #252525;
+    --main-color7: #1b1b1b;
     --yellow-color1: #fbc02d;
     --blue-color1: #1351f9;
     --blue-color2: #3887ff;
@@ -66,10 +68,10 @@ table {
     --main-color4: #cccccc;
     --main-color5: #f2f2f2;
     --main-color6: #f2f2f2;
-    --yellow-color1: #fbc02d; 
+    --main-color7: #e8e8e8;
+    --yellow-color1: #fbc02d;
     --blue-color1: #1351f9; 
     --blue-color2: #3887ff; 
-    --main-rgba-color1: rgba(255, 255, 255, 0.7);
     --main-rgba-color2: rgba(0, 0, 0, 0.15);
 }
 
