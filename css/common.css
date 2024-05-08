@@ -28,6 +28,7 @@ html {
     font-size: 24px;
     margin: 0 0 20px 10px;
     display: flex;
+    font-weight: 500;
 }
 
 .cards-section .card-poster {
@@ -42,6 +43,7 @@ html {
     overflow: hidden;
     border-radius: 10px;
     aspect-ratio: 2 / 3;
+    border: 1px solid var(--main-color7);
 }
 
 .cards-section .card-img {
@@ -92,7 +94,7 @@ html {
 }
 
 .header-nav {
-    border-bottom: 1px solid #2e2e2e;
+    border-bottom: 1px solid var(--main-color5);
 }
 
 .header-nav-menu {
@@ -170,6 +172,7 @@ header nav > ul > li:first-child {
     transition: color 0.3s ease;
     font-size: 20px;
     padding: 0 10px;
+    font-weight: 500;
 }
 
 header nav > ul > li:hover > a {
@@ -181,6 +184,14 @@ header nav > ul > li:hover > a {
 }
 
 header {
+    background: var(--background-color);
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    border-bottom: 1px solid var(--main-color7);
+}
+
+.header-wrap {
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -244,5 +255,5 @@ header .logo {
 }
 
 .header-menu .category a:hover {
-    color: var(--main-color0);
+    color: var(--fixed-color0);
 }

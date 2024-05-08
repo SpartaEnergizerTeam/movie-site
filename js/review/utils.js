@@ -3,10 +3,8 @@ import {getLocalStorage, setLocalStorage} from "../utils/localStorage.js";
 
 const LOCALSTORAGE_COMMENTS = 'comments';
 const LOCALSTORAGE_USER_INFO = 'userObj';
-const TEST_VALUE = '1234';
-console.log('@@ TODO: 테스트 값 꼭 삭제하기');
 
-export const getMovieIdFromURL = () => getUrlParamValue('movie_id') || TEST_VALUE;
+export const getMovieIdFromURL = () => getUrlParamValue('movieId') || '';
 
 export const getDetailComments = () => JSON.parse(getLocalStorage(LOCALSTORAGE_COMMENTS) || '[]');
 
