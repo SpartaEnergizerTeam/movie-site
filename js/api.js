@@ -8,6 +8,12 @@ const options = {
 };
 const defaultUrl = "https://api.themoviedb.org/3/";
 
+export const getCreditData = async (movie_id) => {
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=ko-KR`;
+  const response = await fetch(url, options);
+  return await response.json();
+};
+
 // playing, popular, top, upcoming 중 하나를 movieTypeString의 인자로 넣으면 됩니다.
 export const getMovieData = async (movieTypeString, pageNum = 1) => {
   let url = "";
@@ -55,7 +61,7 @@ export const getMovieImages = async (movie_id) => {
 // 무비 id를 입력하면 영화 영상들을 유튜브로 가져옵니다.
 // 유튜브 url을 리턴하는 함수로 없으면 빈배열을 리턴합니다.
 export const getMovieVideos = async (movie_id) => {
-  const url = `${defaultUrl}${movie_id}/videos?language=ko`;
+  const url = `${defaultUrl}movie/${movie_id}/videos?language=en-US`;
   const response = await fetch(url, options);
   const data = await response.json();
 
@@ -68,4 +74,3 @@ export const getMovieVideos = async (movie_id) => {
   }
   return [];
 };
-
