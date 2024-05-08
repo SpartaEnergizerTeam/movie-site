@@ -1,4 +1,4 @@
-import { getMovieDetail, getMovieVideos } from "../api.js";
+import { getMovieDetail, getMovieVideos, getCreditData } from "../api.js";
 import getUrlParamValue from "../utils/getUrlParamValue.js";
 import { getLocalStorage } from "../utils/localStorage.js";
 
@@ -7,15 +7,14 @@ const movieId = getUrlParamValue("movieId");
 getMovieVideos(movieId).then((response) => {
   const userString = getLocalStorage("userObj");
   // 있으면 객체 없으면 undefined
+  const btn = document.getElementById("trailerBtn");
   const userData = userString ?? JSON.parse(userString);
   if (!userData) {
-    const btn = document.getElementById("trailerBtn");
     btn.innerHTML = "로그인";
     btn.addEventListener("click", function () {
       window.location.href = "./profile.html";
     });
   } else {
-    const btn = document.getElementById("trailerBtn");
     btn.innerHTML = "트레일러 재생";
     let videoUrl;
     if (response.length > 0) {
@@ -25,7 +24,7 @@ getMovieVideos(movieId).then((response) => {
       });
     } else {
       btn.addEventListener("click", function () {
-        alert("동영상이 존재하지 않습니다.");
+        alert("동영상이 존재하지 않아요.");
       });
     }
   }
@@ -94,20 +93,7 @@ getMovieDetail(movieId).then((response) => {
 //////////영화 인물 감독 ////////////
 //1.인물 api. 상단4명만 출력할것
 
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNDQ1MzFmMGRkOGY3NmY2NDE2NWEwNzU4MDQ1M2QzOSIsInN1YiI6IjY2MmIyMzQ5NzY0ODQxMDExZDJjMzFkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bNR43UvxNhyv-aUuh3xtx44tXz-IjayN-QrgO-ATUMA",
-  },
-};
-
-fetch(
-  `https://api.themoviedb.org/3/movie/${movieId}/credits?language=ko-KR`,
-  options
-)
-  .then((response) => response.json())
+getCreditData(movieId)
   .then((response) => {
     // API에서 가져온 출연진 정보
     const actors = response.cast.slice(0, 4); // 배열의 처음 4개 요소만 선택
