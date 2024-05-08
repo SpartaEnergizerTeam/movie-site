@@ -2,10 +2,6 @@
 // 생성한 이미지 값을 유저가 선택하면 로컬스토리지에 저장한다.
 
 let disabled = false;
-// 배포시에 맞는 url로 변경 필!
-const returnUrl = "../index.html";
-let IMAGE_URL =
-  "https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg";
 
 const background_color_list = [
   "00acc1",
@@ -103,8 +99,8 @@ document.getElementById("content").addEventListener("submit", function (e) {
     imageUrl: imgUrl.src,
   };
   window.localStorage.setItem("userObj", JSON.stringify(userObj));
-  // 여기서 다른 url로 이동하면 된다.
-  window.location.href = returnUrl;
+  // 원래 있던 페이지로 다시 이동한다.
+  window.history.back();
 });
 
 // 맨 처음 로컬스토리지 가져와서 값 넣기
