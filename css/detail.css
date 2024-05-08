@@ -9,12 +9,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/detail/detail_gra_bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 650px;
     z-index: 10;
+    background: linear-gradient(to bottom, transparent, var(--background-color));
 }
 
 .video-detail .image-box {
@@ -37,6 +35,8 @@
     z-index: 2;
     bottom: 0;
     left: 0;
+    width: 100%;
+    padding: 0 15px;
 }
 
 .video-detail {
@@ -51,7 +51,7 @@
 
 .video-detail .text-box .logo-box {
     font-size: 70px;
-    color: var(--main-color0);
+    color: var(--fixed-color0);
     margin-bottom: 35px; /* 아래쪽 간격 추가 */
     text-align: left; /*텍스트 중앙정렬*/
 }
@@ -59,7 +59,7 @@
 .video-detail .text-box .dot-item {
     font-size: 16px;
     line-height: 24px;
-    color: var(--main-color0);
+    color: var(--fixed-color0);
 }
 
 .video-detail .btnbox .video-button {
@@ -68,7 +68,7 @@
     border-radius: 12px;
     background-color: var(--blue-color1);
     font-size: 16px;
-    color: var(--main-color0);
+    color: var(--fixed-color0);
     margin-right: 50px; /* 오른쪽 여백 추가 */
 }
 
@@ -171,9 +171,12 @@
 .detail-view-content-arena .detail-view-box {    
     border-top: 1px solid var(--main-color5);/* 선긋기효과 */
     display: flex;
-    flex-wrap: wrap;
     margin-top: 15px;
     color: var(--main-color2);
+}
+
+.detail-view-content-arena .thumb-box {
+    flex-shrink: 0;
 }
 
 .detail-view-content-arena .detail-view-box .detail-info-table td,
@@ -212,7 +215,7 @@
     height: 3px;
     margin: 10px 4px 0;
     border-radius: 50%;
-    background-color: #a5a5a5;
+    background-color: var(--main-color2);
     vertical-align: top;
     content: "";
 }
@@ -224,7 +227,7 @@
     height: 4.8px;
     display: inline-block;
     position: relative;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--main-rgba-color2);
     overflow: hidden;
     border-radius: 4px;
 }
@@ -233,7 +236,7 @@
     box-sizing: border-box;
     width: 0;
     height: 4.8px;
-    background: #1351f9;
+    background: var(--blue-color1);
     position: absolute;
     top: 0;
     left: 0;
@@ -254,10 +257,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1b1b1b;
+    background: var(--background-color);
     z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.video-detail .text-box .share-button .icon {
+    display: block;
+    mask: url(../img/detail/element-icon-share.svg);
+    width: 30px;
+    height: 30px;
+    background: var(--main-color0);
+    mask-size: 30px;
 }

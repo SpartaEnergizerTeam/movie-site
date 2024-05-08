@@ -1,4 +1,5 @@
 import getUrlParamValue from "./utils/getUrlParamValue.js";
+import {getLocalStorage, setLocalStorage} from "./utils/localStorage.js";
 
 const $searchForm = document.querySelector('#searchContainer');
 const $searchInput = document.querySelector('#searchInput');
@@ -26,7 +27,15 @@ if (value) {
 }
 
 const themeButton = document.querySelector('#themeBtn');
+const bodyElement = document.body;
 
 themeButton.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+  bodyElement.classList.toggle('light-mode');
+  const lightMode = bodyElement.className;
+  setLocalStorage('theme-mode', lightMode === 'light-mode' ? 'light-mode' : '');
 });
+
+const themeMode = getLocalStorage('theme-mode');
+if (themeMode === 'light-mode') {
+  bodyElement.classList.add('light-mode');
+}

@@ -1,6 +1,5 @@
 body {
     background-color: var(--background-color);
-    transition: .4s;
 }
 
 body,
@@ -100,7 +99,7 @@ html {
     display: flex;
     justify-content: flex-end;
     font-size: 12px;
-    color: #a5a5a5;
+    color: var(--main-color2);
     position: relative;
     height: 34px;
     align-items: center;
@@ -116,7 +115,7 @@ html {
     right: 0px;
     content: "";
     height: 8px;
-    background-color: #2f2f2f;
+    background-color: var(--main-color5);
     width: 1px;
 }
 
@@ -125,7 +124,7 @@ html {
 }
 
 .header-section {
-    color: #ffffff;
+    color: var(--main-color0);
     display: flex;
     height: 74px;
     justify-content: space-between;
@@ -154,7 +153,7 @@ html {
 }
 
 .header-nav ul li a {
-    color: #a5a5a5;
+    color: var(--main-color2);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.3s ease;
@@ -174,11 +173,11 @@ header nav ul li:first-child {
 }
 
 header nav ul li a:hover {
-    color: #ffffff;
+    color: var(--main-color0);
 }
 
 .header-menu ul li a.on {
-    color: #ffffff;
+    color: var(--main-color0);
 }
 
 header {
@@ -189,18 +188,16 @@ header {
 header .logo {
     flex-shrink: 0;
     margin-right: 78px;
-}
-
-header .logo img {
     width: 108px;
+    height: 24px;
+    mask: url(../img/common/ci-wavve.svg) no-repeat center /cover;
+    display: block;
+    background: var(--main-color0);
 }
 
 #searchResultSection {
     margin-top: 80px;
 }
-
-.header-nav ul li:last-child a {
-    padding-right: 0;
 
 /* ------------------------------ */
 
