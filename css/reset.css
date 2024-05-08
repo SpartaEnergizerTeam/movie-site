@@ -54,18 +54,18 @@ table {
 }
 
 .light-mode {
-    --background-color: #1b1b1b;
-    --main-color0: #ffffff;
-    --main-color1: #e8e8e8;
-    --main-color2: #a5a5a5;
-    --main-color3: #5e5e5e;
-    --main-color4: #717171;
-    --main-color5: #2f2f2f;
-    --yellow-color1: #fbc02d;
-    --blue-color1: #1351f9;
-    --blue-color2: #3887ff;
-    --main-rgba-color1: rgba(0, 0, 0, 0.7);
-    --main-rgba-color2: rgba(0, 0, 0, 0.5);
+    --background-color: #ffffff; 
+    --main-color0: #1b1b1b; 
+    --main-color1: #333333; 
+    --main-color2: #666666; 
+    --main-color3: #999999; 
+    --main-color4: #cccccc;
+    --main-color5: #f2f2f2; 
+    --yellow-color1: #fbc02d; 
+    --blue-color1: #1351f9; 
+    --blue-color2: #3887ff; 
+    --main-rgba-color1: rgba(255, 255, 255, 0.7); 
+    --main-rgba-color2: rgba(255, 255, 255, 0.5); 
 }
 
 * {
