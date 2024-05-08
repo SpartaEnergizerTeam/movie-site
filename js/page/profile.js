@@ -3,7 +3,7 @@
 
 let disabled = false;
 // 배포시에 맞는 url로 변경 필!
-const returnUrl = "index.html";
+const returnUrl = "../index.html";
 let IMAGE_URL =
   "https://t4.ftcdn.net/jpg/00/64/67/27/240_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg";
 

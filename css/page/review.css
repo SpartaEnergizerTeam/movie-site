@@ -57,12 +57,12 @@
     display: block;
     width: 12px;
     height: 12px;
-    mask: url(../img/detail/star-fill.svg) no-repeat center /12px;
+    mask: url(../../img/detail/star-fill.svg) no-repeat center /12px;
     background-color: var(--yellow-color1);
 }
 
 #reviewContainer [class*='star-half'] {
-    mask-image: url(../img/detail/star-half.svg);
+    mask-image: url(../../img/detail/star-half.svg);
 }
 
 #reviewContainer .section-title {
@@ -130,7 +130,7 @@
 }
 
 #reviewList .empty-review {
-    color: var(--main-color4);
+    color: var(--fixed-color4);
     padding: 0 0 80px;
     font-size: 15px;
     line-height: 1.6;

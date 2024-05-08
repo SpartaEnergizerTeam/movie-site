@@ -18,7 +18,7 @@ const writeReviewHandler = () => {
 
     if (!username) {
       window.alert('먼저 프로필을 설정하신 뒤에 작성해주세요');
-      window.location.href = './profile.html';
+      window.location.href = '../../../page/profile.html';
       return;
     }
 

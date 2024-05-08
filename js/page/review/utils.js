@@ -1,5 +1,5 @@
-import getUrlParamValue from "../utils/getUrlParamValue.js";
-import {getLocalStorage, setLocalStorage} from "../utils/localStorage.js";
+import getUrlParamValue from "../../utils/getUrlParamValue.js";
+import {getLocalStorage, setLocalStorage} from "../../utils/localStorage.js";
 
 const LOCALSTORAGE_COMMENTS = 'comments';
 const LOCALSTORAGE_USER_INFO = 'userObj';

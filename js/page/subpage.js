@@ -1,4 +1,4 @@
-import renderMovieDisplay from "./renderMovieDisplay.js";
+import renderMovieDisplay from "../renderMovieDisplay.js";
 
 const $nowPlayingPage = document.querySelector("#nowPlayingPage");
 const $popularPage = document.querySelector("#popularPage");

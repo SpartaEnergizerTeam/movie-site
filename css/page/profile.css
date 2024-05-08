@@ -55,7 +55,7 @@ input:-webkit-autofill:focus,
 .logo_section a {
   width: 108px;
   height: 24px;
-  mask: url(../img/common/ci-wavve.svg) no-repeat center /cover;
+  mask: url(../../img/common/ci-wavve.svg) no-repeat center /cover;
   display: block;
   background: var(--main-color0);
 }
