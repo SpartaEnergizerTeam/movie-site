@@ -96,10 +96,11 @@ document
 
 document.getElementById("content").addEventListener("submit", function (e) {
   e.preventDefault();
+  const imgUrl = document.getElementById("imgUrl");
   const userObj = {
     username: this.username.value,
     password: this.password.value,
-    imageUrl: this.imgUrl.src,
+    imageUrl: imgUrl.src,
   };
   window.localStorage.setItem("userObj", JSON.stringify(userObj));
   // 여기서 다른 url로 이동하면 된다.
