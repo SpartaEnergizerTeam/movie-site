@@ -130,7 +130,7 @@
 }
 
 #reviewList .empty-review {
-    color: var(--main-color4);
+    color: var(--fixed-color4);
     padding: 0 0 80px;
     font-size: 15px;
     line-height: 1.6;

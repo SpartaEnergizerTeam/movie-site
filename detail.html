@@ -22,19 +22,19 @@
             <nav class="header-nav-menu">
                 <ul>
                     <li><a href="./profile.html">내 프로필</a></li>
-                    <li><a href="#">이용권</a></li>
-                    <li><a href="#">쿠폰·코인</a></li>
-                    <li><a href="#">웨이브온</a></li>
-                    <li><a href="#">이벤트</a></li>
+                    <li><a class="not-open-link" href="#">이용권</a></li>
+                    <li><a class="not-open-link" href="#">쿠폰·코인</a></li>
+                    <li><a class="not-open-link" href="#">웨이브온</a></li>
+                    <li><a class="not-open-link" href="#">이벤트</a></li>
                 </ul>
-                <button id="themeBtn" type="button"></button>
+                <button id="themeBtn" type="button"><span class="blind">테마 변경</span></button>
             </nav>
         </div>
         <div class="header-section">
             <a href="./index.html" class="logo"><span class="blind">Wavve</span></a>
             <nav class="header-menu">
                 <ul>
-                    <li><a href="#" class="on">홈</a></li>
+                    <li><a href="./index.html" class="on">홈</a></li>
                     <li>
                         <a href="#">카테고리</a>
                         <div class="category">
@@ -46,7 +46,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">LIVE</a></li>
+                    <li><a class="not-open-link" href="#">LIVE</a></li>
                     <li><a href="./profile.html">MY</a></li>
                 </ul>
             </nav>
@@ -64,11 +64,10 @@
        </div>
        <div class="text-box">
            <div class="text-inner">
-               <h1 class="logo-box">
-               </h1>
+               <h1 class="logo-box"></h1>
                <p class="dot-item"></p>
                <div class="btnbox">
-                   <button class="video-button" type="button">트레일러 재생</button>
+                   <button class="video-button not-open-link" type="button">트레일러 재생</button>
                    <ul>
                        <li class="icon-item">
                            <button class="share-button" type="button">
@@ -90,13 +89,13 @@
     <div class="player-nav">
         <ul>
             <li>
-                <button type="button" class>에피소드</button>
+                <button type="button" class="not-open-link">에피소드</button>
             </li>
             <li>
-                <button type="button" class> 관련영상</button>
+                <button type="button" class="not-open-link"> 관련영상</button>
             </li>
             <li>
-                <button type="button" class>추천</button>
+                <button type="button" class="not-open-link">추천</button>
             </li>
             <li>
                 <button type="button" class="on">상세정보</button>
