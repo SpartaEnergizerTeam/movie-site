@@ -29,11 +29,13 @@ if (value) {
 const themeButton = document.querySelector('#themeBtn');
 const bodyElement = document.body;
 
-themeButton.addEventListener('click', () => {
-  bodyElement.classList.toggle('light-mode');
-  const lightMode = bodyElement.className;
-  setLocalStorage('theme-mode', lightMode === 'light-mode' ? 'light-mode' : '');
-});
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    bodyElement.classList.toggle('light-mode');
+    const lightMode = bodyElement.className;
+    setLocalStorage('theme-mode', lightMode === 'light-mode' ? 'light-mode' : '');
+  });
+}
 
 const themeMode = getLocalStorage('theme-mode');
 if (themeMode === 'light-mode') {
