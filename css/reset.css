@@ -48,6 +48,7 @@ table {
     --main-color4: #717171;
     --fixed-color4: #717171;
     --main-color5: #2f2f2f;
+    --main-color6: #252525;
     --fixed-color5: #2f2f2f;
     --yellow-color1: #fbc02d;
     --blue-color1: #1351f9;
@@ -63,7 +64,8 @@ table {
     --main-color2: #777777;
     --main-color3: #999999; 
     --main-color4: #cccccc;
-    --main-color5: #f2f2f2; 
+    --main-color5: #f2f2f2;
+    --main-color6: #f2f2f2;
     --yellow-color1: #fbc02d; 
     --blue-color1: #1351f9; 
     --blue-color2: #3887ff; 
