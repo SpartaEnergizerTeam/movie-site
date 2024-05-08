@@ -31,9 +31,6 @@ getMovieVideos(movieId).then((response) => {
   }
 });
 
-// document.getElementById("trailerBtn").addEventListener("click", function() {
-// })
-
 getMovieDetail(movieId).then((response) => {
   // 영화 제목 설정
   const titleElement = document.querySelector(".logo-box");
