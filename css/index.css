@@ -1,9 +1,8 @@
 .main {
   width: 100%;
   height: 100%;
-  margin: 109px auto 0;
+  margin: 0 auto;
   padding-bottom: 50px;
-  background-color: #1b1b1b;
 }
 
 #main-banner {
@@ -41,7 +40,7 @@
   left: 0;
   right: 0;
   height: 35%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, var(--main-rgba-color1), transparent);
   border-radius: 10px;
 }
 
@@ -50,7 +49,7 @@
   display: flex;
   bottom: 50px;
   left: 60px;
-  color: rgb(255, 255, 255);
+  color: var(--main-color0);
   font-size: 60px;
   font-weight: 600;
   z-index: 1;
@@ -65,11 +64,11 @@
 #main-banner .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: #e8e8e8;
+  background-color: var(--main-color5);
 }
 
 .main-nav .swiper-pagination-bullet-active {
-  background-color: #ffffff;
+  background-color: var(--main-color0);
 }
 
 #main-banner #main-slider {
@@ -92,48 +91,17 @@
   border-radius: 10px;
 }
 
-.cards-section {
-  position: relative;
-  width: 1240px;
-  margin: 80px auto;
-  overflow: hidden;
-  padding-bottom: 40px;
-}
-
-.title {
-  color: white;
-  font-size: 24px;
-  margin: 0 0 20px 10px;
-  display: flex;
-}
-.title .more {
+.cards-section-title .more {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-size: 16px;
   line-height: 24px;
-  color: #a5a5a5;
+  color: var(--main-color2);
   margin: 0 0 0 auto;
   padding: 5px 10px 5px 0;
 }
-
-.swiper-wrapper .card-poster {
-  width: 240px;
-  height: 360px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-}
-
-#card-carousel #cards-top .card-poster {
-  width: 240px;
-  height: 360px;
-  position: relative;
-  z-index: 3;
-}
-
-#card-carousel #cards-top .card-poster .rated-number {
+#cards-top .card-poster .rated-number {
   width: 120px;
   height: 76px;
   position: absolute;
@@ -142,18 +110,9 @@
   overflow: visible;
 }
 
-.card-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  /* display: block; */
-  transition: transform 0.5s ease;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.card-poster:hover .card-img {
-  transform: scale(1.05);
+.cards-section {
+  width: 1240px;
+  margin: 80px auto;
 }
 
 .custom-swiper-button-prev {
@@ -197,15 +156,9 @@
 }
 
 .main-nav .swiper-pagination-bullet {
-  background: #e8e8e8;
+  background: var(--main-color1);
   width: 10px;
   height: 10px;
-}
-
-.card-image-wrap {
-  overflow: hidden;
-  border-radius: 10px;
-  aspect-ratio: 2 / 3;
 }
 
 .slide-img-container .main-title {

@@ -1,8 +1,8 @@
 const getUrlParamValue = (paramName) => {
-  if (!paramName) return '';
+  if (!paramName || !window.location.search) return '';
 
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(paramName);
+  return urlParams.get(paramName) || '';
 };
 
 export default getUrlParamValue;

@@ -1,0 +1,9 @@
+<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path opacity=".3" d="M0 0h22v22H0z"/>
+        <g stroke="#A5A5A5" stroke-width="2">
+            <path d="M15.45 8.908A6.501 6.501 0 1 1 2.45 8.906a6.501 6.501 0 0 1 13.002.002z"/>
+            <path stroke-linecap="round" d="m14.047 13.654 5.743 5.569"/>
+        </g>
+    </g>
+</svg>
