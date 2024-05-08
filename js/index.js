@@ -10,10 +10,13 @@ const mainImgSwiper = (movieTypeString) => {
       movies.forEach((movie) => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
-        slide.innerHTML = ` <div class="slide-img-container">
-      <title class="main-title">${movie.title}</title>
-      <img src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}" class="big-banner"/>
-      </div>`;
+        slide.innerHTML = `
+        <div class="slide-img-container">
+          <a href="./page/detail.html?movieId=${movie.id}">
+              <title class="main-title">${movie.title}</title>
+              <img src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}" class="big-banner"/>
+          </a>
+        </div>`;
         swiperWrapper.appendChild(slide);
       });
 
@@ -65,7 +68,7 @@ const loadMoviesAndDisplay = (movieTypeString) => {
               : "";
           return `
               <li class="card-poster swiper-slide" id=${movie.id}>
-                <a href="./detail.html?movieId=${movie.id}">
+                <a href="./page/detail.html?movieId=${movie.id}">
                   ${ratedNumberHtml} <!-- 여기에 순위 이미지 코드를 추가합니다. -->
                   <div class="card-image-wrap">
                       <img class="card-img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>

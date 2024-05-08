@@ -1,4 +1,4 @@
-import {getMovieData} from "./api.js";
+import {getMovieData} from "../api.js";
 
 const $container = document.querySelector('#searchMainContainer');
 

@@ -274,7 +274,7 @@
 
 .video-detail .text-box .share-button .icon {
     display: block;
-    mask: url(../img/detail/element-icon-share.svg);
+    mask: url(../../img/detail/element-icon-share.svg);
     width: 30px;
     height: 30px;
     background: var(--main-color0);

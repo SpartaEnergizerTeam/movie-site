@@ -1,5 +1,5 @@
-import {getMovieDetail} from './api.js';
-import getUrlParamValue from "./utils/getUrlParamValue.js";
+import {getMovieDetail} from '../api.js';
+import getUrlParamValue from "../utils/getUrlParamValue.js";
 
 const movieId = getUrlParamValue('movieId');
 
@@ -118,6 +118,7 @@ shareButton.addEventListener('click', function() {
       console.error('주소 복사 실패:', err);
     });
 });
+
 
 const removeLoadingOverlay = () => {
   const loadingOverlay = document.querySelector('#loaderWrap');
