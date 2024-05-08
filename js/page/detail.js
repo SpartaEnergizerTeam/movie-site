@@ -16,7 +16,6 @@ getMovieVideos(movieId).then((response) => {
     });
   } else {
     btn.innerHTML = "트레일러 재생";
-    let videoUrl;
     if (response.length > 0) {
       // 영화 비디오 url이 있으면?
       btn.addEventListener("click", function () {
@@ -77,22 +76,28 @@ getMovieDetail(movieId).then((response) => {
   detailDscElement.textContent = response.overview;
 
   // Production Companies 설정
-  const productionCompaniesElement = document.querySelector(
-    ".detail-info-table tbody tr:nth-child(1) td"
-  );
+  const productionCompaniesElement = document.querySelector(".detail-info-table tbody tr:nth-child(1) td");
   productionCompaniesElement.textContent = response.production_companies
     .map((company) => company.name)
     .join(", ");
 
   // 장르 정보 설정
   const genres = response.genres.map((genre) => genre.name).join(" ");
-  const genreRow = document.querySelector(
-    ".detail-info-table tbody tr:nth-child(2) td"
-  );
+  const genreRow = document.querySelector(".detail-info-table tbody tr:nth-child(2) td");
   genreRow.innerHTML = `<a class="genre">${genres}</a>`;
+}).catch(() => {
+  const $root = document.querySelector('#detailPage');
+  $root.innerHTML = `
+      <div class="no-result-box">
+        <img src="../img/common/icon-alert.svg" alt="" />
+        <p class="search-empty-text">
+            알 수 없는 이유로 정보를 가져올 수 없어요.<br/>불편을 드려 죄송해요
+        </p>
+      </div>
+    `;
 });
 //////////영화 인물 감독 ////////////
-//1.인물 api. 상단4명만 출력할것
+//1.인물 api. 상단 4명만 출력할것
 
 getCreditData(movieId)
   .then((response) => {
@@ -119,7 +124,6 @@ getCreditData(movieId)
   .finally(() => removeLoadingOverlay());
 
 //더보기 스크롤 밑으로 내리기 함수
-
 const moreLink = document.querySelector(".more");
 
 moreLink.addEventListener("click", function () {

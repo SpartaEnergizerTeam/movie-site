@@ -65,3 +65,28 @@ html {
 main {
     min-height: 400px;
 }
+
+.no-result-box .search-empty-text {
+    margin-top: 12px;
+    font-size: 22px;
+    color: var(--main-color2);
+    justify-content: center;
+    line-height: 34px;
+}
+
+.no-result-box .error-word {
+    color: var(--blue-color2);
+}
+
+.no-result-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 120px;
+    text-align: center;
+}
+
+.no-result-box img {
+    width: 74px;
+}

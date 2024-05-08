@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-/*메인 이미지 관련 css*/
-#detailPage {
-}
-
 .video-detail .image-box:before {
     content: '';
     position: absolute;
