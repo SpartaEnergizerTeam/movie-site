@@ -1,0 +1,31 @@
+#searchMainContainer {
+  width: 1240px;
+  margin: 80px auto;
+}
+
+#searchMainContainer .cards-section .card-image-wrap {
+  aspect-ratio: 1 / 0.56;
+}
+
+#searchMainContainer .cards-section .card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#searchMainContainer .cards-section .card-poster p {
+  padding-top: 8px;
+  padding-right: 12px;
+  table-layout: fixed;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a5a5a5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+#searchMainContainer .cards-section {
+  padding-bottom: 60px;
+}
