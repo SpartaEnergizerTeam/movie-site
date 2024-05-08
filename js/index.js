@@ -56,16 +56,12 @@ const loadMoviesAndDisplay = (movieTypeString) => {
   try {
     getMovieData(movieTypeString).then((movieData) => {
       const movies = movieData.results;
-
       const cardList = document.querySelector(`#cards-${movieTypeString}`);
-
       const cardsHtml = movies
         .map((movie, index) => {
           const ratedNumberHtml =
             movieTypeString === "top"
-              ? `<img class="rated-number" src="./img/main/rate-num/${
-                  index + 1
-                }.png" alt="rated-num ${index + 1}"/>`
+              ? `<img class="rated-number" src="./img/main/rate-num/${index + 1}.png" alt="rated-num ${index + 1}"/>`
               : "";
           return `
               <li class="card-poster swiper-slide" id=${movie.id}>

@@ -1,4 +1,4 @@
-import { getMovieData } from "../api.js";
+import { getMovieData } from "./api.js";
 
 // 영화 api data 출력
 const renderMovieDisplay = (movieTypeString, selector) => {
@@ -28,7 +28,4 @@ const renderMovieDisplay = (movieTypeString, selector) => {
   }
 };
 
-renderMovieDisplay("playing", ".cards-section");
-renderMovieDisplay("popular", ".cards-section");
-renderMovieDisplay("upcoming", ".cards-section");
-renderMovieDisplay("top", ".cards-section");
+export default renderMovieDisplay;
