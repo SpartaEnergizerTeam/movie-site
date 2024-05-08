@@ -157,7 +157,7 @@ a:visited {
   width: 94px;
   height: 38px;
   display: block;
-  mask: url(../../img/common/ico-footer-wavve.svg);
+  mask: url(../img/common/ico-footer-wavve.svg);
   mask-size: 94px;
   background: var(--main-color0);
 }
