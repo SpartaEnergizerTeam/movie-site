@@ -38,4 +38,14 @@ getMovieWithKeywords(searchKeyword).then(({results}) => {
     `}).join('');
 
   $searchResultSection.appendChild($ul);
+}).catch(() => {
+  const $div = document.createElement('div');
+  $div.className = 'no-result-box';
+  $div.innerHTML = `
+      <img src="../img/common/icon-alert.svg" alt="" />
+      <p class="search-empty-text">
+          알 수 없는 이유로 정보를 가져올 수 없어요.<br/>불편을 드려 죄송해요
+      </p>
+    `;
+  $searchResultSection.appendChild($div);
 });
