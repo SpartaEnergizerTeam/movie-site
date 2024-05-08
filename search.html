@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>검색 : Energivve(에너자이브)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/search.css"/>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/common.js" type="module"></script>
+    <script defer src="./js/searchMain.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrap">
+        <div class="header-nav">
+        <nav class="header-nav-menu">
+          <ul>
+            <li><a href="./profile.html">내 프로필</a></li>
+            <li><a href="#">이용권</a></li>
+            <li><a href="#">쿠폰·코인</a></li>
+            <li><a href="#">웨이브온</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+          <button id="themeBtn" type="button"></button>
+        </nav>
+      </div>
+        <div class="header-section">
+        <a href="./index.html" class="logo"><span class="blind">Wavve</span></a>
+        <nav class="header-menu">
+          <ul>
+            <li><a href="#" class="on">홈</a></li>
+            <li>
+              <a href="#">카테고리</a>
+              <div class="category">
+                <ul>
+                  <li><a href="./subpage/top20.html">TOP 20</a></li>
+                  <li><a href="./subpage/nowplaying.html">NOW PLAYING</a></li>
+                  <li><a href="./subpage/upcoming.html">UPCOMING</a></li>
+                  <li><a href="./subpage/popular.html">POPULAR</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">LIVE</a></li>
+            <li><a href="./profile.html">MY</a></li>
+          </ul>
+        </nav>
+        <form id="searchContainer">
+          <img src="img/common/icon-search.svg" class="search-input-icon" />
+          <input
+            id="searchInput"
+            placeholder="제목, 장르, 배우로 찾아보세요"
+            type="text"
+            class="search-input-box"
+          />
+          <button id="searchDeleteBtn" type="button">
+            <img src="./img/common/search-delete.svg" class="search-cancel-icon" />
+          </button>
+        </form>
+      </div>
+      </div>
+    </header>
+    <main id="searchMainContainer"></main>
+  </body>
+</html>

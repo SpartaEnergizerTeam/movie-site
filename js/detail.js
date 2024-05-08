@@ -1,14 +1,17 @@
 import {getMovieDetail} from './api.js';
+import getUrlParamValue from "./utils/getUrlParamValue.js";
 
+const movieId = getUrlParamValue('movieId');
 
-getMovieDetail('1094844').then((response) => {
+getMovieDetail(movieId).then((response) => {
   // 영화 제목 설정
   const titleElement = document.querySelector('.logo-box');
+  const tabName = document.querySelector('title');
   titleElement.textContent = response.title;
+  tabName.textContent = `${response.title} : ${tabName.textContent}`;
 
   // 장르 정보 설정
   const genreContainer = document.querySelector('.dot-item');
-  genreContainer.innerHTML = '';
   response.genres.forEach((genre, index) => {
     const genreElement = document.createElement('span');
     genreElement.textContent = genre.name;
@@ -63,7 +66,7 @@ const options = {
   }
 };
 
-fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', options)
+fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=ko-KR`, options)
   .then(response => response.json())
   .then(response => {
     // API에서 가져온 출연진 정보
@@ -71,7 +74,6 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
 
     // preview-dsc에 있는 요소를 찾아서 출연진 정보를 추가합니다.
     const actorListElement = document.querySelector('.content-actor-list');
-    actorListElement.innerHTML = ''; // 기존의 내용 초기화
     const actorElement = document.createElement('span');
     actorElement.classList.add('content-actor-list');
     actorElement.textContent = actors.map((actor) => actor.name).join(', ');
@@ -79,13 +81,13 @@ fetch('https://api.themoviedb.org/3/movie/1094844/credits?language=en-US', optio
 
     // 출연진 정보를 detail-info-table에 추가합니다.
     const genreRow = document.querySelector('.detail-info-table tbody tr:nth-child(3) td');
-    genreRow.innerHTML = '';
     const genreRowElement = document.createElement('span');
     genreRowElement.classList.add('genre');
     genreRowElement.textContent = actors.map((actor) => actor.name).join(', ');
     genreRow.appendChild(genreRowElement);
   })
-  .catch(err => console.error(err));
+  .catch(err => console.error(err))
+  .finally(() => removeLoadingOverlay());
 
 
 //더보기 스크롤 밑으로 내리기 함수
@@ -116,3 +118,13 @@ shareButton.addEventListener('click', function() {
       console.error('주소 복사 실패:', err);
     });
 });
+
+const removeLoadingOverlay = () => {
+  const loadingOverlay = document.querySelector('#loaderWrap');
+
+  const hideOverlay = setTimeout(() => {
+    loadingOverlay.style.display = 'none';
+
+    clearTimeout(hideOverlay);
+  }, 1000);
+}

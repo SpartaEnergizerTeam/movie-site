@@ -4,7 +4,7 @@ input:-webkit-autofill:focus,
 .info_box input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
   -webkit-transition: background-color 9999s ease-out;
-  -webkit-text-fill-color: #a5a5a5;
+  -webkit-text-fill-color: var(--main-color2);
 }
 
 :root {
@@ -43,13 +43,21 @@ input:-webkit-autofill:focus,
   min-height: 800px;
   height: 100vh;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 59px 0 50px;
   overflow: hidden;
 }
 
 .logo_section {
   width: 1240px;
   margin: 0 auto;
+}
+
+.logo_section a {
+  width: 108px;
+  height: 24px;
+  mask: url(../img/common/ci-wavve.svg) no-repeat center /cover;
+  display: block;
+  background: var(--main-color0);
 }
 
 .content {
@@ -61,7 +69,7 @@ input:-webkit-autofill:focus,
 .title {
   font-size: 36px;
   text-align: center;
-  color: #fff;
+  color: var(--main-color0);
 }
 .profile_container {
   height: 250px;
@@ -77,23 +85,23 @@ input:-webkit-autofill:focus,
   height: 52px;
   font-weight: 500;
   font-size: 18px;
-  color: white;
-  background-color: #1351f9;
+  color: var(--fixed-color0);
+  background-color: var(--blue-color1);
   border-radius: 999px;
   cursor: pointer;
   box-sizing: border-box;
   border: none;
 }
 .createBtn:disabled {
-  background: #5e5e5e !important;
-  color: #888888;
+  background: var(--main-color3) !important;
+  color: var(--main-color4);
   cursor: not-allowed;
 }
 .createBtn:active:not(:disabled) {
   scale: 98%;
 }
 .createBtn:hover {
-  background-color: #366afb;
+  background-color: var(--blue-color2);
 }
 
 .info_box {
@@ -101,7 +109,7 @@ input:-webkit-autofill:focus,
   margin-top: 20px;
 }
 .label {
-  color: #a5a5a5;
+  color: var(--main-color2);
   font-size: 16px;
   width: 65px;
   height: 54px;
@@ -116,11 +124,10 @@ input:-webkit-autofill:focus,
   color: #a5a5a5;
   margin-left: 20px;
   padding: 0 20px;
-  background: #252525;
+  background: var(--main-color5);
   border: none;
   vertical-align: middle;
   border-radius: 8px;
-  border: none;
   outline: none;
 }
 
@@ -138,19 +145,19 @@ input:-webkit-autofill:focus,
   border-radius: 999px;
 }
 .cancel {
-  background: #5e5e5e;
+  background: var(--main-color3);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cancel:hover {
-  background: #717171;
+  background: var(--main-color4);
 }
 .confirm {
-  background-color: #1351f9;
+  background-color: var(--blue-color1);
 }
 .confirm:hover {
-  background-color: #366afb;
+  background-color: var(--blue-color2);
 }
 
 .img_style {

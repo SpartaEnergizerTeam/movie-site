@@ -1,135 +1,140 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="ko">
 <head>
     <meta charset='UTF-8'>
     <title>Energivve(에너자이브)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
     <link rel="stylesheet" href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/common.css"/>
     <link rel="stylesheet" href="./css/detail.css"/>
+    <link rel="stylesheet" href="./css/review.css"/>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./js/common.js" type="module"></script>
     <script defer src="./js/detail.js" type="module"></script>
+    <script defer src="js/review/index.js" type="module"></script>
 </head>
-<body>
+<div id="loaderWrap"><div id="loader"></div></div>
+<body id="detailPage">
+<header>
+    <div class="header-wrap">
+        <div class="header-nav">
+            <nav class="header-nav-menu">
+                <ul>
+                    <li><a href="./profile.html">내 프로필</a></li>
+                    <li><a href="#">이용권</a></li>
+                    <li><a href="#">쿠폰·코인</a></li>
+                    <li><a href="#">웨이브온</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+                <button id="themeBtn" type="button"></button>
+            </nav>
+        </div>
+        <div class="header-section">
+            <a href="./index.html" class="logo"><span class="blind">Wavve</span></a>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="#" class="on">홈</a></li>
+                    <li>
+                        <a href="#">카테고리</a>
+                        <div class="category">
+                            <ul>
+                                <li><a href="./subpage/top20.html">TOP 20</a></li>
+                                <li><a href="./subpage/nowplaying.html">NOW PLAYING</a></li>
+                                <li><a href="./subpage/upcoming.html">UPCOMING</a></li>
+                                <li><a href="./subpage/popular.html">POPULAR</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">LIVE</a></li>
+                    <li><a href="./profile.html">MY</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <a href="./search.html">
+                    <img src="./img/common/icon-search.svg" alt="검색" />
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
    <div class=video-detail>
        <div class="image-box">
-           <img src="https://image.wavve.com/v1/thumbnails/1240_698_20_80/meta/image/202404/1713512287301888362.webp" alt=""/>
+           <img src="" alt=""/>
        </div>
        <div class="text-box">
-           <h1 class="logo-box">
-              수사반장<br/>1958
-           </h1>
-           <p class="dot-item">
-               드라마
-           </p>
-           <div class="btnbox">
-            <button class="video-button" type="button">트레일러 재생</button>
-           <ul>
-               <li class="icon-item">
-                   <button type="button">
-                       <img src="./img/detail/element-icon-share.svg" width="30" height="30" alt="공유">
-                       <span class="icon-txt">공유</span>
-                   </button>
-               </li>
-           </ul>
-           </div>
-           <div class="detail-info-box">
-               <p class="content-priview-box">
-                   <div class="content-clamp">
-                      <span>
-                        <span class="text">
-                         1958년을 배경으로 야만의 시대, 소도둑 검거 전문 박영한 형사가 개성 넘치는 동료 3인방과 한 팀으로 뭉쳐 부패 권력의 비상식을 상식으로 깨부수며 민중을 위한 형사로 거듭나는 이야기를 그린 드라마</span>
-                       <a class="more"> 더보기</a>
-                      </span>
-                   </div>
-               </p>
-
+           <div class="text-inner">
+               <h1 class="logo-box">
+               </h1>
+               <p class="dot-item"></p>
+               <div class="btnbox">
+                   <button class="video-button" type="button">트레일러 재생</button>
+                   <ul>
+                       <li class="icon-item">
+                           <button class="share-button" type="button">
+                               <span class="icon"></span>
+                               <span class="icon-txt">공유</span>
+                           </button>
+                       </li>
+                   </ul>
+               </div>
            </div>
        </div>
    </div>
+    <div class="detail-info-box">
+        <p class="content-priview-box">
+        <div class="content-clamp"><span><span class="text"></span><a class="more"> 더보기</a></span></div>
+        </p>
+    </div>
     <div class="player-bottom-contents">
     <div class="player-nav">
         <ul>
             <li>
-                <button type="button" class> 에피소드 </button>
+                <button type="button" class>에피소드</button>
             </li>
             <li>
                 <button type="button" class> 관련영상</button>
             </li>
             <li>
-                <button type="button" class> 추천 </button>
+                <button type="button" class>추천</button>
             </li>
             <li>
-                <button type="button" class="on"> 상세정보 </button>
+                <button type="button" class="on">상세정보</button>
             </li>
         </ul>
     </div>
     <div class="detail-view-content-arena">
         <div class="preview-detail-box">
-            <strong class="preview-title"> 수사반장 1958 </strong>
+            <strong class="preview-title"></strong>
             
-            <p class="preview-dsc">황천에서 상경한 영한(이제훈)은 부임 첫날부터 동대문파의 이인자 살모사(강인권)를 검거하고 종남서 최고 골칫덩이로 등극한다.</p>
+            <p class="preview-dsc"></p>
             <div class="content-actor-box"><!--출연진-->
                 <strong>출연 :</strong>
                 <span class="content-actor-list"><!--이제훈--></span>
-                <span class="content-actor-list"><!--이제훈--></span>
-                <span class="content-actor-list"><!--이제훈--></span>
-                <span class="content-actor-list"><!--이제훈--></span>
-
             </div>
         </div>
         <div class="detail-view-box"><!--하단 썸네일-->
             <div class="thumb-box">
-                <div class="picture-arena">
-                    <picture>
-                   
-                     <img src="./img/detail/1713512289000104275.webp" alt="수사반장 1958" class="thumb-img">
-
-                    </picture>
-                </div>
+                <div class="picture-arena"><picture><img src="" alt="" class="thumb-img"/></picture></div>
             </div>
             <div class="detail-info-box">
-                <p class="detail-dsc">
-                    "1958년을 배경으로 야만의 시대, 소도둑 검거 전문 박영한 형사가 개성 넘치는 동료 3인방과 한 팀으로 뭉쳐 부패 권력의 비상식을 상식으로 깨부수며 민중을 위한 형사로 거듭나는 이야기를 그린 드라마"
-                </p>
+                <p class="detail-dsc"></p>
                 <table class="detail-info-table"> <!---하단 출연진 및 기타 정보-->
                     <colgroup>
-                        <col style="width: 76px;">
-                        <col style="width: auto;">
+                        <col style="width: 76px">
+                        <col style="width: auto">
                     </colgroup>
                     <tr>
                         <th scope="row">개요</th>
-                        <td>MBC,2024~</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row">장르</th>
-                    
-                        <td>
-                            <span class="genre">
-                              #수사
-                            </span>
-                        </td>
+                        <td><span class="genre"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">출연</th>
-                        <td>
-                            <span class="genre"> <!--이제훈--> </span>
-                            ,                              
-                            <span class="genre"> <!--이제훈--> </span>
-                            ,  
-                            <span class="genre"> <!--이제훈--> </span>
-                            ,  
-                            <span class="genre"> <!--이제훈--> </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><!--감독--></th>
-                        <td>
-                            <span class="genre">
-                                <!--김성훈-->
-                            </span>
-                        </td>
+                        <td></td>
                     </tr>
 
                 </table>  <!---하단 썸네일 인포 끝자락-->
@@ -138,8 +143,29 @@
         </div>
     </div>
 </div>
-
-
-    
+   <section id="reviewContainer">
+       <div class="write-button-container">
+           <p>이 작품 어떠셨나요?</p>
+           <div class="rate-container big">
+               <div class="rate-box gray">
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+               </div>
+               <div class="fill-rate-box rate-box">
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+                   <span class="star-fill"></span>
+               </div>
+           </div>
+           <button id="openWriteReviewBtn" type="button">감상평 남기기</button>
+       </div>
+       <h1 class="section-title">감상평</h1>
+       <div id="reviewList"></div>
+   </section>
 </body>
 </html>
