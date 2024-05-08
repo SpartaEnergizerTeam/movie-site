@@ -55,7 +55,8 @@ export const getMovieImages = async (movie_id) => {
 // 무비 id를 입력하면 영화 영상들을 유튜브로 가져옵니다.
 // 유튜브 url을 리턴하는 함수로 없으면 빈배열을 리턴합니다.
 export const getMovieVideos = async (movie_id) => {
-  const url = `${defaultUrl}${movie_id}/videos?language=ko`;
+  // movie/movie_id/videos?language=ko
+  const url = `${defaultUrl}movie/${movie_id}/videos?language=ko`;
   const response = await fetch(url, options);
   const data = await response.json();
 
@@ -68,4 +69,3 @@ export const getMovieVideos = async (movie_id) => {
   }
   return [];
 };
-
