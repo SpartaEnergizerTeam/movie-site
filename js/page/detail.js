@@ -111,7 +111,7 @@ shareButton.addEventListener('click', function() {
   navigator.clipboard.writeText(url)
     .then(() => {
       // 복사가 성공했을 때 알림을 표시합니다.
-      alert('주소가 복사되었습니다.');
+      alert('주소가 복사되었어요');
     })
     .catch(err => {
       // 복사가 실패했을 때 에러를 콘솔에 출력합니다.
