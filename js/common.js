@@ -18,7 +18,7 @@ const handleSearch = () => {
       event.preventDefault();
       if (!$searchInput.value) return window.alert('검색어를 입력해주세요');
 
-      window.location.href = `./search-result.html?query=${encodeURIComponent($searchInput.value)}`;
+      window.location.href = `../page/search-result.html?query=${encodeURIComponent($searchInput.value)}`;
     });
   }
 

@@ -1,5 +1,5 @@
-import getUrlParamValue from "./utils/getUrlParamValue.js";
-import {getMovieWithKeywords} from "./api.js";
+import getUrlParamValue from "../utils/getUrlParamValue.js";
+import {getMovieWithKeywords} from "../api.js";
 
 const $searchResultSection = document.querySelector('#searchResultSection');
 
@@ -11,7 +11,7 @@ getMovieWithKeywords(searchKeyword).then(({results}) => {
     const $div = document.createElement('div');
     $div.className = 'no-result-box';
     $div.innerHTML = `
-      <img src="./img/common/icon-alert.svg" alt="" />
+      <img src="../img/common/icon-alert.svg" alt="" />
       <p class="search-empty-text">
           '<span class="error-word">${searchKeywordKor}</span>' 검색결과가 없어요.<br/>다시 한 번 확인해주세요
       </p>

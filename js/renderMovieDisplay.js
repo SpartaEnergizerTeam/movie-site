@@ -11,7 +11,7 @@ const renderMovieDisplay = (movieTypeString, selector) => {
       const cardsHtml = movies
         .map((movie) => {
           return `<li class="card-poster">
-          <a href="../detail.html?movieId=${movie.id}">
+          <a href="./detail.html?movieId=${movie.id}">
           <div class="card-image-wrap"><img class="card-img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/></div>
           </a>
           </li>`;
