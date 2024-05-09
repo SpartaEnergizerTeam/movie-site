@@ -48,7 +48,6 @@
 ### dicebear
 프로필 아바타 이미지를 변경할 수 있도록 dicebear를 사용했어요<br/><br/>
 ## 2. 대표기능
-
 - [x] 내가 찾고 싶은 영화를 검색할 수 있어요<br />
 - [x] 엄선한 카테고리로 추천된 다양한 영화를 만날 수 있어요<br />
 - [x] 영화의 상세 정보를 볼 수 있어요<br />
@@ -87,15 +86,27 @@
 - 상세페이지 접속시 쿼리스트링에 id를 주어 새로고침을 해도 같은 페이지를 바라볼 수 있도록 했어요
 - 트레일러 재생 클릭시 새 창으로 트레일러 영상을 볼 수 있도록 했어요
 - 공유버튼을 제공하여 현재 영화 페이지 링크를 공유할 수 있도록 구현했어요<br/><br/>
-### 4. dicebear http-api를 사용한 프로필 변경 기능
+### 4. 검색 페이지
+<img width="600" alt="스크린샷" src="https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/44cdefd8-dcaf-483a-b1fd-59820ce54366"><br/>
+<img width="600" alt="스크린샷" src="https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/70d7a697-d9e9-4905-86ba-2fb909f18d15"><br/>
+- 검색 페이지는 2개의 페이지로 나눠져요
+- 검색 버튼을 누르면, 검색 메인 페이지로 이동하고 영화를 다양하게 탐색할 수 있도록 구좌를 제공해요
+- 검색어를 입력하지 않으면 경고창이 떠요
+- 검색결과가 없는 경우, 안내하는 UI를 보여줄 수 있게 했어요
+- api 통신을 기타 이유로 실패한 경우에도, 안내할 수 있는 UI를 보여줄 수 있도록 했어요<br/><br/>
+### 5. 카테고리
+<img width="600" alt="image" src="https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/8f1a9a3e-0216-4f85-a95b-9ad8028cd27b"><br/>
+<img width="600" alt="image" src="https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/69e5b5a0-16ed-4672-8c0b-b213a3b8f9df"><br/>
+- 각 메뉴에 접근하면, 영화를 큐레이션해주는 카테고리 메뉴를 만들었어요<br/><br/>
+### 6. dicebear http-api를 사용한 프로필 변경 기능
 ![프로필 변경-r](https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/01fd2f86-0848-4477-bb02-897ed8376999)
 - `localstorage`를 사용하여 프로필을 저장해요
 - 프로필 이미지를 랜덤으로 생성할 수 있게 했어요
 - 생성 중에는 다시 클릭할 수 없어요<br/><br/>
-### 5. setInterval을 이용한 footer 공지 슬라이더 구현
+### 7. setInterval을 이용한 footer 공지 슬라이더 구현
 ![footer-r](https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/dfbb757c-4844-4b4f-bb5d-617e3224b89e)
 - setInterval을 사용하여, swiper 라이브러리 없이 슬라이더를 구현했어요<br/><br/>
-### 6. js를 사용한 별점 부여 UI
+### 8. js를 사용한 별점 부여 UI
 ![review](https://github.com/SpartaEnergizerTeam/movie-site/assets/40863185/36953914-4df0-45db-bfeb-d383d0d26e9b)
 - 프로필 등록을 하여야 리뷰를 남길 수 있도록 했어요, 등록하지 않은 경우 프로필 등록 페이지로 이동해요
 - `localstorage`를 이용하여 리뷰를 저장할 수 있도록 했어요
