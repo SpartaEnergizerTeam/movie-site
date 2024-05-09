@@ -59,7 +59,7 @@ table {
     --main-rgba-color2: rgba(255, 255, 255, 0.15);
 }
 
-.light-mode {
+[data-theme='light-mode'] {
     --background-color: #ffffff; 
     --main-color0: #1b1b1b;
     --main-color1: #333333;
