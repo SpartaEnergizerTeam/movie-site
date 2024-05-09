@@ -31,19 +31,14 @@ const header = () => {
 
   const themeHandler = () => {
     const themeButton = document.querySelector('#themeBtn');
-    const bodyElement = document.body;
+    const rootElement = document.querySelector(':root');
 
     if (themeButton) {
       themeButton.addEventListener('click', () => {
-        bodyElement.classList.toggle('light-mode');
-        const lightMode = bodyElement.className;
-        setLocalStorage('theme-mode', lightMode === 'light-mode' ? 'light-mode' : '');
+        const lightMode = rootElement.dataset.theme;
+        rootElement.dataset.theme = lightMode ? '' : 'light-mode';
+        setLocalStorage('theme-mode', lightMode ? '' : 'light-mode');
       });
-    }
-
-    const themeMode = getLocalStorage('theme-mode');
-    if (themeMode === 'light-mode') {
-      bodyElement.classList.add('light-mode');
     }
   };
 
