@@ -12,11 +12,11 @@
     <td align="center"><b>안종현</b></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/whitewise95"><img src="https://avatars.githubusercontent.com/u/40863185?v=4" width="100px" /></a></td>
-    <td align="center"><a href="https://github.com/heesu21"><img src="https://avatars.githubusercontent.com/u/96329698?v=4" width="100px" /></a></td>
-    <td align="center"><a href="https://github.com/jeoninhwa3"><img src="https://avatars.githubusercontent.com/u/167187204?v=4" width="100px" /></a></td>
-    <td align="center"><a href="https://github.com/NHJeans"><img src="https://avatars.githubusercontent.com/u/159714267?v=4" width="100px" /></a></td>
-    <td align="center"><a href="https://github.com/NHJeans"><img src="https://avatars.githubusercontent.com/u/110883544?v=4" width="100px" /></a></td>
+    <td align="center"><a href="https://github.com/1eeyerin"><img src="https://avatars.githubusercontent.com/u/40863185?v=4" width="100px" /></a></td>
+    <td align="center"><a href="https://github.com/LeLu815"><img src="https://avatars.githubusercontent.com/u/96329698?v=4" width="100px" /></a></td>
+    <td align="center"><a href="https://github.com/yeeunseo-dev"><img src="https://avatars.githubusercontent.com/u/167187204?v=4" width="100px" /></a></td>
+    <td align="center"><a href="https://github.com/ARMJONG"><img src="https://avatars.githubusercontent.com/u/159714267?v=4" width="100px" /></a></td>
+    <td align="center"><a href="https://github.com/Ahnjonghyun87"><img src="https://avatars.githubusercontent.com/u/110883544?v=4" width="100px" /></a></td>
   </tr>
   <tr>
     <td align="center">리뷰</td>
